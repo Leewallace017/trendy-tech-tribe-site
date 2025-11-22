@@ -35,7 +35,7 @@ const posts = (await getCollection('tech')).sort(
               })}
             </time>
             <h2>
-              <a href={`/tech/${post.data.slug}`}>{post.data.title}</a>
+              <a href={`/tech/${post.slug}`}>{post.data.title}</a>
             </h2>
             <p class="post-summary">{post.data.summary}</p>
             <div class="post-meta">

@@ -1,6 +1,5 @@
 ---
 title: "Grid Battery Storage Just Hit a Tipping Point in the US"
-slug: "grid-battery-storage-boom"
 date: "2025-11-18"
 category: "Energy & Policy"
 tags: ["energy storage", "batteries", "grid", "clean energy", "renewable energy"]

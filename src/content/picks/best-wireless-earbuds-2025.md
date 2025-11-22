@@ -1,6 +1,5 @@
 ---
 title: "Best Wireless Earbuds of 2025: Tested and Ranked"
-slug: "best-wireless-earbuds-2025"
 date: "2025-11-21"
 category: "Picks & Reviews"
 tags: ["earbuds", "audio", "headphones", "wireless", "product reviews", "buying guide"]

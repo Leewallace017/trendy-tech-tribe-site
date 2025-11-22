@@ -1,6 +1,5 @@
 ---
 title: "Nvidia Q4 Earnings: Why This Report Could Reset AI Stock Valuations"
-slug: "nvidia-earnings-preview-q4-2025"
 date: "2025-11-17"
 category: "Markets & Money"
 tags: ["Nvidia", "earnings", "AI", "semiconductors", "stock market", "tech stocks"]

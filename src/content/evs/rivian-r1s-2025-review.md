@@ -1,6 +1,5 @@
 ---
 title: "Rivian R1S (2025) Review: The Best Electric SUV You Can Actually Buy"
-slug: "rivian-r1s-2025-review"
 date: "2025-11-19"
 category: "EVs & Mobility"
 tags: ["Rivian", "R1S", "electric SUV", "EV review", "electric vehicles"]

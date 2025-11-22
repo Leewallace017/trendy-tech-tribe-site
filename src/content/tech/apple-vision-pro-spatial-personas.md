@@ -1,6 +1,5 @@
 ---
 title: "Apple Vision Pro Gets Spatial Personas: A Game Changer for Virtual Meetings"
-slug: "apple-vision-pro-spatial-personas"
 date: "2025-11-21"
 category: "Tech & Innovation"
 tags: ["Apple", "Vision Pro", "AR", "VR", "spatial computing"]

@@ -1,6 +1,5 @@
 ---
 title: "AI Agents in 2025: Beyond Chatbots to Autonomous Workflows"
-slug: "ai-agents-guide-2025"
 date: "2025-11-20"
 category: "AI & Automation"
 tags: ["AI agents", "LLMs", "automation", "Claude", "ChatGPT", "Anthropic", "OpenAI"]

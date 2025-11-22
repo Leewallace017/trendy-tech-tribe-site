@@ -2,7 +2,6 @@ import { defineCollection, z } from 'astro:content';
 
 const articleSchema = z.object({
   title: z.string(),
-  slug: z.string(),
   date: z.string(),
   category: z.enum([
     'Tech & Innovation',
