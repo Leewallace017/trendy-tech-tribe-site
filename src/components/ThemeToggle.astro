@@ -1,0 +1,96 @@
+---
+---
+
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+  <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+    <path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.657 4.343L14.243 5.757M5.757 14.243L4.343 15.657M15.657 15.657L14.243 14.243M5.757 5.757L4.343 4.343" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+  <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17 10.5C16.1 13.5 13.4 15.8 10.1 16C6.1 16.2 2.8 12.9 3 8.9C3.2 5.6 5.5 2.9 8.5 2C7.3 3.9 7.5 6.5 9 8.3C10.5 10.1 13.1 10.5 15 9.5C15.7 9.2 16.4 9.8 16.9 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<script>
+  function initTheme() {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (!themeToggle) return;
+
+    // Get initial theme from localStorage or system preference
+    const getTheme = () => {
+      if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+        return localStorage.getItem('theme');
+      }
+      if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+        return 'light';
+      }
+      return 'dark';
+    };
+
+    // Apply theme to document
+    const applyTheme = (theme: string) => {
+      document.documentElement.setAttribute('data-theme', theme);
+    };
+
+    // Initialize theme
+    const currentTheme = getTheme();
+    applyTheme(currentTheme);
+
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem('theme', newTheme);
+      }
+
+      applyTheme(newTheme);
+    });
+  }
+
+  // Initialize on page load
+  initTheme();
+
+  // Re-initialize after navigation (for client-side routing)
+  document.addEventListener('astro:after-swap', initTheme);
+</script>
+
+<style>
+  .theme-toggle {
+    background: var(--bg-tertiary);
+    border: 2px solid var(--border-normal);
+    border-radius: var(--radius-md);
+    padding: var(--space-2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: all var(--transition-normal) var(--easing-smooth);
+    width: 40px;
+    height: 40px;
+  }
+
+  .theme-toggle:hover {
+    background: var(--bg-elevated);
+    border-color: var(--border-glow);
+    box-shadow: var(--glow-soft);
+    transform: scale(1.05);
+  }
+
+  .sun-icon,
+  .moon-icon {
+    display: none;
+  }
+
+  /* Show moon icon in dark mode (click to go to light) */
+  :global([data-theme="dark"]) .moon-icon {
+    display: block;
+  }
+
+  /* Show sun icon in light mode (click to go to dark) */
+  :global([data-theme="light"]) .sun-icon {
+    display: block;
+  }
+</style>

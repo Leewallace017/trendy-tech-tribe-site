@@ -1,7 +1,10 @@
 /**
- * Trendy Tech Tribe - Global Styles & Design Tokens
+ * Trendy Tech Tribe - Design Tokens & Component Library
  * Version: 2.0.0
  * Design Direction: Tribal Cyberpunk
+ *
+ * This file contains all design tokens (CSS custom properties) and
+ * production-ready component styles for the Trendy Tech Tribe website.
  */
 
 /* ============================================================================
@@ -71,16 +74,6 @@
   --gradient-tribal: linear-gradient(135deg, #b44aff 0%, #5cff80 100%);
   --gradient-text-neon: linear-gradient(135deg, #ffffff 0%, #00ffff 50%, #ff00ff 100%);
   --gradient-text-subtle: linear-gradient(135deg, #f0f0ff 0%, #b8b8d4 100%);
-
-  /* === LEGACY ALIASES (for backwards compatibility) === */
-  --color-primary: #ff00ff;
-  --color-secondary: #00ffff;
-  --color-accent: #00d4ff;
-  --color-text: var(--text-primary);
-  --color-text-light: var(--text-secondary);
-  --color-bg: var(--bg-primary);
-  --color-bg-alt: var(--bg-secondary);
-  --color-border: var(--border-normal);
 }
 
 /* ============================================================================
@@ -127,16 +120,6 @@
   /* === GRADIENTS === */
   --gradient-hero: linear-gradient(135deg, #d81b60 0%, #00b8d4 100%);
   --gradient-bg: linear-gradient(135deg, #f0eeff 0%, #fef5ff 50%, #f0eeff 100%);
-  --gradient-text-neon: linear-gradient(135deg, #1a0f3d 0%, #00b8d4 50%, #d81b60 100%);
-
-  /* === LEGACY ALIASES === */
-  --color-primary: #d81b60;
-  --color-secondary: #00b8d4;
-  --color-text: var(--text-primary);
-  --color-text-light: var(--text-secondary);
-  --color-bg: var(--bg-primary);
-  --color-bg-alt: var(--bg-secondary);
-  --color-border: var(--border-normal);
 }
 
 /* ============================================================================
@@ -148,8 +131,6 @@
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Courier New', monospace;
-  --font-sans: var(--font-primary);
-  --font-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
 
   /* === FONT SIZES (Fluid Typography) === */
   --text-display: clamp(3rem, 8vw, 5rem);
@@ -211,22 +192,12 @@
   --space-40: 10rem;
   --space-48: 12rem;
 
-  /* === LEGACY ALIASES === */
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 1.5rem;
-  --space-lg: 2rem;
-  --space-xl: 3rem;
-  --space-2xl: 4rem;
-
   /* === CONTAINER WIDTHS === */
   --container-sm: 640px;
   --container-md: 768px;
   --container-lg: 1024px;
   --container-xl: 1280px;
   --container-2xl: 1536px;
-  --max-width: 1280px;
-  --max-width-article: 750px;
 
   /* === BORDER RADIUS === */
   --radius-none: 0;
@@ -371,12 +342,6 @@ blockquote {
   color: var(--text-secondary);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* ============================================================================
    LAYOUT UTILITIES
    ============================================================================ */
@@ -392,22 +357,6 @@ img {
 .container-md { max-width: var(--container-md); }
 .container-lg { max-width: var(--container-lg); }
 .container-2xl { max-width: var(--container-2xl); }
-
-.article-container {
-  max-width: var(--max-width-article);
-  margin: 0 auto;
-  padding: 0 var(--space-md);
-}
-
-.text-center {
-  text-align: center;
-}
-
-/* Margin utilities */
-.mb-sm { margin-bottom: var(--space-sm); }
-.mb-md { margin-bottom: var(--space-md); }
-.mb-lg { margin-bottom: var(--space-lg); }
-.mb-xl { margin-bottom: var(--space-xl); }
 
 /* ============================================================================
    BUTTONS
@@ -595,6 +544,233 @@ img {
   box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
+/* Feature Card with Gradient Border */
+.card-feature {
+  position: relative;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+}
+
+.card-feature::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.6;
+  transition: opacity var(--transition-normal) var(--easing-smooth);
+}
+
+.card-feature:hover::before {
+  opacity: 1;
+}
+
+/* ============================================================================
+   NAVIGATION
+   ============================================================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  width: 100%;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal) var(--easing-smooth);
+}
+
+.header-content {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  filter: drop-shadow(0 0 10px rgba(92, 255, 128, 0.3));
+  transition: filter var(--transition-normal) var(--easing-smooth);
+}
+
+.site-logo:hover {
+  filter: drop-shadow(0 0 20px rgba(92, 255, 128, 0.5));
+}
+
+.site-logo img {
+  width: 80px;
+  height: 80px;
+}
+
+[data-theme="light"] .site-logo {
+  filter: drop-shadow(0 0 5px rgba(123, 31, 162, 0.15));
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--text-secondary);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-body);
+  text-decoration: none;
+  transition: color var(--transition-normal) var(--easing-smooth);
+  padding-bottom: var(--space-1);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
+  transition: width var(--transition-normal) var(--easing-smooth);
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* ============================================================================
+   HERO SECTION
+   ============================================================================ */
+
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: var(--space-16) var(--space-6);
+  background: var(--gradient-bg);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(255, 0, 255, 0.15) 0%, transparent 50%);
+  animation: pulseGlow 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.hero-content {
+  position: relative;
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: var(--weight-black);
+  line-height: var(--line-tight);
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-6);
+  background: var(--gradient-text-neon);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  font-size: var(--text-body-xl);
+  line-height: var(--line-relaxed);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================================================
+   FORMS
+   ============================================================================ */
+
+.form-group {
+  margin-bottom: var(--space-6);
+}
+
+.form-label {
+  display: block;
+  font-weight: var(--weight-medium);
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-primary);
+  font-size: var(--text-body);
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-normal);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal) var(--easing-smooth);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-tertiary);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.1), var(--glow-cyan);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
 /* ============================================================================
    UTILITY CLASSES
    ============================================================================ */
@@ -698,5 +874,41 @@ a:focus-visible {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================================
+   RESPONSIVE UTILITIES
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  .site-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-list {
+    gap: var(--space-4);
+  }
+
+  .nav-link {
+    font-size: var(--text-body-sm);
+  }
+
+  .hero {
+    min-height: 50vh;
+    padding: var(--space-12) var(--space-4);
+  }
+}
+
+@media (max-width: 640px) {
+  .header-content {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

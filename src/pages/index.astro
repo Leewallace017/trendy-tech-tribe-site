@@ -65,12 +65,12 @@ const categoryMap: Record<string, string> = {
           <div class="hero-content">
             <span class="hero-category">{featuredPost.data.category}</span>
             <h1 class="hero-title">
-              <a href={`/${categoryMap[featuredPost.data.category]}/${featuredPost.data.slug}`}>
+              <a href={`/${categoryMap[featuredPost.data.category]}/${featuredPost.slug}`}>
                 {featuredPost.data.title}
               </a>
             </h1>
             <p class="hero-summary">{featuredPost.data.summary}</p>
-            <a href={`/${categoryMap[featuredPost.data.category]}/${featuredPost.data.slug}`} class="hero-cta">
+            <a href={`/${categoryMap[featuredPost.data.category]}/${featuredPost.slug}`} class="hero-cta">
               Read More →
             </a>
           </div>
@@ -85,11 +85,16 @@ const categoryMap: Record<string, string> = {
         <div class="posts-grid">
           {techPosts.length > 0 ? techPosts.map(post => (
             <article class="post-card">
-              <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
-              <h3>
-                <a href={`/tech/${post.slug}`}>{post.data.title}</a>
-              </h3>
-              <p>{post.data.summary}</p>
+              <a href={`/tech/${post.slug}`} class="post-image">
+                <img src={post.data.image} alt={post.data.imageAlt || post.data.title} />
+              </a>
+              <div class="post-content">
+                <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
+                <h3>
+                  <a href={`/tech/${post.slug}`}>{post.data.title}</a>
+                </h3>
+                <p>{post.data.summary}</p>
+              </div>
             </article>
           )) : (
             <p class="empty-state">No posts yet. Check back soon!</p>
@@ -103,11 +108,16 @@ const categoryMap: Record<string, string> = {
         <div class="posts-grid">
           {aiPosts.length > 0 ? aiPosts.map(post => (
             <article class="post-card">
-              <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
-              <h3>
-                <a href={`/ai/${post.slug}`}>{post.data.title}</a>
-              </h3>
-              <p>{post.data.summary}</p>
+              <a href={`/ai/${post.slug}`} class="post-image">
+                <img src={post.data.image} alt={post.data.imageAlt || post.data.title} />
+              </a>
+              <div class="post-content">
+                <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
+                <h3>
+                  <a href={`/ai/${post.slug}`}>{post.data.title}</a>
+                </h3>
+                <p>{post.data.summary}</p>
+              </div>
             </article>
           )) : (
             <p class="empty-state">No posts yet. Check back soon!</p>
@@ -121,11 +131,16 @@ const categoryMap: Record<string, string> = {
         <div class="posts-grid">
           {evsPosts.length > 0 ? evsPosts.map(post => (
             <article class="post-card">
-              <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
-              <h3>
-                <a href={`/evs/${post.slug}`}>{post.data.title}</a>
-              </h3>
-              <p>{post.data.summary}</p>
+              <a href={`/evs/${post.slug}`} class="post-image">
+                <img src={post.data.image} alt={post.data.imageAlt || post.data.title} />
+              </a>
+              <div class="post-content">
+                <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
+                <h3>
+                  <a href={`/evs/${post.slug}`}>{post.data.title}</a>
+                </h3>
+                <p>{post.data.summary}</p>
+              </div>
             </article>
           )) : (
             <p class="empty-state">No posts yet. Check back soon!</p>
@@ -134,12 +149,28 @@ const categoryMap: Record<string, string> = {
         <a href="/evs" class="section-link">View all EV posts →</a>
       </section>
 
-      <!-- Newsletter CTA -->
-      <section class="newsletter-cta">
-        <div class="newsletter-content">
-          <h2>Stay in the Loop</h2>
-          <p>Get the week's top tech stories, AI updates, and product picks delivered to your inbox.</p>
-          <a href="/newsletter" class="cta-button">Subscribe to Newsletter</a>
+      <!-- Join the Tribe CTA -->
+      <section class="tribe-cta">
+        <div class="tribe-content">
+          <h2>Join the Tribe</h2>
+          <p>Trendy Tech Tribe is here to help you navigate the fast-paced universe of technology. From revealing the latest gadgets to decoding complex tech trends, we empower our tribe with the knowledge they need to stay ahead of the curve.</p>
+          <div class="tribe-image">
+            <img src="/join-the-tribe.png" alt="Join the Trendy Tech Tribe community" />
+          </div>
+          <div class="newsletter-signup">
+            <h3>Get Weekly Tech Insights</h3>
+            <p class="signup-description">Join thousands staying ahead of the curve. Get curated tech news, AI updates, and product reviews delivered to your inbox.</p>
+            <form class="signup-form" action="/api/subscribe" method="POST">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+                class="email-input"
+              />
+              <button type="submit" class="subscribe-button">Subscribe</button>
+            </form>
+          </div>
         </div>
       </section>
 
@@ -148,11 +179,16 @@ const categoryMap: Record<string, string> = {
         <div class="posts-grid">
           {energyPosts.length > 0 ? energyPosts.map(post => (
             <article class="post-card">
-              <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
-              <h3>
-                <a href={`/energy/${post.slug}`}>{post.data.title}</a>
-              </h3>
-              <p>{post.data.summary}</p>
+              <a href={`/energy/${post.slug}`} class="post-image">
+                <img src={post.data.image} alt={post.data.imageAlt || post.data.title} />
+              </a>
+              <div class="post-content">
+                <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
+                <h3>
+                  <a href={`/energy/${post.slug}`}>{post.data.title}</a>
+                </h3>
+                <p>{post.data.summary}</p>
+              </div>
             </article>
           )) : (
             <p class="empty-state">No posts yet. Check back soon!</p>
@@ -166,11 +202,16 @@ const categoryMap: Record<string, string> = {
         <div class="posts-grid">
           {marketsPosts.length > 0 ? marketsPosts.map(post => (
             <article class="post-card">
-              <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
-              <h3>
-                <a href={`/markets/${post.slug}`}>{post.data.title}</a>
-              </h3>
-              <p>{post.data.summary}</p>
+              <a href={`/markets/${post.slug}`} class="post-image">
+                <img src={post.data.image} alt={post.data.imageAlt || post.data.title} />
+              </a>
+              <div class="post-content">
+                <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
+                <h3>
+                  <a href={`/markets/${post.slug}`}>{post.data.title}</a>
+                </h3>
+                <p>{post.data.summary}</p>
+              </div>
             </article>
           )) : (
             <p class="empty-state">No posts yet. Check back soon!</p>
@@ -184,11 +225,16 @@ const categoryMap: Record<string, string> = {
         <div class="posts-grid">
           {picksPosts.length > 0 ? picksPosts.map(post => (
             <article class="post-card">
-              <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
-              <h3>
-                <a href={`/picks/${post.slug}`}>{post.data.title}</a>
-              </h3>
-              <p>{post.data.summary}</p>
+              <a href={`/picks/${post.slug}`} class="post-image">
+                <img src={post.data.image} alt={post.data.imageAlt || post.data.title} />
+              </a>
+              <div class="post-content">
+                <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
+                <h3>
+                  <a href={`/picks/${post.slug}`}>{post.data.title}</a>
+                </h3>
+                <p>{post.data.summary}</p>
+              </div>
             </article>
           )) : (
             <p class="empty-state">No posts yet. Check back soon!</p>
@@ -204,172 +250,413 @@ const categoryMap: Record<string, string> = {
 
 <style>
   .hero {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    position: relative;
+    background: var(--gradient-bg);
     color: white;
-    padding: var(--space-2xl) 0;
-    margin-bottom: var(--space-2xl);
+    padding: var(--space-24) 0;
+    margin-bottom: var(--space-16);
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(255, 0, 255, 0.15) 0%, transparent 50%);
+    animation: pulseGlow 8s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
   }
 
   .hero-content {
+    position: relative;
     max-width: 800px;
+    z-index: 1;
   }
 
   .hero-category {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.375rem 0.75rem;
-    border-radius: 4px;
-    font-size: 0.875rem;
-    font-weight: 600;
+    background: rgba(180, 74, 255, 0.3);
+    border: 1px solid var(--tribal-purple);
+    padding: 0.375rem 0.875rem;
+    border-radius: var(--radius-full);
+    font-size: var(--text-body-sm);
+    font-weight: var(--weight-semibold);
     text-transform: uppercase;
-    margin-bottom: var(--space-md);
+    letter-spacing: var(--tracking-wide);
+    margin-bottom: var(--space-6);
+    box-shadow: var(--glow-purple);
+  }
+
+  [data-theme="light"] .hero-category {
+    background: rgba(123, 31, 162, 0.15);
+    color: var(--tribal-purple);
+    border-color: var(--tribal-purple);
   }
 
   .hero-title {
-    font-size: 3rem;
-    margin-bottom: var(--space-md);
-    line-height: 1.1;
+    font-family: var(--font-display);
+    font-size: var(--text-display);
+    font-weight: var(--weight-black);
+    margin-bottom: var(--space-6);
+    line-height: var(--line-tight);
+    letter-spacing: var(--tracking-tight);
   }
 
   .hero-title a {
     color: white;
+    background: var(--gradient-text-neon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity var(--transition-normal);
   }
 
   .hero-title a:hover {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 
   .hero-summary {
-    font-size: 1.25rem;
-    margin-bottom: var(--space-lg);
-    line-height: 1.6;
-    opacity: 0.95;
+    font-size: var(--text-body-xl);
+    margin-bottom: var(--space-8);
+    line-height: var(--line-relaxed);
+    color: var(--text-secondary);
+    max-width: 65ch;
+  }
+
+  [data-theme="light"] .hero-summary {
+    color: var(--text-primary);
   }
 
   .hero-cta {
     display: inline-block;
-    background-color: white;
-    color: var(--color-primary);
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: transform 0.2s;
+    background: linear-gradient(135deg, var(--neon-magenta), var(--neon-cyan));
+    color: white;
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--radius-md);
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-body-lg);
+    transition: all var(--transition-normal) var(--easing-smooth);
+    box-shadow: var(--glow-magenta);
   }
 
   .hero-cta:hover {
     transform: translateY(-2px);
-    color: var(--color-primary);
+    color: white;
+    box-shadow: var(--glow-magenta-intense), var(--shadow-lg);
   }
 
   .category-section {
-    margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-20);
   }
 
   .category-section h2 {
-    font-size: 2rem;
-    margin-bottom: var(--space-lg);
-    padding-bottom: var(--space-sm);
-    border-bottom: 3px solid var(--color-primary);
+    font-size: var(--text-h2);
+    font-weight: var(--weight-black);
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-4);
+    border-bottom: 3px solid transparent;
+    border-image: var(--gradient-neon-h);
+    border-image-slice: 1;
+    letter-spacing: var(--tracking-tight);
+    position: relative;
+  }
+
+  .category-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-neon-h);
+    box-shadow: var(--glow-cyan);
   }
 
   .posts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--space-lg);
-    margin-bottom: var(--space-md);
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-8);
+    margin-bottom: var(--space-6);
   }
 
   .post-card {
-    padding: var(--space-md);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    transition: box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-normal) var(--easing-smooth);
   }
 
   .post-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    border-color: var(--border-glow);
+    box-shadow: var(--glow-soft), var(--shadow-lg);
+  }
+
+  .post-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    display: block;
+    background: var(--bg-tertiary);
+  }
+
+  .post-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(10, 6, 20, 0.4) 70%,
+      rgba(10, 6, 20, 0.7) 100%
+    );
+    pointer-events: none;
+  }
+
+  .post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow) var(--easing-smooth);
+  }
+
+  .post-card:hover .post-image img {
+    transform: scale(1.08);
+  }
+
+  .post-content {
+    padding: var(--space-6);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
   }
 
   .post-date {
     display: block;
-    font-size: 0.875rem;
-    color: var(--color-text-light);
-    margin-bottom: var(--space-xs);
+    font-size: var(--text-body-sm);
+    color: var(--text-tertiary);
+    font-weight: var(--weight-medium);
+    margin-bottom: 0;
   }
 
   .post-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: var(--space-sm);
-    line-height: 1.3;
+    font-size: var(--text-h4);
+    font-weight: var(--weight-bold);
+    line-height: var(--line-snug);
+    margin: 0;
   }
 
   .post-card h3 a {
-    color: var(--color-text);
+    color: var(--text-primary);
+    transition: color var(--transition-normal) var(--easing-smooth);
   }
 
   .post-card h3 a:hover {
-    color: var(--color-primary);
+    color: var(--neon-cyan);
   }
 
   .post-card p {
-    font-size: 0.95rem;
-    color: var(--color-text-light);
+    font-size: var(--text-body);
+    color: var(--text-secondary);
+    line-height: var(--line-normal);
     margin: 0;
-    line-height: 1.5;
   }
 
   .empty-state {
-    color: var(--color-text-light);
+    color: var(--text-tertiary);
     font-style: italic;
   }
 
   .section-link {
-    display: inline-block;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-top: var(--space-md);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: var(--weight-semibold);
+    color: var(--neon-cyan);
+    margin-top: var(--space-4);
+    transition: all var(--transition-normal) var(--easing-smooth);
   }
 
   .section-link:hover {
-    color: var(--color-secondary);
+    color: var(--neon-magenta);
+    transform: translateX(4px);
   }
 
-  .newsletter-cta {
-    background: linear-gradient(135deg, var(--color-accent) 0%, #ef4444 100%);
-    color: white;
-    padding: var(--space-2xl);
-    border-radius: 12px;
-    text-align: center;
-    margin: var(--space-2xl) 0;
+  .tribe-cta {
+    position: relative;
+    background: var(--gradient-bg);
+    padding: var(--space-24);
+    border-radius: var(--radius-2xl);
+    margin: var(--space-24) 0;
+    border: 1px solid var(--border-bright);
+    box-shadow: var(--glow-soft), var(--shadow-xl);
+    overflow: hidden;
   }
 
-  .newsletter-content h2 {
-    color: white;
-    margin-bottom: var(--space-md);
+  .tribe-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-glow);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .tribe-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .tribe-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: var(--weight-black);
+    margin-bottom: var(--space-8);
     border: none;
     padding: 0;
+    text-align: center;
+    background: var(--gradient-text-neon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  .newsletter-content p {
-    font-size: 1.125rem;
-    margin-bottom: var(--space-lg);
-    opacity: 0.95;
+  .tribe-content > p {
+    font-size: var(--text-body-lg);
+    line-height: var(--line-relaxed);
+    max-width: 800px;
+    margin: 0 auto var(--space-12);
+    text-align: center;
+    color: var(--text-secondary);
   }
 
-  .cta-button {
-    display: inline-block;
-    background-color: white;
-    color: var(--color-accent);
-    padding: 0.875rem 2rem;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: transform 0.2s;
+  .tribe-image {
+    max-width: 900px;
+    margin: 0 auto var(--space-16);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow:
+      var(--glow-magenta),
+      0 16px 48px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-bright);
   }
 
-  .cta-button:hover {
+  .tribe-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .newsletter-signup {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px) saturate(180%);
+    padding: var(--space-10);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(180, 74, 255, 0.3);
+  }
+
+  .newsletter-signup h3 {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-4);
+    color: var(--text-primary);
+  }
+
+  .signup-description {
+    font-size: var(--text-body);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-8);
+    line-height: var(--line-relaxed);
+  }
+
+  .signup-form {
+    display: flex;
+    gap: var(--space-3);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .email-input {
+    flex: 1;
+    padding: var(--space-3) var(--space-4);
+    border: 2px solid var(--border-normal);
+    border-radius: var(--radius-md);
+    font-size: var(--text-body);
+    font-family: var(--font-primary);
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    transition: all var(--transition-normal) var(--easing-smooth);
+  }
+
+  .email-input:focus {
+    outline: none;
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.1), var(--glow-cyan);
+  }
+
+  .email-input::placeholder {
+    color: var(--text-tertiary);
+  }
+
+  .subscribe-button {
+    padding: var(--space-3) var(--space-8);
+    background: linear-gradient(135deg, var(--neon-magenta), var(--neon-cyan));
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: var(--text-body);
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    transition: all var(--transition-normal) var(--easing-smooth);
+    font-family: var(--font-primary);
+    white-space: nowrap;
+    box-shadow: var(--glow-magenta);
+  }
+
+  .subscribe-button:hover {
     transform: translateY(-2px);
-    color: var(--color-accent);
+    box-shadow: var(--glow-magenta-intense), var(--shadow-lg);
+  }
+
+  .subscribe-button:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .tribe-content h2 {
+      font-size: 2rem;
+    }
+
+    .tribe-content p {
+      font-size: 1rem;
+    }
+
+    .newsletter-signup h3 {
+      font-size: 1.5rem;
+    }
+
+    .signup-form {
+      flex-direction: column;
+    }
+
+    .subscribe-button {
+      width: 100%;
+    }
   }
 
   @media (max-width: 768px) {

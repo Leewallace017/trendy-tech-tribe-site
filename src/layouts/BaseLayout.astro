@@ -28,6 +28,26 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <link rel="icon" type="image/svg+xml" href="/logo.svg">
   <meta name="generator" content={Astro.generator}>
 
+  <!-- Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Initialize theme before page renders to prevent flash -->
+  <script is:inline>
+    function getInitialTheme() {
+      if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+        return localStorage.getItem('theme');
+      }
+      if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+        return 'light';
+      }
+      return 'dark';
+    }
+    const theme = getInitialTheme();
+    document.documentElement.setAttribute('data-theme', theme);
+  </script>
+
   <!-- SEO -->
   <title>{fullTitle}</title>
   <meta name="description" content={description}>
