@@ -16,6 +16,8 @@ const articleSchema = z.object({
   summary: z.string(),
   seoTitle: z.string(),
   seoDescription: z.string(),
+  image: z.string(),
+  imageAlt: z.string().optional(),
   featured: z.boolean().default(false),
   affiliateProducts: z.array(z.object({
     name: z.string(),

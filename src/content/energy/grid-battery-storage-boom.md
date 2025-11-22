@@ -7,6 +7,8 @@ type: "quick-take"
 summary: "The US added more grid battery capacity in Q3 2025 than the entire previous year combined, signaling a fundamental shift in how we manage electricity."
 seoTitle: "Grid Battery Storage Boom: What the Latest Numbers Mean"
 seoDescription: "US grid battery storage installations surged in 2025. Here's what this means for renewable energy, grid stability, and electricity costs."
+image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&h=630&fit=crop"
+imageAlt: "Large-scale battery energy storage facility with solar panels"
 featured: false
 ---
 

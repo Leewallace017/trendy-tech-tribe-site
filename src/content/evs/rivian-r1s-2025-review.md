@@ -7,6 +7,8 @@ type: "product-review"
 summary: "After three weeks with Rivian's flagship electric SUV, the R1S proves that purpose-built EVs can outclass traditional automakers' conversions—if you can stomach the price."
 seoTitle: "Rivian R1S 2025 Review: Best Electric SUV for Families"
 seoDescription: "Comprehensive Rivian R1S review covering real-world range, performance, build quality, and whether this $85K electric SUV is worth buying in 2025."
+image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1200&h=630&fit=crop"
+imageAlt: "Modern electric SUV on scenic mountain road"
 featured: false
 affiliateProducts: []
 ---

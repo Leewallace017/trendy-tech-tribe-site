@@ -7,6 +7,8 @@ type: "deep-dive"
 summary: "AI agents are moving from simple chat interfaces to autonomous systems that complete complex multi-step tasks. Here's what changed, what works today, and where the technology is heading."
 seoTitle: "AI Agents 2025 Guide: How Autonomous AI Actually Works"
 seoDescription: "Comprehensive guide to AI agents in 2025. Learn how autonomous AI systems work, what they can do today, and how to use them effectively in your workflow."
+image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop"
+imageAlt: "AI and robotics concept with neural networks and automation"
 featured: false
 ---
 

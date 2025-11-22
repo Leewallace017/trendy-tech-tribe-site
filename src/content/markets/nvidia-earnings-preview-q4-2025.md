@@ -7,6 +7,8 @@ type: "quick-take"
 summary: "Nvidia reports Q4 earnings next week. With AI infrastructure spending under scrutiny and competition heating up, this could be the most consequential earnings report of the year."
 seoTitle: "Nvidia Q4 2025 Earnings Preview: What to Watch"
 seoDescription: "Nvidia reports Q4 earnings amid AI spending questions. Here's what Wall Street is watching and why this report could reset AI stock valuations."
+image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=630&fit=crop"
+imageAlt: "Stock market data and financial charts on screens"
 featured: false
 ---
 

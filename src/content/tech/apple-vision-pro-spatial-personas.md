@@ -7,6 +7,8 @@ type: "quick-take"
 summary: "Apple's latest visionOS update brings Spatial Personas to Vision Pro, transforming how users collaborate in mixed reality environments."
 seoTitle: "Apple Vision Pro Spatial Personas: What You Need to Know"
 seoDescription: "Apple Vision Pro's new Spatial Personas feature changes virtual collaboration. Learn what it means for the future of remote work and spatial computing."
+image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=1200&h=630&fit=crop"
+imageAlt: "Person wearing Apple Vision Pro headset in modern office environment"
 featured: true
 ---
 

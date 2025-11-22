@@ -7,6 +7,8 @@ type: "best-list"
 summary: "We tested 15 pairs of wireless earbuds across all price ranges. Here are the top picks for sound quality, noise cancellation, battery life, and value."
 seoTitle: "Best Wireless Earbuds 2025: Top Picks Tested and Reviewed"
 seoDescription: "The best wireless earbuds for 2025 tested across all budgets. Find the perfect pair for sound quality, ANC, battery life, or best value under $100."
+image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=1200&h=630&fit=crop"
+imageAlt: "Premium wireless earbuds on modern desk with tech accessories"
 featured: false
 affiliateProducts: [
   { name: "Sony WF-1000XM5", url: "#", price: "$299" },
