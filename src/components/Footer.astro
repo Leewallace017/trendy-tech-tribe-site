@@ -1,0 +1,99 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Trendy Tech Tribe</h3>
+        <p>Your source for tech news, AI insights, EV updates, and product reviews.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="/tech">Tech & Innovation</a></li>
+          <li><a href="/ai">AI & Automation</a></li>
+          <li><a href="/evs">EVs & Mobility</a></li>
+          <li><a href="/energy">Energy & Policy</a></li>
+          <li><a href="/markets">Markets & Money</a></li>
+          <li><a href="/picks">Picks & Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/newsletter">Newsletter</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Trendy Tech Tribe. All rights reserved.</p>
+      <p class="disclosure">Some links may be affiliate links. We may earn a commission at no cost to you.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-text);
+    color: #f9fafb;
+    padding: var(--space-2xl) 0 var(--space-lg);
+    margin-top: var(--space-2xl);
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    color: #fff;
+    margin-bottom: var(--space-md);
+  }
+
+  .footer-section p {
+    color: #d1d5db;
+    line-height: 1.6;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer-section a {
+    color: #d1d5db;
+    transition: color 0.2s;
+  }
+
+  .footer-section a:hover {
+    color: #fff;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: var(--space-lg);
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.875rem;
+  }
+
+  .disclosure {
+    margin-top: var(--space-xs);
+    font-size: 0.75rem;
+  }
+</style>
