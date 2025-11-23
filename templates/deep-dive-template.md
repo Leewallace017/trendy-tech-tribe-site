@@ -1,28 +1,55 @@
 ---
 title: "[Topic]: A Deep Dive into [Specific Aspect]"
-date: "YYYY-MM-DD"
+date: "2025-11-22"  # TODAY'S date or later
 author: "Trendy Tech Tribe Staff"
 category: "[Category Name]"
 tags: ["analysis", "topic keyword", "industry"]
 type: "deep-dive"
 summary: "An in-depth analysis of [topic], exploring [key aspects] and what it means for [audience/industry]."
-seoTitle: "[Topic] Explained: [Key Benefit/Insight] in [Year]"
+seoTitle: "[Topic] Explained: [Key Benefit/Insight] in 2025"
 seoDescription: "Comprehensive analysis of [topic] covering [aspect 1], [aspect 2], and [aspect 3]. Understand the implications for [audience]."
-image: "https://images.unsplash.com/photo-XXXXXXXX"
+image: "https://..."
 imageAlt: "[Descriptive alt text related to topic]"
-imageCredit: "Photo by [Photographer Name] on Unsplash"
+imageCredit: "..."
 featured: false
 affiliateProducts: []
 sources:
   - title: "[Academic/Industry Source 1]"
-    url: "https://example.com"
+    url: "https://..."  # REAL working URLs only
   - title: "[News/Research Source 2]"
-    url: "https://example.com"
+    url: "https://..."
   - title: "[Expert Opinion Source 3]"
-    url: "https://example.com"
+    url: "https://..."
   - title: "[Data/Statistics Source 4]"
-    url: "https://example.com"
+    url: "https://..."
+  - title: "[Source 5+]"
+    url: "https://..."
 ---
+
+<!--
+IMAGE SOURCING FOR DEEP-DIVE/ANALYSIS:
+
+Prioritize conceptual/illustrative images:
+
+1. BEST: AI-generated conceptual visualization
+   - Prompt: "Abstract visualization of [concept], tech journalism style, professional"
+   - Example: "Neural network diagram, modern tech illustration"
+   - Example: "Data flowing through servers, abstract tech art"
+   - Credit: "AI Generated Image"
+
+2. GOOD: Infographic or data visualization
+   - Create chart/graph from data in article
+   - Or find relevant data viz from sources
+   - Credit accordingly
+
+3. ACCEPTABLE: Specific conceptual Unsplash
+   - Search for specific concept, not generic "tech"
+   - Example: "data center servers" for cloud article
+   - Example: "solar panel farm aerial" for energy article
+   - Credit: "Photo by [Name] on Unsplash"
+
+AVOID: Generic stock photos unrelated to analysis
+-->
 
 ## Key Takeaways
 

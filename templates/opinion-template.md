@@ -1,6 +1,6 @@
 ---
 title: "[Strong Opinion Statement/Question]"
-date: "YYYY-MM-DD"
+date: "2025-11-22"  # TODAY'S date or later
 author: "Trendy Tech Tribe Staff"
 category: "[Category Name]"
 tags: ["opinion", "analysis", "debate"]
@@ -8,19 +8,43 @@ type: "opinion"
 summary: "[Topic] has sparked debate. Here's our take on [controversial aspect] and why [strong position]."
 seoTitle: "Opinion: [Controversial Take] on [Topic]"
 seoDescription: "Our perspective on [topic] - why [position] and what it means for [industry/consumers/future]."
-image: "https://images.unsplash.com/photo-XXXXXXXX"
+image: "https://..."
 imageAlt: "[Image description relevant to opinion topic]"
-imageCredit: "Photo by [Photographer Name] on Unsplash"
+imageCredit: "..."
 featured: false
 affiliateProducts: []
 sources:
   - title: "[Supporting Source 1]"
-    url: "https://example.com"
+    url: "https://..."  # REAL URLs only
   - title: "[Counterargument Source]"
-    url: "https://example.com"
+    url: "https://..."
   - title: "[Context Source]"
-    url: "https://example.com"
+    url: "https://..."
 ---
+
+<!--
+IMAGE SOURCING FOR OPINION PIECES:
+
+Similar to deep-dive - conceptual/thematic:
+
+1. BEST: AI-generated thematic image
+   - Reflects the debate/controversy
+   - Example: "Two paths diverging, business decision concept"
+   - Example: "Balance scales, tech ethics concept art"
+   - Credit: "AI Generated Image"
+
+2. GOOD: Relevant news image if opinion is about specific event
+   - Company/product if opinion addresses it
+   - Credit appropriately (press release, etc.)
+
+3. ACCEPTABLE: Conceptual Unsplash
+   - Search for themes (debate, innovation, disruption, etc.)
+   - Avoid generic business stock photos
+   - Credit: "Photo by [Name] on Unsplash"
+
+NOTE: Opinion pieces should have distinctive images that signal "commentary"
+rather than straight news. Abstract/conceptual works well.
+-->
 
 ## The Argument in Brief
 
