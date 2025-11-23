@@ -3,6 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import AdSenseAnchor from '../components/AdSenseAnchor.astro';
+import AdSenseSidebar from '../components/AdSenseSidebar.astro';
 
 interface Props {
   title: string;
@@ -93,8 +94,14 @@ const schema = {
         <img src={image} alt={imageAlt || title} />
       </div>
 
-      <div class="article-content article-container">
-        <slot />
+      <div class="article-layout article-container">
+        <div class="article-content">
+          <slot />
+        </div>
+
+        <aside class="article-sidebar">
+          <AdSenseSidebar />
+        </aside>
       </div>
     </article>
   </main>
@@ -191,9 +198,22 @@ const schema = {
     border-color: var(--color-primary);
   }
 
+  .article-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: var(--space-2xl);
+    align-items: start;
+    max-width: 1200px;
+  }
+
   .article-content {
     font-size: 1.125rem;
     line-height: 1.8;
+    min-width: 0;
+  }
+
+  .article-sidebar {
+    display: block;
   }
 
   .article-content :global(h2) {
@@ -221,7 +241,22 @@ const schema = {
     color: var(--color-text-light);
   }
 
+  @media (max-width: 1024px) {
+    .article-layout {
+      grid-template-columns: 1fr 250px;
+      gap: var(--space-lg);
+    }
+  }
+
   @media (max-width: 768px) {
+    .article-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .article-sidebar {
+      display: none;
+    }
+
     .article-title {
       font-size: 2rem;
     }
