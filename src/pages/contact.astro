@@ -1,0 +1,292 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Contact - Trendy Tech Tribe"
+  description="Get in touch with Trendy Tech Tribe. We'd love to hear from you about tech news, product reviews, and collaboration opportunities."
+>
+  <Header />
+
+  <main>
+    <div class="container">
+      <section class="contact-hero">
+        <h1>Get in Touch</h1>
+        <p class="hero-description">Have a question, feedback, or collaboration idea? We'd love to hear from you.</p>
+      </section>
+
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="info-card">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+            </div>
+            <h2>Email Us</h2>
+            <p>For general inquiries, partnership opportunities, or feedback:</p>
+            <a href="mailto:contact@trendytechtribe.com" class="email-link">contact@trendytechtribe.com</a>
+          </div>
+
+          <div class="info-card">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h2>Join the Tribe</h2>
+            <p>Stay updated with the latest tech news, AI insights, and product reviews:</p>
+            <a href="/#newsletter" class="cta-link">Subscribe to Newsletter</a>
+          </div>
+
+          <div class="info-card">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <h2>What We Cover</h2>
+            <ul class="topics-list">
+              <li>Tech & Innovation</li>
+              <li>AI & Automation</li>
+              <li>EVs & Mobility</li>
+              <li>Energy & Policy</li>
+              <li>Markets & Money</li>
+              <li>Product Reviews & Picks</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="response-note">
+          <h3>Response Time</h3>
+          <p>We typically respond to emails within 24-48 hours during business days. For urgent matters, please indicate so in your subject line.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .contact-hero {
+    text-align: center;
+    padding: var(--space-24) 0 var(--space-16);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .contact-hero h1 {
+    font-family: var(--font-display);
+    font-size: var(--text-display);
+    font-weight: var(--weight-black);
+    margin-bottom: var(--space-6);
+    background: var(--gradient-text-neon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: var(--tracking-tight);
+  }
+
+  .hero-description {
+    font-size: var(--text-body-xl);
+    color: var(--text-secondary);
+    line-height: var(--line-relaxed);
+    max-width: 65ch;
+    margin: 0 auto;
+  }
+
+  .contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: var(--space-24);
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-8);
+    margin-bottom: var(--space-16);
+  }
+
+  .info-card {
+    position: relative;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: var(--space-10);
+    text-align: center;
+    transition: all var(--transition-normal) var(--easing-smooth);
+    overflow: hidden;
+  }
+
+  .info-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-glow);
+    opacity: 0;
+    transition: opacity var(--transition-normal) var(--easing-smooth);
+    pointer-events: none;
+  }
+
+  .info-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-glow);
+    box-shadow: var(--glow-soft), var(--shadow-lg);
+  }
+
+  .info-card:hover::before {
+    opacity: 0.1;
+  }
+
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--space-6);
+    border-radius: var(--radius-full);
+    background: var(--gradient-bg);
+    border: 2px solid var(--border-bright);
+    color: var(--neon-cyan);
+    box-shadow: var(--glow-cyan);
+  }
+
+  .info-card h2 {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-4);
+    color: var(--text-primary);
+  }
+
+  .info-card p {
+    font-size: var(--text-body);
+    color: var(--text-secondary);
+    line-height: var(--line-relaxed);
+    margin-bottom: var(--space-6);
+  }
+
+  .email-link {
+    display: inline-block;
+    font-size: var(--text-body-lg);
+    font-weight: var(--weight-semibold);
+    color: var(--neon-cyan);
+    padding: var(--space-4) var(--space-6);
+    border: 2px solid var(--neon-cyan);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-normal) var(--easing-smooth);
+    box-shadow: var(--glow-cyan);
+  }
+
+  .email-link:hover {
+    background: var(--neon-cyan);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6), var(--shadow-lg);
+  }
+
+  .cta-link {
+    display: inline-block;
+    font-size: var(--text-body);
+    font-weight: var(--weight-semibold);
+    color: white;
+    background: linear-gradient(135deg, var(--neon-magenta), var(--neon-cyan));
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-normal) var(--easing-smooth);
+    box-shadow: var(--glow-magenta);
+  }
+
+  .cta-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-magenta-intense), var(--shadow-lg);
+    color: white;
+  }
+
+  .topics-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .topics-list li {
+    font-size: var(--text-body);
+    color: var(--text-secondary);
+    padding: var(--space-2) var(--space-4);
+    margin-bottom: var(--space-2);
+    border-left: 3px solid var(--neon-cyan);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-normal) var(--easing-smooth);
+  }
+
+  .topics-list li:hover {
+    border-left-color: var(--neon-magenta);
+    background: var(--bg-secondary);
+    transform: translateX(4px);
+  }
+
+  .response-note {
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(180, 74, 255, 0.3);
+    border-radius: var(--radius-xl);
+    padding: var(--space-10);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .response-note h3 {
+    font-size: var(--text-h4);
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-4);
+  }
+
+  .response-note p {
+    font-size: var(--text-body);
+    color: var(--text-secondary);
+    line-height: var(--line-relaxed);
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .contact-hero h1 {
+      font-size: var(--text-h1);
+    }
+
+    .hero-description {
+      font-size: var(--text-body-lg);
+    }
+
+    .contact-info {
+      grid-template-columns: 1fr;
+    }
+
+    .info-card {
+      padding: var(--space-8);
+    }
+
+    .icon {
+      width: 64px;
+      height: 64px;
+    }
+
+    .icon svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+</style>
