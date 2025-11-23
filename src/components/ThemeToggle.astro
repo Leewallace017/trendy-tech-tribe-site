@@ -17,9 +17,10 @@
     if (!themeToggle) return;
 
     // Get initial theme from localStorage or system preference
-    const getTheme = () => {
-      if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-        return localStorage.getItem('theme');
+    const getTheme = (): string => {
+      if (typeof localStorage !== 'undefined') {
+        const stored = localStorage.getItem('theme');
+        if (stored) return stored;
       }
       if (window.matchMedia('(prefers-color-scheme: light)').matches) {
         return 'light';
