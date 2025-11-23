@@ -1,0 +1,61 @@
+---
+/**
+ * Google AdSense Sidebar Ad Component
+ * Sticky sidebar ad for desktop views
+ */
+interface Props {
+  slot?: string; // AdSense slot ID (to be provided after AdSense approval)
+}
+
+const { slot = 'YOUR_AD_SLOT_ID' } = Astro.props;
+---
+
+<div class="adsense-sidebar">
+  <div class="ad-label">Advertisement</div>
+  <!-- Google AdSense Sidebar Ad -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-format="rectangle"
+       data-ad-client="ca-pub-1313072084978240"
+       data-ad-slot={slot}></ins>
+</div>
+
+<script is:inline>
+  if (typeof window !== 'undefined') {
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }
+</script>
+
+<style>
+  .adsense-sidebar {
+    position: sticky;
+    top: 2rem;
+    padding: 1rem;
+    background-color: var(--bg-secondary, #f5f5f5);
+    border-radius: 8px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ad-label {
+    font-size: 0.75rem;
+    color: var(--text-muted, #666);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .adsense-sidebar {
+      display: none; /* Hide sidebar ads on mobile */
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .adsense-sidebar {
+      background-color: var(--bg-secondary, #1a1a1a);
+    }
+  }
+</style>

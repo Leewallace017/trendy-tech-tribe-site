@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import AdSenseHead from '../components/AdSenseHead.astro';
 
 interface Props {
   title: string;
@@ -27,6 +28,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/logo.svg">
   <meta name="generator" content={Astro.generator}>
+
+  <!-- Google AdSense -->
+  <AdSenseHead />
 
   <!-- Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

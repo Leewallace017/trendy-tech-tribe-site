@@ -3,6 +3,7 @@ import { defineCollection, z } from 'astro:content';
 const articleSchema = z.object({
   title: z.string(),
   date: z.string(),
+  author: z.string().default('Trendy Tech Tribe Staff'),
   category: z.enum([
     'Tech & Innovation',
     'AI & Automation',
@@ -18,11 +19,16 @@ const articleSchema = z.object({
   seoDescription: z.string(),
   image: z.string(),
   imageAlt: z.string().optional(),
+  imageCredit: z.string().optional(),
   featured: z.boolean().default(false),
   affiliateProducts: z.array(z.object({
     name: z.string(),
     url: z.string(),
     price: z.string().optional()
+  })).optional().default([]),
+  sources: z.array(z.object({
+    title: z.string(),
+    url: z.string()
   })).optional().default([])
 });
 

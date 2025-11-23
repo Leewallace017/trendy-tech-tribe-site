@@ -8,7 +8,9 @@
       "Bash(npm run dev:*)",
       "Bash(find:*)",
       "Bash(node:*)",
-      "Bash(lsof:*)"
+      "Bash(lsof:*)",
+      "Bash(gh auth status:*)",
+      "Bash(gh repo create:*)"
     ],
     "deny": [],
     "ask": []

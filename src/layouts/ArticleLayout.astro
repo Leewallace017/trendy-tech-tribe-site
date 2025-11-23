@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import AdSenseAnchor from '../components/AdSenseAnchor.astro';
 
 interface Props {
   title: string;
@@ -99,6 +100,9 @@ const schema = {
   </main>
 
   <Footer />
+
+  <!-- AdSense Anchor Ad (Mobile only) -->
+  <AdSenseAnchor />
 
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 </BaseLayout>
