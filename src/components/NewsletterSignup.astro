@@ -4,17 +4,77 @@
 <div class="newsletter-signup">
   <h3>Get Weekly Tech Insights</h3>
   <p class="signup-description">Join thousands staying ahead of the curve. Get curated tech news, AI updates, and product reviews delivered to your inbox.</p>
-  <form class="signup-form" action="/api/subscribe" method="POST">
-    <input
-      type="email"
-      name="email"
-      placeholder="Enter your email address"
-      required
-      class="email-input"
-    />
-    <button type="submit" class="subscribe-button">Subscribe</button>
+  <form class="signup-form" id="newsletter-signup-form">
+    <div class="input-wrapper">
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email address"
+        required
+        class="email-input"
+      />
+      <button type="submit" class="subscribe-button">Subscribe</button>
+    </div>
+    <div id="signup-message" class="form-message"></div>
   </form>
 </div>
+
+<script>
+  const form = document.getElementById('newsletter-signup-form') as HTMLFormElement;
+  const messageDiv = document.getElementById('signup-message');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const email = formData.get('email');
+      const submitBtn = form.querySelector('.subscribe-button') as HTMLButtonElement;
+      
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Subscribing...';
+      }
+
+      if (messageDiv) {
+        messageDiv.textContent = '';
+        messageDiv.className = 'form-message';
+      }
+
+      try {
+        const response = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        });
+
+        const data = await response.json();
+
+        if (messageDiv) {
+          messageDiv.textContent = data.message;
+          if (response.ok) {
+            messageDiv.classList.add('success');
+            form.reset();
+          } else {
+            messageDiv.classList.add('error');
+          }
+        }
+      } catch (error) {
+        if (messageDiv) {
+          messageDiv.textContent = 'Something went wrong. Please try again.';
+          messageDiv.classList.add('error');
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Subscribe';
+        }
+      }
+    });
+  }
+</script>
 
 <style>
   .newsletter-signup {
@@ -43,10 +103,13 @@
   }
 
   .signup-form {
-    display: flex;
-    gap: var(--space-3);
     max-width: 500px;
     margin: 0 auto;
+  }
+
+  .input-wrapper {
+    display: flex;
+    gap: var(--space-3);
   }
 
   .email-input {
@@ -95,12 +158,33 @@
     transform: translateY(0);
   }
 
+  .subscribe-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .form-message {
+    margin-top: var(--space-4);
+    font-size: var(--text-body-sm);
+    min-height: 1.5em;
+    transition: all var(--transition-normal);
+  }
+
+  .form-message.success {
+    color: var(--color-success);
+  }
+
+  .form-message.error {
+    color: var(--color-error);
+  }
+
   @media (max-width: 768px) {
     .newsletter-signup h3 {
       font-size: 1.5rem;
     }
 
-    .signup-form {
+    .input-wrapper {
       flex-direction: column;
     }
 

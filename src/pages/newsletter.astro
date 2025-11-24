@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
+---
+
+<BaseLayout
+  title="Newsletter | Trendy Tech Tribe"
+  description="Subscribe to the Trendy Tech Tribe newsletter for weekly tech insights, AI updates, and product reviews."
+>
+  <main class="newsletter-page">
+    <div class="container">
+      <div class="newsletter-hero">
+        <h1>Stay Ahead of the Curve</h1>
+        <p>Join our community of tech enthusiasts and get the latest insights delivered directly to your inbox.</p>
+      </div>
+      
+      <div class="signup-wrapper">
+        <NewsletterSignup />
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="icon">🚀</div>
+          <h3>Tech Trends</h3>
+          <p>Be the first to know about emerging technologies and industry shifts.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon">🤖</div>
+          <h3>AI Updates</h3>
+          <p>Weekly breakdowns of the latest developments in Artificial Intelligence.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon">⚡</div>
+          <h3>Energy & EVs</h3>
+          <p>In-depth coverage of the green energy revolution and electric vehicles.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .newsletter-page {
+    padding: var(--space-24) 0;
+    min-height: 80vh;
+  }
+
+  .newsletter-hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--space-16);
+  }
+
+  .newsletter-hero h1 {
+    font-family: var(--font-display);
+    font-size: var(--text-display);
+    margin-bottom: var(--space-6);
+    background: var(--gradient-text-neon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .newsletter-hero p {
+    font-size: var(--text-body-xl);
+    color: var(--text-secondary);
+  }
+
+  .signup-wrapper {
+    margin-bottom: var(--space-24);
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-8);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .benefit-card {
+    background: var(--bg-secondary);
+    padding: var(--space-8);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-subtle);
+    text-align: center;
+    transition: transform var(--transition-normal);
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-glow);
+  }
+
+  .icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-4);
+  }
+
+  .benefit-card h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+  }
+
+  @media (max-width: 768px) {
+    .newsletter-hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .newsletter-page {
+      padding: var(--space-12) 0;
+    }
+  }
+</style>
