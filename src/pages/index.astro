@@ -124,7 +124,23 @@ const categoryMap: Record<string, string> = {
           <h2>Join the Tribe</h2>
           <p>Trendy Tech Tribe is here to help you navigate the fast-paced universe of technology. From revealing the latest gadgets to decoding complex tech trends, we empower our tribe with the knowledge they need to stay ahead of the curve.</p>
           <div class="tribe-image">
-            <img src="/join-the-tribe.png" alt="Join the Trendy Tech Tribe community" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="/images/optimized/join-the-tribe-small.webp 640w,
+                        /images/optimized/join-the-tribe-medium.webp 1024w,
+                        /images/optimized/join-the-tribe.webp 1456w"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 900px, 900px"
+              />
+              <img
+                src="/images/optimized/join-the-tribe.webp"
+                alt="Join the Trendy Tech Tribe community"
+                loading="lazy"
+                decoding="async"
+                width="1456"
+                height="832"
+              />
+            </picture>
           </div>
           <NewsletterSignup />
         </div>

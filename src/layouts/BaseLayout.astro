@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
+import GoogleConsentMode from '../components/GoogleConsentMode.astro';
 import AdSenseHead from '../components/AdSenseHead.astro';
+import ConsentBanner from '../components/ConsentBanner.astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
 
 interface Props {
@@ -30,13 +32,23 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <link rel="icon" type="image/svg+xml" href="/images/logos/logo.svg">
   <meta name="generator" content={Astro.generator}>
 
+  <!-- Google Consent Mode (must load before ads/analytics) -->
+  <GoogleConsentMode />
+
   <!-- Google AdSense -->
   <AdSenseHead />
 
   <!-- Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </noscript>
+
+  <!-- Preconnect to ad networks for better performance -->
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+  <link rel="preconnect" href="https://fundingchoicesmessages.google.com">
 
   <!-- Initialize theme before page renders to prevent flash -->
   <script is:inline>
@@ -74,6 +86,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 </head>
 <body>
   <slot />
+  <ConsentBanner />
   <SpeedInsights />
 </body>
 </html>
