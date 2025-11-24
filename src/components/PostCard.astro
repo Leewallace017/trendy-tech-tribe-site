@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
+import { optimizeUnsplashUrl, getUnsplashSrcset } from '../utils/imageOptimization';
 
 interface Props {
   post: CollectionEntry<'tech' | 'ai' | 'evs' | 'energy' | 'markets' | 'picks'>;
@@ -8,11 +9,27 @@ interface Props {
 }
 
 const { post, categorySlug } = Astro.props;
+const isUnsplash = post.data.image.includes('unsplash.com');
+const optimizedSrc = isUnsplash ? optimizeUnsplashUrl(post.data.image, 800) : post.data.image;
+const srcset = isUnsplash ? getUnsplashSrcset(post.data.image) : '';
 ---
 
 <article class="post-card">
   <a href={`/${categorySlug}/${post.slug}`} class="post-image">
-    <Image src={post.data.image} alt={post.data.imageAlt || post.data.title} width={600} height={338} loading="lazy" decoding="async" />
+    {isUnsplash ? (
+      <img
+        src={optimizedSrc}
+        srcset={srcset}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 400px, 400px"
+        alt={post.data.imageAlt || post.data.title}
+        width="600"
+        height="338"
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <Image src={post.data.image} alt={post.data.imageAlt || post.data.title} width={600} height={338} loading="lazy" decoding="async" />
+    )}
   </a>
   <div class="post-content">
     <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
