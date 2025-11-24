@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 ---
 
@@ -7,6 +9,7 @@ import NewsletterSignup from '../components/NewsletterSignup.astro';
   title="Newsletter | Trendy Tech Tribe"
   description="Subscribe to the Trendy Tech Tribe newsletter for weekly tech insights, AI updates, and product reviews."
 >
+  <Header />
   <main class="newsletter-page">
     <div class="container">
       <div class="newsletter-hero">
@@ -37,6 +40,8 @@ import NewsletterSignup from '../components/NewsletterSignup.astro';
       </div>
     </div>
   </main>
+
+  <Footer />
 </BaseLayout>
 
 <style>
