@@ -14,15 +14,15 @@ imageCredit: "Photo by freestocks on Unsplash"
 featured: false
 affiliateProducts:
   - name: "Amazon Echo Dot (5th Gen)"
-    url: "https://amazon.com/dp/B09B8V1LZ3?tag=trendytecht0a-20"
+    url: "https://www.amazon.com/dp/B09B8V1LZ3?tag=trendytecht0a-20"
   - name: "Anker PowerCore 20,000mAh Power Bank"
-    url: "https://amazon.com/dp/B00X5RV14Y?tag=trendytecht0a-20"
+    url: "https://www.amazon.com/dp/B00X5RV14Y?tag=trendytecht0a-20"
   - name: "Tile Mate Bluetooth Tracker (4-Pack)"
-    url: "https://amazon.com/dp/B09B2WLB62?tag=trendytecht0a-20"
+    url: "https://www.amazon.com/dp/B09B2WLB62?tag=trendytecht0a-20"
   - name: "Roku Streaming Stick 4K"
-    url: "https://amazon.com/dp/B09BKCDXZC?tag=trendytecht0a-20"
+    url: "https://www.amazon.com/dp/B09BKCDXZC?tag=trendytecht0a-20"
   - name: "Logitech MX Master 3S Wireless Mouse"
-    url: "https://amazon.com/dp/B09HM94VDS?tag=trendytecht0a-20"
+    url: "https://www.amazon.com/dp/B09HM94VDS?tag=trendytecht0a-20"
 sources:
   - title: "Wirecutter Holiday Gift Guide 2025"
     url: "https://www.nytimes.com/wirecutter/gifts/"
@@ -52,7 +52,7 @@ When shopping for tech gifts under $100, these factors separate winners from clu
 
 **Rating: 8.5/10**
 
-[View on Amazon](https://amazon.com/dp/B09B8V1LZ3?tag=trendytecht0a-20)
+[View on Amazon](https://www.amazon.com/dp/B09B8V1LZ3?tag=trendytecht0a-20)
 
 **Key Features:**
 - Improved audio quality with clearer vocals and deeper bass
@@ -80,7 +80,7 @@ When shopping for tech gifts under $100, these factors separate winners from clu
 
 **Rating: 9/10**
 
-[View on Amazon](https://amazon.com/dp/B00X5RV14Y?tag=trendytecht0a-20)
+[View on Amazon](https://www.amazon.com/dp/B00X5RV14Y?tag=trendytecht0a-20)
 
 **Key Features:**
 - 20,000mAh capacity (charges iPhone 14 about 4 times)
@@ -108,7 +108,7 @@ When shopping for tech gifts under $100, these factors separate winners from clu
 
 **Rating: 8/10**
 
-[View on Amazon](https://amazon.com/dp/B09B2WLB62?tag=trendytecht0a-20)
+[View on Amazon](https://www.amazon.com/dp/B09B2WLB62?tag=trendytecht0a-20)
 
 **Key Features:**
 - 250-foot Bluetooth range
@@ -136,7 +136,7 @@ When shopping for tech gifts under $100, these factors separate winners from clu
 
 **Rating: 9/10**
 
-[View on Amazon](https://amazon.com/dp/B09BKCDXZC?tag=trendytecht0a-20)
+[View on Amazon](https://www.amazon.com/dp/B09BKCDXZC?tag=trendytecht0a-20)
 
 **Key Features:**
 - 4K HDR10+ streaming
@@ -164,7 +164,7 @@ When shopping for tech gifts under $100, these factors separate winners from clu
 
 **Rating: 9.5/10**
 
-[View on Amazon](https://amazon.com/dp/B09HM94VDS?tag=trendytecht0a-20)
+[View on Amazon](https://www.amazon.com/dp/B09HM94VDS?tag=trendytecht0a-20)
 
 **Key Features:**
 - Electromagnetic scrolling (quiet, precise)
@@ -272,9 +272,9 @@ For maximum impact:
 - **Premium feel**: Logitech MX Master 3S - Feels more expensive than it is
 
 **Our Top Recommendations:**
-1. **Most Recipients**: Echo Dot 5th Gen ([View on Amazon](https://amazon.com/dp/B09B8V1LZ3?tag=trendytecht0a-20))
-2. **Travelers**: Anker PowerCore 20K ([View on Amazon](https://amazon.com/dp/B00X5RV14Y?tag=trendytecht0a-20))
-3. **Budget Hero**: Tile Mate 4-Pack ([View on Amazon](https://amazon.com/dp/B09B2WLB62?tag=trendytecht0a-20))
+1. **Most Recipients**: Echo Dot 5th Gen ([View on Amazon](https://www.amazon.com/dp/B09B8V1LZ3?tag=trendytecht0a-20))
+2. **Travelers**: Anker PowerCore 20K ([View on Amazon](https://www.amazon.com/dp/B00X5RV14Y?tag=trendytecht0a-20))
+3. **Budget Hero**: Tile Mate 4-Pack ([View on Amazon](https://www.amazon.com/dp/B09B2WLB62?tag=trendytecht0a-20))
 
 ---
 
