@@ -186,12 +186,21 @@ When shopping for [product category], these factors matter most:
 
 ## Comparison Table
 
+<!-- Use this format for product-focused comparison tables -->
+| Product | Price Range | Category | Key Feature | Battery/Power | Best For | Rating |
+|---------|-------------|----------|-------------|---------------|----------|--------|
+| **[Full Product Name 1]** | $XX-XX | [Category] | [Standout feature] | [Battery details] | [Target audience] | X/10 |
+| **[Full Product Name 2]** | $XX-XX | [Category] | [Standout feature] | [Battery details] | [Target audience] | X/10 |
+| **[Full Product Name 3]** | $XX-XX | [Category] | [Standout feature] | [Battery details] | [Target audience] | X/10 |
+| **[Full Product Name 4]** | $XX-XX | [Category] | [Standout feature] | [Battery details] | [Target audience] | X/10 |
+
+<!-- Alternative: Use this format for feature-focused comparison across products -->
 | Feature | Product 1 | Product 2 | Product 3 | Product 4 |
 |---------|-----------|-----------|-----------|-----------|
 | **[Key Spec 1]** | X | X | X | X |
 | **[Key Spec 2]** | X | X | X | X |
 | **[Key Spec 3]** | X | X | X | X |
-| **Price Range** | Mid | Budget | Premium | Mid |
+| **Price Range** | $XX-XX | $XX-XX | $XX-XX | $XX-XX |
 | **Rating** | X/10 | X/10 | X/10 | X/10 |
 | **Best For** | Most users | Budget buyers | Premium buyers | [Niche use] |
 

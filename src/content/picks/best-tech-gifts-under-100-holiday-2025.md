@@ -193,13 +193,13 @@ When shopping for tech gifts under $100, these factors separate winners from clu
 
 ## Comparison Table
 
-| Product | Category | Best Feature | Battery Life | Ideal Recipient |
-|---------|----------|--------------|--------------|-----------------|
-| **Echo Dot 5th Gen** | Smart Home | Temperature sensor | Plugged in | Smart home beginners |
-| **Anker PowerCore** | Power | 20,000mAh capacity | N/A (it is the battery) | Travelers |
-| **Tile Mate 4-Pack** | Tracking | 4-pack value | 1 year (replaceable) | Forgetful people |
-| **Roku Stick 4K** | Entertainment | Platform-agnostic | Plugged in | Streaming fans |
-| **MX Master 3S** | Productivity | Ergonomic design | 70 days | Office workers |
+| Product | Price Range | Category | Key Feature | Battery/Power | Best For | Rating |
+|---------|-------------|----------|-------------|---------------|----------|--------|
+| **Amazon Echo Dot (5th Gen)** | $30-$50 | Smart Home | Temperature sensor & improved audio | AC powered | Smart home beginners | 8.5/10 |
+| **Anker PowerCore 20K** | $40-$60 | Power Bank | 20,000mAh capacity | Charges 4+ phones | Frequent travelers | 9/10 |
+| **Tile Mate (4-Pack)** | $50-$70 | Bluetooth Tracker | 4-pack value bundle | 1 year (replaceable battery) | Forgetful people | 8/10 |
+| **Roku Streaming Stick 4K** | $35-$50 | Streaming Device | Platform-agnostic streaming | AC powered | Streaming enthusiasts | 9/10 |
+| **Logitech MX Master 3S** | $85-$100 | Wireless Mouse | Ergonomic design & multi-device | 70 days per charge | Office workers & designers | 9.5/10 |
 
 ## Buying Guide
 

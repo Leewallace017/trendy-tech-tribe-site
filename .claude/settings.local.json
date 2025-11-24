@@ -10,7 +10,8 @@
       "Bash(node:*)",
       "Bash(lsof:*)",
       "Bash(gh auth status:*)",
-      "Bash(gh repo create:*)"
+      "Bash(gh repo create:*)",
+      "Bash(npm run generate-image:*)"
     ],
     "deny": [],
     "ask": []

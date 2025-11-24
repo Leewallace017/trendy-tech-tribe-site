@@ -1,0 +1,543 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="About - Trendy Tech Tribe"
+  description="Learn about Trendy Tech Tribe, your trusted source for tech news, AI insights, EV updates, energy policy, market analysis, and honest product reviews."
+>
+  <Header />
+
+  <main>
+    <div class="container">
+      <section class="about-hero">
+        <h1>About Trendy Tech Tribe</h1>
+        <p class="hero-description">We're on a mission to decode the future of technology, one story at a time.</p>
+      </section>
+
+      <div class="about-content">
+        <section class="mission-section">
+          <div class="section-content">
+            <div class="icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h2>Our Mission</h2>
+            <p>In a world where technology moves at the speed of light, staying informed shouldn't be overwhelming. Trendy Tech Tribe cuts through the noise to bring you clear, insightful coverage of the innovations shaping our future.</p>
+            <p>We believe technology should empower, not intimidate. That's why we break down complex topics into digestible insights, helping our tribe navigate everything from AI breakthroughs to the latest gadgets with confidence.</p>
+          </div>
+        </section>
+
+        <section class="coverage-grid">
+          <div class="coverage-card">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2" ry="2"/>
+                <path d="M9 22v-4h6v4"/>
+                <path d="M8 6h.01"/>
+                <path d="M16 6h.01"/>
+                <path d="M12 6h.01"/>
+                <path d="M12 10h.01"/>
+                <path d="M12 14h.01"/>
+                <path d="M16 10h.01"/>
+                <path d="M16 14h.01"/>
+                <path d="M8 10h.01"/>
+                <path d="M8 14h.01"/>
+              </svg>
+            </div>
+            <h3>Tech & Innovation</h3>
+            <p>From breakthrough inventions to industry disruptions, we cover the innovations reshaping how we live and work.</p>
+          </div>
+
+          <div class="coverage-card">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h-2a5 5 0 0 0-5-5h-4a5 5 0 0 0-5 5H3a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/>
+                <path d="M14 22v-4a2 2 0 0 0-2-2h-0a2 2 0 0 0-2 2v4"/>
+                <path d="M18 14h.01"/>
+                <path d="M6 14h.01"/>
+              </svg>
+            </div>
+            <h3>AI & Automation</h3>
+            <p>Exploring how artificial intelligence is transforming industries, workplaces, and daily life with clarity and context.</p>
+          </div>
+
+          <div class="coverage-card">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+                <circle cx="7" cy="17" r="2"/>
+                <circle cx="17" cy="17" r="2"/>
+              </svg>
+            </div>
+            <h3>EVs & Mobility</h3>
+            <p>Tracking the electric vehicle revolution and the future of sustainable transportation.</p>
+          </div>
+
+          <div class="coverage-card">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <h3>Markets & Money</h3>
+            <p>Decoding tech markets, startup funding, and the business side of innovation.</p>
+          </div>
+
+          <div class="coverage-card">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3>Energy & Policy</h3>
+            <p>Analyzing renewable energy trends and the policies driving the clean energy transition.</p>
+          </div>
+
+          <div class="coverage-card">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+              </svg>
+            </div>
+            <h3>Picks & Reviews</h3>
+            <p>Honest, hands-on reviews of the latest gadgets, tools, and tech products worth your attention.</p>
+          </div>
+        </section>
+
+        <section class="values-section">
+          <h2>What Sets Us Apart</h2>
+          <div class="values-grid">
+            <div class="value-item">
+              <div class="value-number">01</div>
+              <h3>Clear & Accessible</h3>
+              <p>We translate tech jargon into plain language, making complex innovations understandable for everyone.</p>
+            </div>
+            <div class="value-item">
+              <div class="value-number">02</div>
+              <h3>Unbiased Insights</h3>
+              <p>Our reviews and analysis are honest and independent, free from corporate influence.</p>
+            </div>
+            <div class="value-item">
+              <div class="value-number">03</div>
+              <h3>Future-Focused</h3>
+              <p>We don't just report on technology—we explore what it means for your future.</p>
+            </div>
+            <div class="value-item">
+              <div class="value-number">04</div>
+              <h3>Community-Driven</h3>
+              <p>Our tribe is at the heart of everything we do. We listen, learn, and grow together.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="join-cta">
+          <div class="cta-content">
+            <h2>Join the Tribe</h2>
+            <p>Stay ahead of the curve with weekly insights delivered straight to your inbox. Join thousands of tech enthusiasts who trust Trendy Tech Tribe to keep them informed.</p>
+            <div class="cta-buttons">
+              <a href="/#newsletter" class="btn-primary">Subscribe to Newsletter</a>
+              <a href="/contact" class="btn-secondary">Get in Touch</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .about-hero {
+    text-align: center;
+    padding: var(--space-24) 0 var(--space-16);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .about-hero h1 {
+    font-family: var(--font-display);
+    font-size: var(--text-display);
+    font-weight: var(--weight-black);
+    margin-bottom: var(--space-6);
+    background: var(--gradient-text-neon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: var(--tracking-tight);
+  }
+
+  .hero-description {
+    font-size: var(--text-body-xl);
+    color: var(--text-secondary);
+    line-height: var(--line-relaxed);
+    max-width: 65ch;
+    margin: 0 auto;
+  }
+
+  .about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: var(--space-24);
+  }
+
+  /* Mission Section */
+  .mission-section {
+    margin-bottom: var(--space-20);
+    position: relative;
+    background: var(--gradient-bg);
+    border: 1px solid var(--border-bright);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-16);
+    overflow: hidden;
+    box-shadow: var(--glow-soft), var(--shadow-xl);
+  }
+
+  .mission-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-glow);
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .section-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto var(--space-8);
+    border-radius: var(--radius-full);
+    background: var(--gradient-bg);
+    border: 3px solid var(--border-bright);
+    color: var(--neon-cyan);
+    box-shadow: var(--glow-cyan-intense);
+  }
+
+  .mission-section h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-h1);
+    font-weight: var(--weight-black);
+    margin-bottom: var(--space-6);
+    background: var(--gradient-text-neon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .mission-section p {
+    font-size: var(--text-body-lg);
+    color: var(--text-secondary);
+    line-height: var(--line-relaxed);
+    margin-bottom: var(--space-6);
+  }
+
+  .mission-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Coverage Grid */
+  .coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-8);
+    margin-bottom: var(--space-20);
+  }
+
+  .coverage-card {
+    position: relative;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: var(--space-10);
+    text-align: center;
+    transition: all var(--transition-normal) var(--easing-smooth);
+    overflow: hidden;
+  }
+
+  .coverage-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-glow);
+    opacity: 0;
+    transition: opacity var(--transition-normal) var(--easing-smooth);
+    pointer-events: none;
+  }
+
+  .coverage-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-glow);
+    box-shadow: var(--glow-soft), var(--shadow-lg);
+  }
+
+  .coverage-card:hover::before {
+    opacity: 0.1;
+  }
+
+  .card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--space-6);
+    border-radius: var(--radius-full);
+    background: var(--gradient-bg);
+    border: 2px solid var(--border-bright);
+    color: var(--neon-magenta);
+    box-shadow: var(--glow-magenta);
+    transition: all var(--transition-normal) var(--easing-smooth);
+  }
+
+  .coverage-card:hover .card-icon {
+    transform: scale(1.1);
+    box-shadow: var(--glow-magenta-intense);
+  }
+
+  .coverage-card h3 {
+    font-size: var(--text-h4);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-4);
+    color: var(--text-primary);
+  }
+
+  .coverage-card p {
+    font-size: var(--text-body);
+    color: var(--text-secondary);
+    line-height: var(--line-relaxed);
+    margin: 0;
+  }
+
+  /* Values Section */
+  .values-section {
+    margin-bottom: var(--space-20);
+  }
+
+  .values-section h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-h1);
+    font-weight: var(--weight-black);
+    text-align: center;
+    margin-bottom: var(--space-12);
+    background: var(--gradient-text-neon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-10);
+  }
+
+  .value-item {
+    position: relative;
+    padding: var(--space-8);
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(180, 74, 255, 0.3);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-normal) var(--easing-smooth);
+  }
+
+  .value-item:hover {
+    transform: translateY(-4px);
+    border-color: var(--neon-cyan);
+    box-shadow: var(--glow-cyan), var(--shadow-lg);
+  }
+
+  .value-number {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: var(--weight-black);
+    background: var(--gradient-text-neon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: var(--space-4);
+    line-height: 1;
+  }
+
+  .value-item h3 {
+    font-size: var(--text-h4);
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+  }
+
+  .value-item p {
+    font-size: var(--text-body);
+    color: var(--text-secondary);
+    line-height: var(--line-relaxed);
+    margin: 0;
+  }
+
+  /* Join CTA */
+  .join-cta {
+    position: relative;
+    background: var(--gradient-bg);
+    border: 1px solid var(--border-bright);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-16);
+    text-align: center;
+    overflow: hidden;
+    box-shadow: var(--glow-soft), var(--shadow-xl);
+  }
+
+  .join-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-glow);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-h1);
+    font-weight: var(--weight-black);
+    margin-bottom: var(--space-6);
+    background: var(--gradient-text-neon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .cta-content p {
+    font-size: var(--text-body-lg);
+    color: var(--text-secondary);
+    line-height: var(--line-relaxed);
+    margin-bottom: var(--space-8);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: var(--space-4) var(--space-8);
+    background: linear-gradient(135deg, var(--neon-magenta), var(--neon-cyan));
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-body-lg);
+    transition: all var(--transition-normal) var(--easing-smooth);
+    box-shadow: var(--glow-magenta);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    color: white;
+    box-shadow: var(--glow-magenta-intense), var(--shadow-lg);
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    padding: var(--space-4) var(--space-8);
+    background: transparent;
+    color: var(--neon-cyan);
+    border: 2px solid var(--neon-cyan);
+    border-radius: var(--radius-md);
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-body-lg);
+    transition: all var(--transition-normal) var(--easing-smooth);
+    box-shadow: var(--glow-cyan);
+  }
+
+  .btn-secondary:hover {
+    background: var(--neon-cyan);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6), var(--shadow-lg);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-hero h1 {
+      font-size: var(--text-h1);
+    }
+
+    .hero-description {
+      font-size: var(--text-body-lg);
+    }
+
+    .mission-section {
+      padding: var(--space-12);
+    }
+
+    .icon-wrapper {
+      width: 80px;
+      height: 80px;
+    }
+
+    .mission-section h2 {
+      font-size: var(--text-h2);
+    }
+
+    .mission-section p {
+      font-size: var(--text-body);
+    }
+
+    .coverage-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .values-section h2 {
+      font-size: var(--text-h2);
+    }
+
+    .cta-content h2 {
+      font-size: var(--text-h2);
+    }
+
+    .cta-content p {
+      font-size: var(--text-body);
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+    }
+  }
+</style>

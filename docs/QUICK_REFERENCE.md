@@ -5,7 +5,7 @@
 - [ ] Choose topic (newsworthy or evergreen)
 - [ ] Select appropriate template
 - [ ] Identify 3+ reputable sources
-- [ ] Find suitable image (Unsplash/AI/press release)
+- [ ] Generate or find suitable image (see Image Workflow below)
 - [ ] For product articles: verify current Amazon pricing
 
 ---
@@ -52,20 +52,82 @@ https://www.amazon.com/dp/[ASIN]?tag=trendytecht0a-20
 
 ---
 
-## Image Attribution Format
+## Image Workflow
 
-**Unsplash:**
-```yaml
-imageCredit: "Photo by [Photographer Name] on Unsplash"
+### Option 1: AI Generated Images (Recommended)
+
+**When to use:** No press release photo available, Unsplash doesn't have what you need
+
+**Generate an image:**
+```bash
+npm run generate-image "your image description"
 ```
+
+**Examples:**
+```bash
+# For a Tesla article
+npm run generate-image "Tesla electric vehicle charging at modern station"
+
+# For an AI article
+npm run generate-image "AI robot working on computer coding"
+
+# With custom style
+npm run generate-image "Solar panels on residential roof" --style photorealistic
+
+# With Replicate (cheaper)
+npm run generate-image "5G network technology" --provider replicate
+```
+
+The script will:
+1. Generate the image using AI (DALL-E 3 or Stable Diffusion)
+2. Download it to `/public/images/articles/`
+3. Give you the exact frontmatter to copy/paste
+
+**Setup (first time only):**
+1. Copy `.env.example` to `.env`
+2. Add your API key (OpenAI or Replicate)
+3. Get keys at:
+   - OpenAI: https://platform.openai.com/api-keys (~$0.04-0.12/image)
+   - Replicate: https://replicate.com/account/api-tokens (~$0.005/image)
+
+### Option 2: Unsplash Photos
+
+**When to use:** Need real photos, product shots, people
+
+1. Search Unsplash.com for your topic
+2. Copy the image URL
+3. Note the photographer name
+
+### Option 3: Press Release Images
+
+**When to use:** Company announcements, product launches
+
+1. Check company press kit or blog post
+2. Download image to `/public/images/articles/`
+3. Credit the company
+
+---
+
+## Image Attribution Format
 
 **AI Generated:**
 ```yaml
+image: "/images/articles/tesla-ev-charging-1234567.png"
+imageAlt: "Tesla electric vehicle charging at modern station"
 imageCredit: "AI Generated Image"
+```
+
+**Unsplash:**
+```yaml
+image: "https://images.unsplash.com/photo-..."
+imageAlt: "Descriptive alt text"
+imageCredit: "Photo by [Photographer Name] on Unsplash"
 ```
 
 **Press Release:**
 ```yaml
+image: "/images/articles/company-product-photo.jpg"
+imageAlt: "Descriptive alt text"
 imageCredit: "Image courtesy of [Company Name]"
 ```
 
