@@ -207,6 +207,39 @@ const product = await api.getItems({
 
 ---
 
+## Amazon Link Format Requirements
+
+**CRITICAL: All Amazon links MUST use the correct URL format**
+
+### ✅ CORRECT Format:
+```
+https://www.amazon.com/dp/ASIN?tag=trendytecht0a-20
+```
+
+### ❌ WRONG Format:
+```
+https://amazon.com/dp/ASIN?tag=trendytecht0a-20  (missing www.)
+```
+
+**Why this matters:**
+- Links without "www." may not work properly
+- Affiliate tracking may not function correctly
+- Users may see errors or broken links
+
+**Required Format Components:**
+1. Protocol: `https://`
+2. Domain: `www.amazon.com` (NOT `amazon.com`)
+3. Path: `/dp/ASIN` (ASIN is the product code)
+4. Tracking: `?tag=trendytecht0a-20`
+
+**Examples of Correct Links:**
+```markdown
+[View on Amazon](https://www.amazon.com/dp/B09B8V1LZ3?tag=trendytecht0a-20)
+[Check Price](https://www.amazon.com/dp/B00X5RV14Y?tag=trendytecht0a-20)
+```
+
+---
+
 ## Summary
 
 **Safest approach for compliance:**
@@ -215,5 +248,6 @@ const product = await api.getItems({
 3. **Use** price ranges when necessary ($50-100)
 4. **Include** disclaimers if you mention any pricing
 5. **Update** or remove any pricing info older than 30 days
+6. **ALWAYS** use correct URL format: `https://www.amazon.com` (with "www.")
 
 This protects you from Amazon Associates violations and potential account suspension.

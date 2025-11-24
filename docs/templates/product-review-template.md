@@ -14,7 +14,7 @@ imageCredit: "..."
 featured: false
 affiliateProducts:
   - name: "[Product Name]"
-    url: "https://amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20"
+    url: "https://www.amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20"
     # NO PRICE FIELD - violates Amazon Associates rules!
 sources:
   - title: "[Manufacturer] Official Specs"
@@ -72,7 +72,7 @@ NEVER:
 
 **Bottom Line:** [One-sentence verdict on whether to buy and for whom]
 
-[View Current Price on Amazon →](https://amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
+[View Current Price on Amazon →](https://www.amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
 
 ## What Is the [Product Name]?
 
@@ -173,7 +173,7 @@ If relying on reviews:
 
 The [Product Name] is positioned in the [budget/mid-range/premium] segment of the market.
 
-[View Current Pricing on Amazon →](https://amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
+[View Current Pricing on Amazon →](https://www.amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
 
 **For Context:**
 - Competitors in this category typically range from $X-Y
@@ -224,7 +224,7 @@ The [Product Name] is positioned in the [budget/mid-range/premium] segment of th
 - Clear recommendation for target audience
 - Memorable takeaway that helps reader decide]
 
-[View on Amazon →](https://amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
+[View on Amazon →](https://www.amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
 
 ---
 
@@ -243,6 +243,7 @@ The [Product Name] is positioned in the [budget/mid-range/premium] segment of th
 - [ ] **Specs verified** against manufacturer website
 - [ ] **3+ review sources** consulted and cited
 - [ ] **Affiliate tracking ID present** in all Amazon URLs (?tag=trendytecht0a-20)
+- [ ] **Amazon URLs use CORRECT format** - https://www.amazon.com (with "www.")
 - [ ] **NO static pricing** anywhere in article
 - [ ] **Image is product-specific** (not generic category image)
 - [ ] **Image credit correct** (Amazon, manufacturer, or AI)
@@ -250,11 +251,17 @@ The [Product Name] is positioned in the [budget/mid-range/premium] segment of th
 - [ ] **Date is current** (not in the past!)
 - [ ] **Facts cross-referenced** across multiple sources
 
+**Amazon Link Format - CRITICAL:**
+- ✅ **CORRECT:** https://www.amazon.com/dp/ASIN?tag=trendytecht0a-20
+- ❌ **WRONG:** https://amazon.com/dp/ASIN?tag=trendytecht0a-20 (missing www.)
+- ⚠️ **Links without "www." may not work properly or track correctly**
+
 **CRITICAL Amazon Rules:**
 - ❌ NEVER include specific prices in body text
 - ❌ NEVER show prices in frontmatter
 - ✅ ALWAYS use "Check price on Amazon" CTAs
 - ✅ ALWAYS include affiliate tracking ID: ?tag=trendytecht0a-20
+- ✅ ALWAYS use https://www.amazon.com (with "www.")
 - ✅ ALWAYS include disclaimer about prices changing
 
 **Image Guidelines for Product Reviews:**

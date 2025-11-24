@@ -14,14 +14,14 @@ imageCredit: "..."
 featured: false
 affiliateProducts:
   - name: "[Product 1 Name]"
-    url: "https://amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20"
+    url: "https://www.amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20"
     # NO PRICE - Amazon violation!
   - name: "[Product 2 Name]"
-    url: "https://amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20"
+    url: "https://www.amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20"
   - name: "[Product 3 Name]"
-    url: "https://amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20"
+    url: "https://www.amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20"
   - name: "[Product 4 Name]"
-    url: "https://amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20"
+    url: "https://www.amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20"
 sources:
   - title: "[Manufacturer/Review Source 1]"
     url: "https://..."
@@ -80,7 +80,7 @@ When shopping for [product category], these factors matter most:
 
 **Rating: X/10**
 
-[View on Amazon](https://amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
+[View on Amazon](https://www.amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
 
 **Key Features:**
 - [Specific feature from manufacturer specs]
@@ -110,7 +110,7 @@ When shopping for [product category], these factors matter most:
 
 **Rating: X/10**
 
-[View on Amazon](https://amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
+[View on Amazon](https://www.amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
 
 **Key Features:**
 - [Feature 1]
@@ -136,7 +136,7 @@ When shopping for [product category], these factors matter most:
 
 **Rating: X/10**
 
-[View on Amazon](https://amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
+[View on Amazon](https://www.amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
 
 **Key Features:**
 - [Premium feature 1]
@@ -162,7 +162,7 @@ When shopping for [product category], these factors matter most:
 
 **Rating: X/10**
 
-[View on Amazon](https://amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
+[View on Amazon](https://www.amazon.com/dp/XXXXXXXXXX?tag=trendytecht0a-20)
 
 **Key Features:**
 - [Feature optimized for specific use]
@@ -284,12 +284,18 @@ When shopping for [product category], these factors matter most:
 - [ ] **Specs verified** against manufacturer websites
 - [ ] **Multiple reviews** consulted for each product (3+ sources)
 - [ ] **Affiliate tracking ID** in ALL Amazon URLs
+- [ ] **Amazon URLs use CORRECT format** - https://www.amazon.com (with "www.")
 - [ ] **NO specific prices** anywhere in article
 - [ ] **Price ranges only** (budget/mid/premium tiers)
 - [ ] **Image shows actual products** from the list
 - [ ] **Comparison table accurate** (verified specs)
 - [ ] **All source links work**
 - [ ] **Date is current** (today or later)
+
+**Amazon Link Format - CRITICAL:**
+- ✅ **CORRECT:** https://www.amazon.com/dp/ASIN?tag=trendytecht0a-20
+- ❌ **WRONG:** https://amazon.com/dp/ASIN?tag=trendytecht0a-20 (missing www.)
+- ⚠️ **Links without "www." may not work properly or track correctly**
 
 **Amazon Pricing Rules:**
 - ❌ NEVER list specific prices ($79, $149, etc.)
@@ -298,6 +304,7 @@ When shopping for [product category], these factors matter most:
 - ✅ USE "Check price on Amazon" CTAs
 - ✅ INCLUDE disclaimer that prices change
 - ✅ ALWAYS add ?tag=trendytecht0a-20 to all Amazon links
+- ✅ ALWAYS use https://www.amazon.com (with "www.")
 
 **Image Priority for Best-Lists:**
 1st: Hero product (Best Overall) image from Amazon
