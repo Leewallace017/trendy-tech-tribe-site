@@ -1,0 +1,71 @@
+---
+// Google Consent Mode v2 implementation
+// This initializes consent mode before any tags load
+---
+
+<script is:inline>
+  // Initialize Google Consent Mode with default settings
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+
+  // Set default consent to denied for all categories
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'granted', // Required for basic site functionality
+    'personalization_storage': 'denied',
+    'security_storage': 'granted' // Required for security
+  });
+
+  // Check if user has previously made a consent choice
+  function loadConsentFromStorage() {
+    if (typeof localStorage !== 'undefined') {
+      const consentData = localStorage.getItem('user_consent');
+      if (consentData) {
+        try {
+          const consent = JSON.parse(consentData);
+          const consentTimestamp = localStorage.getItem('consent_timestamp');
+          const currentTime = new Date().getTime();
+          const consentAge = currentTime - parseInt(consentTimestamp || '0');
+          const thirtyDays = 30 * 24 * 60 * 60 * 1000;
+
+          // Check if consent is still valid (less than 30 days old)
+          if (consentAge < thirtyDays) {
+            gtag('consent', 'update', consent);
+            return true;
+          } else {
+            // Consent expired, clear it
+            localStorage.removeItem('user_consent');
+            localStorage.removeItem('consent_timestamp');
+          }
+        } catch (e) {
+          console.error('Error loading consent:', e);
+        }
+      }
+    }
+    return false;
+  }
+
+  // Load previously saved consent
+  loadConsentFromStorage();
+
+  // Function to update consent (called from consent banner)
+  window.updateConsent = function(consent) {
+    gtag('consent', 'update', consent);
+
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('user_consent', JSON.stringify(consent));
+      localStorage.setItem('consent_timestamp', new Date().getTime().toString());
+    }
+  };
+
+  // Function to check if consent has been given
+  window.hasConsent = function() {
+    if (typeof localStorage !== 'undefined') {
+      return localStorage.getItem('user_consent') !== null;
+    }
+    return false;
+  };
+</script>
