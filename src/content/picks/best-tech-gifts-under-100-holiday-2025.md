@@ -16,7 +16,7 @@ affiliateProducts:
   - name: "Amazon Echo Dot (5th Gen)"
     url: "https://www.amazon.com/dp/B09B8V1LZ3?tag=trendytecht0a-20"
   - name: "Anker PowerCore 20,000mAh Power Bank"
-    url: "https://www.amazon.com/dp/B00X5RV14Y?tag=trendytecht0a-20"
+    url: "https://www.amazon.com/dp/B08LG2X98F?tag=trendytecht0a-20"
   - name: "Tile Mate Bluetooth Tracker (4-Pack)"
     url: "https://www.amazon.com/dp/B09B2WLB62?tag=trendytecht0a-20"
   - name: "Roku Streaming Stick 4K"
@@ -80,13 +80,13 @@ When shopping for tech gifts under $100, these factors separate winners from clu
 
 **Rating: 9/10**
 
-[View on Amazon](https://www.amazon.com/dp/B00X5RV14Y?tag=trendytecht0a-20)
+[View on Amazon](https://www.amazon.com/dp/B08LG2X98F?tag=trendytecht0a-20)
 
 **Key Features:**
 - 20,000mAh capacity (charges iPhone 14 about 4 times)
-- Dual USB ports for charging multiple devices
-- PowerIQ fast charging technology
-- Compact size for the capacity
+- 20W USB-C Power Delivery output
+- Dual charging ports (USB-C and USB-A)
+- PowerIQ 3.0 fast charging technology
 
 **Pros:**
 - Massive capacity in relatively compact form
@@ -95,8 +95,8 @@ When shopping for tech gifts under $100, these factors separate winners from clu
 - Works with virtually any USB device
 
 **Cons:**
-- Takes ~10 hours to fully recharge itself
-- No USB-C port on this model (older design)
+- Takes ~8-10 hours to fully recharge itself
+- Slightly heavier than some competitors
 
 **Who It's For:** Frequent travelers, commuters, or anyone who needs reliable backup power away from outlets.
 
@@ -273,7 +273,7 @@ For maximum impact:
 
 **Our Top Recommendations:**
 1. **Most Recipients**: Echo Dot 5th Gen ([View on Amazon](https://www.amazon.com/dp/B09B8V1LZ3?tag=trendytecht0a-20))
-2. **Travelers**: Anker PowerCore 20K ([View on Amazon](https://www.amazon.com/dp/B00X5RV14Y?tag=trendytecht0a-20))
+2. **Travelers**: Anker PowerCore 20K ([View on Amazon](https://www.amazon.com/dp/B08LG2X98F?tag=trendytecht0a-20))
 3. **Budget Hero**: Tile Mate 4-Pack ([View on Amazon](https://www.amazon.com/dp/B09B2WLB62?tag=trendytecht0a-20))
 
 ---
