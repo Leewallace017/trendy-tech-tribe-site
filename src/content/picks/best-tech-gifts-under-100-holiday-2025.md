@@ -16,7 +16,7 @@ affiliateProducts:
   - name: "Amazon Echo Dot (5th Gen)"
     url: "https://www.amazon.com/dp/B09B8V1LZ3?tag=trendytecht0a-20"
   - name: "Anker PowerCore 20,000mAh Power Bank"
-    url: "https://www.amazon.com/dp/B08LG2X98F?tag=trendytecht0a-20"
+    url: "https://www.amazon.com/dp/B0D5CQ9CHQ?tag=trendytecht0a-20"
   - name: "Tile Mate Bluetooth Tracker (4-Pack)"
     url: "https://www.amazon.com/dp/B0D634BYLV?tag=trendytecht0a-20"
   - name: "Roku Streaming Stick 4K"
@@ -80,7 +80,7 @@ When shopping for tech gifts under $100, these factors separate winners from clu
 
 **Rating: 9/10**
 
-[View on Amazon](https://www.amazon.com/dp/B08LG2X98F?tag=trendytecht0a-20)
+[View on Amazon](https://www.amazon.com/dp/B0D5CQ9CHQ?tag=trendytecht0a-20)
 
 **Key Features:**
 - 20,000mAh capacity (charges iPhone 14 about 4 times)
@@ -273,7 +273,7 @@ For maximum impact:
 
 **Our Top Recommendations:**
 1. **Most Recipients**: Echo Dot 5th Gen ([View on Amazon](https://www.amazon.com/dp/B09B8V1LZ3?tag=trendytecht0a-20))
-2. **Travelers**: Anker PowerCore 20K ([View on Amazon](https://www.amazon.com/dp/B08LG2X98F?tag=trendytecht0a-20))
+2. **Travelers**: Anker PowerCore 20K ([View on Amazon](https://www.amazon.com/dp/B0D5CQ9CHQ?tag=trendytecht0a-20))
 3. **Budget Hero**: Tile Mate 4-Pack ([View on Amazon](https://www.amazon.com/dp/B0D634BYLV?tag=trendytecht0a-20))
 
 ---
