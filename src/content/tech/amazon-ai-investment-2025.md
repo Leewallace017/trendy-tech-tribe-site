@@ -8,7 +8,7 @@ type: "quick-take"
 summary: "Amazon plans to invest up to $50 billion to expand AI and supercomputing capabilities for AWS U.S. government customers, adding nearly 1.3 gigawatts of capacity beginning in 2026."
 seoTitle: "Amazon's $50B AI Investment for Government Cloud Infrastructure"
 seoDescription: "Amazon investing $50B in AI infrastructure for AWS government customers. 1.3 gigawatts capacity expansion begins 2026 across multiple regions."
-image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200"
+image: "/images/aws-data-center.png"
 imageAlt: "Modern data center server infrastructure with blue lighting"
 imageCredit: "Photo by NASA on Unsplash"
 featured: false

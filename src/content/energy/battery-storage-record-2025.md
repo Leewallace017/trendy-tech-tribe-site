@@ -8,7 +8,7 @@ type: "quick-take"
 summary: "Global battery energy storage deployments reached 156 GWh through October 2025, marking a 38% increase year-over-year as the market accelerates toward a projected $100 billion valuation by 2033."
 seoTitle: "Battery Storage Hits 156 GWh Record - Market Headed to $100B by 2033"
 seoDescription: "Global grid-scale battery storage reached 156 GWh in 2025, up 38% YoY. China leads with giga-scale projects as market projects $100B valuation by 2033."
-image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200"
+image: "/images/battery-storage-infrastructure.png"
 imageAlt: "Large-scale battery energy storage system with solar panels in background"
 imageCredit: "Photo by American Public Power Association on Unsplash"
 featured: false

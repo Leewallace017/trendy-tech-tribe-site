@@ -8,7 +8,7 @@ type: "best-list"
 summary: "Black Friday 2025 is here with massive discounts on tech. We've rounded up the best deals under $100 on smart home devices, streaming gear, and audio products."
 seoTitle: "Best Black Friday Tech Deals Under $100 - 2025 Guide"
 seoDescription: "Top Black Friday 2025 tech deals under $100. Amazon Echo, Fire TV Stick, Bose headphones, and more with verified discounts and availability."
-image: "https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=1200"
+image: "/images/black-friday-tech-deals.png"
 imageAlt: "Black Friday shopping concept with tech gadgets and sale tags"
 imageCredit: "Photo by Markus Spiske on Unsplash"
 featured: true

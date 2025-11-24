@@ -8,7 +8,7 @@ type: "quick-take"
 summary: "Tech stocks rebounded in November 2025 as Alphabet's Gemini 3 launch fueled AI optimism, though concerns about an AI bubble persist following mixed reactions to Nvidia's strong earnings."
 seoTitle: "Tech Stocks Rally on AI Boom - But Is It a Bubble?"
 seoDescription: "Alphabet's Gemini 3 drives tech stock rally despite AI bubble fears. Nvidia beats expectations but shares slide. Market up 16.67% YTD."
-image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200"
+image: "/images/tech-stocks-trading.png"
 imageAlt: "Stock market charts showing tech sector performance with upward trend"
 imageCredit: "Photo by Nicholas Cappello on Unsplash"
 featured: false
