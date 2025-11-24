@@ -33,26 +33,44 @@ Right-click on a product → "Copy link address" → Extract ASIN from URL
 
 ## Pre-Publishing ASIN Verification Checklist
 
-**Before publishing ANY article with Amazon links, complete this checklist:**
+**⚠️ MANDATORY: Before publishing ANY article with Amazon links, complete this visual verification:**
 
-- [ ] **Step 1: Extract all ASINs** from your article
-  - Search your markdown file for `amazon.com/dp/`
-  - List each unique ASIN
+### Step 1: Extract All ASINs
+- [ ] Search your markdown file for `amazon.com/dp/`
+- [ ] List each unique ASIN
+- [ ] Run `npm run verify-asins` to auto-extract
 
-- [ ] **Step 2: Verify each ASIN manually**
-  - Open `https://www.amazon.com/dp/[ASIN]` in browser
-  - Confirm product page loads (not 404 error)
-  - Verify product matches your article description
-  - Check product is "In Stock" or "Available"
+### Step 2: Visual Browser Verification (REQUIRED)
+**For EACH ASIN, perform these checks:**
 
-- [ ] **Step 3: Verify affiliate tag present**
-  - Each Amazon URL should end with `?tag=trendytecht0a-20`
-  - Format: `https://www.amazon.com/dp/[ASIN]?tag=trendytecht0a-20`
+- [ ] **Open in browser**: `https://www.amazon.com/dp/[ASIN]?tag=trendytecht0a-20`
+- [ ] **Verify page loads**: No 404 error, page displays correctly
+- [ ] **Check product match**: Product title/image matches article description
+- [ ] **Verify availability**: Shows "In Stock", "Available", or "Add to Cart" (not "Currently unavailable")
+- [ ] **Confirm affiliate tag**: URL bar shows `?tag=trendytecht0a-20`
+- [ ] **Check product specs**: Match what you wrote in article
+- [ ] **Verify current model**: Not discontinued or replaced
 
-- [ ] **Step 4: Test final links**
-  - Click each Amazon link in your article preview
-  - Verify they redirect to correct product pages
-  - Confirm affiliate tag is preserved after redirect
+### Step 3: Screenshot Documentation (PROOF REQUIRED)
+**Take screenshots showing:**
+
+- [ ] **URL bar** with full Amazon URL including affiliate tag
+- [ ] **Product title** and main image
+- [ ] **Availability status** ("In Stock" or "Add to Cart")
+- [ ] **Save as**: `asin-verification-[product-name]-[date].png`
+
+**Why screenshots?**
+- Proof that links worked at publication time
+- Reference for future audits
+- Documentation if product gets discontinued
+- Evidence for troubleshooting
+
+### Step 4: Test Final Links in Article
+- [ ] Preview article locally (`npm run dev`)
+- [ ] Click EVERY "View on Amazon" link
+- [ ] Verify redirects to correct product
+- [ ] Confirm affiliate tag preserved after redirect
+- [ ] Test on both desktop and mobile if possible
 
 ## Common ASIN Issues & Solutions
 
