@@ -1,0 +1,111 @@
+---
+---
+
+<div class="newsletter-signup">
+  <h3>Get Weekly Tech Insights</h3>
+  <p class="signup-description">Join thousands staying ahead of the curve. Get curated tech news, AI updates, and product reviews delivered to your inbox.</p>
+  <form class="signup-form" action="/api/subscribe" method="POST">
+    <input
+      type="email"
+      name="email"
+      placeholder="Enter your email address"
+      required
+      class="email-input"
+    />
+    <button type="submit" class="subscribe-button">Subscribe</button>
+  </form>
+</div>
+
+<style>
+  .newsletter-signup {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px) saturate(180%);
+    padding: var(--space-10);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(180, 74, 255, 0.3);
+  }
+
+  .newsletter-signup h3 {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-4);
+    color: var(--text-primary);
+  }
+
+  .signup-description {
+    font-size: var(--text-body);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-8);
+    line-height: var(--line-relaxed);
+  }
+
+  .signup-form {
+    display: flex;
+    gap: var(--space-3);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .email-input {
+    flex: 1;
+    padding: var(--space-3) var(--space-4);
+    border: 2px solid var(--border-normal);
+    border-radius: var(--radius-md);
+    font-size: var(--text-body);
+    font-family: var(--font-primary);
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    transition: all var(--transition-normal) var(--easing-smooth);
+  }
+
+  .email-input:focus {
+    outline: none;
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.1), var(--glow-cyan);
+  }
+
+  .email-input::placeholder {
+    color: var(--text-tertiary);
+  }
+
+  .subscribe-button {
+    padding: var(--space-3) var(--space-8);
+    background: linear-gradient(135deg, var(--neon-magenta), var(--neon-cyan));
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: var(--text-body);
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    transition: all var(--transition-normal) var(--easing-smooth);
+    font-family: var(--font-primary);
+    white-space: nowrap;
+    box-shadow: var(--glow-magenta);
+  }
+
+  .subscribe-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-magenta-intense), var(--shadow-lg);
+  }
+
+  .subscribe-button:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .newsletter-signup h3 {
+      font-size: 1.5rem;
+    }
+
+    .signup-form {
+      flex-direction: column;
+    }
+
+    .subscribe-button {
+      width: 100%;
+    }
+  }
+</style>

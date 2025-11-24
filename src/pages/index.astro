@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import PostCard from '../components/PostCard.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { getCollection } from 'astro:content';
 
 // Get latest posts from each category
@@ -84,18 +86,7 @@ const categoryMap: Record<string, string> = {
         <h2>Tech & Innovation</h2>
         <div class="posts-grid">
           {techPosts.length > 0 ? techPosts.map(post => (
-            <article class="post-card">
-              <a href={`/tech/${post.slug}`} class="post-image">
-                <img src={post.data.image} alt={post.data.imageAlt || post.data.title} />
-              </a>
-              <div class="post-content">
-                <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
-                <h3>
-                  <a href={`/tech/${post.slug}`}>{post.data.title}</a>
-                </h3>
-                <p>{post.data.summary}</p>
-              </div>
-            </article>
+            <PostCard post={post} categorySlug="tech" />
           )) : (
             <p class="empty-state">No posts yet. Check back soon!</p>
           )}
@@ -107,18 +98,7 @@ const categoryMap: Record<string, string> = {
         <h2>AI & Automation</h2>
         <div class="posts-grid">
           {aiPosts.length > 0 ? aiPosts.map(post => (
-            <article class="post-card">
-              <a href={`/ai/${post.slug}`} class="post-image">
-                <img src={post.data.image} alt={post.data.imageAlt || post.data.title} />
-              </a>
-              <div class="post-content">
-                <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
-                <h3>
-                  <a href={`/ai/${post.slug}`}>{post.data.title}</a>
-                </h3>
-                <p>{post.data.summary}</p>
-              </div>
-            </article>
+            <PostCard post={post} categorySlug="ai" />
           )) : (
             <p class="empty-state">No posts yet. Check back soon!</p>
           )}
@@ -130,18 +110,7 @@ const categoryMap: Record<string, string> = {
         <h2>EVs & Mobility</h2>
         <div class="posts-grid">
           {evsPosts.length > 0 ? evsPosts.map(post => (
-            <article class="post-card">
-              <a href={`/evs/${post.slug}`} class="post-image">
-                <img src={post.data.image} alt={post.data.imageAlt || post.data.title} />
-              </a>
-              <div class="post-content">
-                <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
-                <h3>
-                  <a href={`/evs/${post.slug}`}>{post.data.title}</a>
-                </h3>
-                <p>{post.data.summary}</p>
-              </div>
-            </article>
+            <PostCard post={post} categorySlug="evs" />
           )) : (
             <p class="empty-state">No posts yet. Check back soon!</p>
           )}
@@ -157,20 +126,7 @@ const categoryMap: Record<string, string> = {
           <div class="tribe-image">
             <img src="/join-the-tribe.png" alt="Join the Trendy Tech Tribe community" />
           </div>
-          <div class="newsletter-signup">
-            <h3>Get Weekly Tech Insights</h3>
-            <p class="signup-description">Join thousands staying ahead of the curve. Get curated tech news, AI updates, and product reviews delivered to your inbox.</p>
-            <form class="signup-form" action="/api/subscribe" method="POST">
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email address"
-                required
-                class="email-input"
-              />
-              <button type="submit" class="subscribe-button">Subscribe</button>
-            </form>
-          </div>
+          <NewsletterSignup />
         </div>
       </section>
 
@@ -178,18 +134,7 @@ const categoryMap: Record<string, string> = {
         <h2>Energy & Policy</h2>
         <div class="posts-grid">
           {energyPosts.length > 0 ? energyPosts.map(post => (
-            <article class="post-card">
-              <a href={`/energy/${post.slug}`} class="post-image">
-                <img src={post.data.image} alt={post.data.imageAlt || post.data.title} />
-              </a>
-              <div class="post-content">
-                <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
-                <h3>
-                  <a href={`/energy/${post.slug}`}>{post.data.title}</a>
-                </h3>
-                <p>{post.data.summary}</p>
-              </div>
-            </article>
+            <PostCard post={post} categorySlug="energy" />
           )) : (
             <p class="empty-state">No posts yet. Check back soon!</p>
           )}
@@ -201,18 +146,7 @@ const categoryMap: Record<string, string> = {
         <h2>Markets & Money</h2>
         <div class="posts-grid">
           {marketsPosts.length > 0 ? marketsPosts.map(post => (
-            <article class="post-card">
-              <a href={`/markets/${post.slug}`} class="post-image">
-                <img src={post.data.image} alt={post.data.imageAlt || post.data.title} />
-              </a>
-              <div class="post-content">
-                <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
-                <h3>
-                  <a href={`/markets/${post.slug}`}>{post.data.title}</a>
-                </h3>
-                <p>{post.data.summary}</p>
-              </div>
-            </article>
+            <PostCard post={post} categorySlug="markets" />
           )) : (
             <p class="empty-state">No posts yet. Check back soon!</p>
           )}
@@ -224,18 +158,7 @@ const categoryMap: Record<string, string> = {
         <h2>Picks & Reviews</h2>
         <div class="posts-grid">
           {picksPosts.length > 0 ? picksPosts.map(post => (
-            <article class="post-card">
-              <a href={`/picks/${post.slug}`} class="post-image">
-                <img src={post.data.image} alt={post.data.imageAlt || post.data.title} />
-              </a>
-              <div class="post-content">
-                <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>
-                <h3>
-                  <a href={`/picks/${post.slug}`}>{post.data.title}</a>
-                </h3>
-                <p>{post.data.summary}</p>
-              </div>
-            </article>
+            <PostCard post={post} categorySlug="picks" />
           )) : (
             <p class="empty-state">No posts yet. Check back soon!</p>
           )}
@@ -256,6 +179,13 @@ const categoryMap: Record<string, string> = {
     padding: var(--space-24) 0;
     margin-bottom: var(--space-16);
     overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: var(--space-12) 0;
+      margin-bottom: var(--space-10);
+    }
   }
 
   .hero::before {
@@ -386,92 +316,11 @@ const categoryMap: Record<string, string> = {
     margin-bottom: var(--space-6);
   }
 
-  .post-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    transition: all var(--transition-normal) var(--easing-smooth);
-  }
-
-  .post-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--border-glow);
-    box-shadow: var(--glow-soft), var(--shadow-lg);
-  }
-
-  .post-image {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    display: block;
-    background: var(--bg-tertiary);
-  }
-
-  .post-image::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      180deg,
-      transparent 0%,
-      rgba(10, 6, 20, 0.4) 70%,
-      rgba(10, 6, 20, 0.7) 100%
-    );
-    pointer-events: none;
-  }
-
-  .post-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-slow) var(--easing-smooth);
-  }
-
-  .post-card:hover .post-image img {
-    transform: scale(1.08);
-  }
-
-  .post-content {
-    padding: var(--space-6);
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-  }
-
-  .post-date {
-    display: block;
-    font-size: var(--text-body-sm);
-    color: var(--text-tertiary);
-    font-weight: var(--weight-medium);
-    margin-bottom: 0;
-  }
-
-  .post-card h3 {
-    font-size: var(--text-h4);
-    font-weight: var(--weight-bold);
-    line-height: var(--line-snug);
-    margin: 0;
-  }
-
-  .post-card h3 a {
-    color: var(--text-primary);
-    transition: color var(--transition-normal) var(--easing-smooth);
-  }
-
-  .post-card h3 a:hover {
-    color: var(--neon-cyan);
-  }
-
-  .post-card p {
-    font-size: var(--text-body);
-    color: var(--text-secondary);
-    line-height: var(--line-normal);
-    margin: 0;
+  @media (max-width: 768px) {
+    .posts-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
   }
 
   .empty-state {
@@ -503,6 +352,14 @@ const categoryMap: Record<string, string> = {
     border: 1px solid var(--border-bright);
     box-shadow: var(--glow-soft), var(--shadow-xl);
     overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .tribe-cta {
+      padding: var(--space-8);
+      margin: var(--space-12) 0;
+      border-radius: var(--radius-lg);
+    }
   }
 
   .tribe-cta::before {
@@ -559,84 +416,6 @@ const categoryMap: Record<string, string> = {
     display: block;
   }
 
-  .newsletter-signup {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    background: var(--bg-glass);
-    backdrop-filter: blur(16px) saturate(180%);
-    padding: var(--space-10);
-    border-radius: var(--radius-xl);
-    border: 1px solid rgba(180, 74, 255, 0.3);
-  }
-
-  .newsletter-signup h3 {
-    font-size: var(--text-h3);
-    font-weight: var(--weight-bold);
-    margin-bottom: var(--space-4);
-    color: var(--text-primary);
-  }
-
-  .signup-description {
-    font-size: var(--text-body);
-    color: var(--text-secondary);
-    margin-bottom: var(--space-8);
-    line-height: var(--line-relaxed);
-  }
-
-  .signup-form {
-    display: flex;
-    gap: var(--space-3);
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .email-input {
-    flex: 1;
-    padding: var(--space-3) var(--space-4);
-    border: 2px solid var(--border-normal);
-    border-radius: var(--radius-md);
-    font-size: var(--text-body);
-    font-family: var(--font-primary);
-    background-color: var(--bg-tertiary);
-    color: var(--text-primary);
-    transition: all var(--transition-normal) var(--easing-smooth);
-  }
-
-  .email-input:focus {
-    outline: none;
-    border-color: var(--neon-cyan);
-    box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.1), var(--glow-cyan);
-  }
-
-  .email-input::placeholder {
-    color: var(--text-tertiary);
-  }
-
-  .subscribe-button {
-    padding: var(--space-3) var(--space-8);
-    background: linear-gradient(135deg, var(--neon-magenta), var(--neon-cyan));
-    color: white;
-    border: none;
-    border-radius: var(--radius-md);
-    font-size: var(--text-body);
-    font-weight: var(--weight-semibold);
-    cursor: pointer;
-    transition: all var(--transition-normal) var(--easing-smooth);
-    font-family: var(--font-primary);
-    white-space: nowrap;
-    box-shadow: var(--glow-magenta);
-  }
-
-  .subscribe-button:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--glow-magenta-intense), var(--shadow-lg);
-  }
-
-  .subscribe-button:active {
-    transform: translateY(0);
-  }
-
   @media (max-width: 768px) {
     .tribe-content h2 {
       font-size: 2rem;
@@ -645,31 +424,13 @@ const categoryMap: Record<string, string> = {
     .tribe-content p {
       font-size: 1rem;
     }
-
-    .newsletter-signup h3 {
-      font-size: 1.5rem;
-    }
-
-    .signup-form {
-      flex-direction: column;
-    }
-
-    .subscribe-button {
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 768px) {
+    
     .hero-title {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 
     .hero-summary {
-      font-size: 1rem;
-    }
-
-    .posts-grid {
-      grid-template-columns: 1fr;
+      font-size: 1.125rem;
     }
   }
 </style>
