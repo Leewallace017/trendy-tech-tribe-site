@@ -14,8 +14,8 @@ imageCredit: "Photo by Zan on Unsplash"
 featured: false
 affiliateProducts: []
 sources:
-  - title: "Apple plans to use 1.2 trillion parameter Google Gemini model to power new Siri"
-    url: "https://www.bloomberg.com/news/articles/2025-11-05/apple-plans-to-use-1-2-trillion-parameter-google-gemini-model-to-power-new-siri"
+  - title: "Apple to use Google's AI model to run new Siri - Reuters"
+    url: "https://www.reuters.com/business/apple-use-googles-ai-model-run-new-siri-bloomberg-news-reports-2025-11-05/"
   - title: "Google reveals its own version of Apple AI Cloud"
     url: "https://www.artificialintelligence-news.com/news/google-reveals-its-own-version-of-apple-ai-cloud/"
 ---

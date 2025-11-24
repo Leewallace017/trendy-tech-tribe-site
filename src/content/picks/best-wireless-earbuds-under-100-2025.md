@@ -14,15 +14,15 @@ imageCredit: "AI Generated Image"
 featured: false
 affiliateProducts:
   - name: "Anker Soundcore Space A40"
-    url: "https://amazon.com/dp/B0B1LVC5VZ?tag=trendytecht0a-20"
+    url: "https://amazon.com/dp/B0B1LPNDGF?tag=trendytecht0a-20"
   - name: "JBL Live Pro 2"
-    url: "https://amazon.com/dp/B09V9ZZTYY?tag=trendytecht0a-20"
+    url: "https://amazon.com/dp/B09V9P5Q6W?tag=trendytecht0a-20"
   - name: "1MORE Evo"
     url: "https://amazon.com/dp/B09Q31SGTP?tag=trendytecht0a-20"
   - name: "Beats Flex"
     url: "https://amazon.com/dp/B08L6ZYW21?tag=trendytecht0a-20"
   - name: "Soundcore Liberty 4 NC"
-    url: "https://amazon.com/dp/B0BZV4QFP8?tag=trendytecht0a-20"
+    url: "https://amazon.com/dp/B0BZV7M23Q?tag=trendytecht0a-20"
 sources:
   - title: "Best Budget Wireless Earbuds - Wirecutter"
     url: "https://www.nytimes.com/wirecutter/reviews/best-wireless-earbuds/"
@@ -55,7 +55,7 @@ Shopping for wireless earbuds under $100 requires trade-offs, but not as many as
 
 **Rating: 9/10**
 
-[View on Amazon](https://amazon.com/dp/B0B1LVC5VZ?tag=trendytecht0a-20)
+[View on Amazon](https://amazon.com/dp/B0B1LPNDGF?tag=trendytecht0a-20)
 
 **Key Features:**
 - Adaptive ANC with multiple modes
@@ -83,7 +83,7 @@ Shopping for wireless earbuds under $100 requires trade-offs, but not as many as
 
 **Rating: 8.5/10**
 
-[View on Amazon](https://amazon.com/dp/B09V9ZZTYY?tag=trendytecht0a-20)
+[View on Amazon](https://amazon.com/dp/B09V9P5Q6W?tag=trendytecht0a-20)
 
 **Key Features:**
 - True Adaptive ANC with Smart Ambient
@@ -140,7 +140,7 @@ Shopping for wireless earbuds under $100 requires trade-offs, but not as many as
 
 **Rating: 8.5/10**
 
-[View on Amazon](https://amazon.com/dp/B0BZV4QFP8?tag=trendytecht0a-20)
+[View on Amazon](https://amazon.com/dp/B0BZV7M23Q?tag=trendytecht0a-20)
 
 **Key Features:**
 - Adaptive ANC 2.0 (reduces noise up to 98.5%)
@@ -280,10 +280,10 @@ Yes, if they have IPX4 or higher rating. The JBL Live Pro 2 (IP55) are especiall
 The best wireless earbuds under $100 deliver experiences that would have cost $200+ just two years ago. Our testing confirms that ANC, long battery life, and hi-res audio codecs are no longer premium-only features.
 
 For maximum value:
-- **Most users**: Anker Soundcore Space A40 ([View on Amazon](https://amazon.com/dp/B0B1LVC5VZ?tag=trendytecht0a-20))
+- **Most users**: Anker Soundcore Space A40 ([View on Amazon](https://amazon.com/dp/B0B1LPNDGF?tag=trendytecht0a-20))
 - **Sound quality priority**: 1MORE Evo ([View on Amazon](https://amazon.com/dp/B09Q31SGTP?tag=trendytecht0a-20))
 - **Apple ecosystem**: Beats Flex ([View on Amazon](https://amazon.com/dp/B08L6ZYW21?tag=trendytecht0a-20))
-- **Serious ANC**: Soundcore Liberty 4 NC ([View on Amazon](https://amazon.com/dp/B0BZV4QFP8?tag=trendytecht0a-20))
+- **Serious ANC**: Soundcore Liberty 4 NC ([View on Amazon](https://amazon.com/dp/B0BZV7M23Q?tag=trendytecht0a-20))
 
 **Our Top Recommendations:**
 1. **Best Overall**: Anker Space A40 - 50hr battery, strong ANC, $70-80

@@ -43,7 +43,7 @@ export async function checkLink(url: string): Promise<LinkCheckResult> {
 
       // Amazon shows these messages when a product doesn't exist
       const notFoundIndicators = [
-        'Sorry, we couldn\'t find that page',
+        "Sorry, we couldn't find that page",
         'Page Not Found',
         'Looking for something?',
         'Dogs of Amazon', // Amazon's 404 page has this

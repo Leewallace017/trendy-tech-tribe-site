@@ -24,8 +24,6 @@ affiliateProducts:
   - name: "Logitech MX Master 3S Wireless Mouse"
     url: "https://amazon.com/dp/B09HM94VDS?tag=trendytecht0a-20"
 sources:
-  - title: "Amazon Best Sellers - Electronics"
-    url: "https://www.amazon.com/Best-Sellers-Electronics/zgbs/electronics"
   - title: "Wirecutter Holiday Gift Guide 2025"
     url: "https://www.nytimes.com/wirecutter/gifts/"
 ---

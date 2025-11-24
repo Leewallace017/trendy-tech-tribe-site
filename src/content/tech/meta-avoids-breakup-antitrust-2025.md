@@ -14,8 +14,8 @@ imageCredit: "Photo by Shubham Dhage on Unsplash"
 featured: false
 affiliateProducts: []
 sources:
-  - title: "Meta, Google, Apple, Amazon antitrust efforts face challenges"
-    url: "https://www.washingtonpost.com/technology/2025/11/20/meta-google-apple-amazon-antitrust/"
+  - title: "Meta defeats antitrust case over Instagram, WhatsApp - Reuters"
+    url: "https://www.reuters.com/sustainability/boards-policy-regulation/meta-defeats-us-antitrust-case-over-instagram-whatsapp-2025-11-18/"
 ---
 
 ## What Happened
