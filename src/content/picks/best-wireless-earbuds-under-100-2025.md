@@ -14,20 +14,20 @@ imageCredit: "AI Generated Image"
 featured: false
 affiliateProducts:
   - name: "Anker Soundcore Space A40"
-    url: "https://amazon.com/dp/B0B1LVC5BW?tag=trendytecht0a-20"
+    url: "https://amazon.com/dp/B0B1LVC5VZ?tag=trendytecht0a-20"
   - name: "JBL Live Pro 2"
-    url: "https://amazon.com/dp/B0B66F2ZBF?tag=trendytecht0a-20"
+    url: "https://amazon.com/dp/B09V9ZZTYY?tag=trendytecht0a-20"
   - name: "1MORE Evo"
-    url: "https://amazon.com/dp/B09B7JKC9V?tag=trendytecht0a-20"
+    url: "https://amazon.com/dp/B09Q31SGTP?tag=trendytecht0a-20"
   - name: "Beats Flex"
-    url: "https://amazon.com/dp/B08T13J5W3?tag=trendytecht0a-20"
+    url: "https://amazon.com/dp/B08L6ZYW21?tag=trendytecht0a-20"
   - name: "Soundcore Liberty 4 NC"
     url: "https://amazon.com/dp/B0BZV4QFP8?tag=trendytecht0a-20"
 sources:
   - title: "Best Budget Wireless Earbuds - Wirecutter"
     url: "https://www.nytimes.com/wirecutter/reviews/best-wireless-earbuds/"
   - title: "Budget Earbuds Reviews - RTINGS"
-    url: "https://www.rtings.com/headphones/reviews/best/earbuds-in-ear-headphones-under-100"
+    url: "https://www.rtings.com/headphones/reviews/best/wireless-bluetooth-earbuds-under-100"
 ---
 
 ## Quick Picks
@@ -55,7 +55,7 @@ Shopping for wireless earbuds under $100 requires trade-offs, but not as many as
 
 **Rating: 9/10**
 
-[View on Amazon](https://amazon.com/dp/B0B1LVC5BW?tag=trendytecht0a-20)
+[View on Amazon](https://amazon.com/dp/B0B1LVC5VZ?tag=trendytecht0a-20)
 
 **Key Features:**
 - Adaptive ANC with multiple modes
@@ -83,7 +83,7 @@ Shopping for wireless earbuds under $100 requires trade-offs, but not as many as
 
 **Rating: 8.5/10**
 
-[View on Amazon](https://amazon.com/dp/B0B66F2ZBF?tag=trendytecht0a-20)
+[View on Amazon](https://amazon.com/dp/B09V9ZZTYY?tag=trendytecht0a-20)
 
 **Key Features:**
 - True Adaptive ANC with Smart Ambient
@@ -111,7 +111,7 @@ Shopping for wireless earbuds under $100 requires trade-offs, but not as many as
 
 **Rating: 8.5/10**
 
-[View on Amazon](https://amazon.com/dp/B09B7JKC9V?tag=trendytecht0a-20)
+[View on Amazon](https://amazon.com/dp/B09Q31SGTP?tag=trendytecht0a-20)
 
 **Key Features:**
 - Hi-Res Audio Wireless certified
@@ -168,7 +168,7 @@ Shopping for wireless earbuds under $100 requires trade-offs, but not as many as
 
 **Rating: 7.5/10**
 
-[View on Amazon](https://amazon.com/dp/B08T13J5W3?tag=trendytecht0a-20)
+[View on Amazon](https://amazon.com/dp/B08L6ZYW21?tag=trendytecht0a-20)
 
 **Key Features:**
 - Apple W1 chip (seamless pairing with iPhones)
@@ -280,9 +280,9 @@ Yes, if they have IPX4 or higher rating. The JBL Live Pro 2 (IP55) are especiall
 The best wireless earbuds under $100 deliver experiences that would have cost $200+ just two years ago. Our testing confirms that ANC, long battery life, and hi-res audio codecs are no longer premium-only features.
 
 For maximum value:
-- **Most users**: Anker Soundcore Space A40 ([View on Amazon](https://amazon.com/dp/B0B1LVC5BW?tag=trendytecht0a-20))
-- **Sound quality priority**: 1MORE Evo ([View on Amazon](https://amazon.com/dp/B09B7JKC9V?tag=trendytecht0a-20))
-- **Apple ecosystem**: Beats Flex ([View on Amazon](https://amazon.com/dp/B08T13J5W3?tag=trendytecht0a-20))
+- **Most users**: Anker Soundcore Space A40 ([View on Amazon](https://amazon.com/dp/B0B1LVC5VZ?tag=trendytecht0a-20))
+- **Sound quality priority**: 1MORE Evo ([View on Amazon](https://amazon.com/dp/B09Q31SGTP?tag=trendytecht0a-20))
+- **Apple ecosystem**: Beats Flex ([View on Amazon](https://amazon.com/dp/B08L6ZYW21?tag=trendytecht0a-20))
 - **Serious ANC**: Soundcore Liberty 4 NC ([View on Amazon](https://amazon.com/dp/B0BZV4QFP8?tag=trendytecht0a-20))
 
 **Our Top Recommendations:**
