@@ -18,7 +18,7 @@ async function main() {
   }
 
   // Capture homepage
-  await page.goto("http://localhost:4322", {
+  await page.goto("http://localhost:4321", {
     waitUntil: "networkidle0"
   });
 
@@ -29,29 +29,29 @@ async function main() {
   });
   console.log("Saved homepage screenshot to:", homeFilePath);
 
-  // Capture an article page with hero image
-  await page.goto("http://localhost:4322/tech/apple-vision-pro-spatial-personas", {
+  // Capture Rivian article (to verify image fix)
+  await page.goto("http://localhost:4321/evs/rivian-production-cuts-2025", {
     waitUntil: "networkidle0"
   });
 
-  const articleFilePath = path.join(screenshotsDir, `article-${Date.now()}.png`);
+  const rivianFilePath = path.join(screenshotsDir, `rivian-article-${Date.now()}.png`);
   await page.screenshot({
-    path: articleFilePath,
+    path: rivianFilePath,
     fullPage: true
   });
-  console.log("Saved article screenshot to:", articleFilePath);
+  console.log("Saved Rivian article screenshot to:", rivianFilePath);
 
-  // Capture a category page
-  await page.goto("http://localhost:4322/ai", {
+  // Capture Meta article (to verify image fix)
+  await page.goto("http://localhost:4321/tech/meta-avoids-breakup-antitrust-2025", {
     waitUntil: "networkidle0"
   });
 
-  const categoryFilePath = path.join(screenshotsDir, `category-${Date.now()}.png`);
+  const metaFilePath = path.join(screenshotsDir, `meta-article-${Date.now()}.png`);
   await page.screenshot({
-    path: categoryFilePath,
+    path: metaFilePath,
     fullPage: true
   });
-  console.log("Saved category screenshot to:", categoryFilePath);
+  console.log("Saved Meta article screenshot to:", metaFilePath);
 
   await browser.close();
 }
