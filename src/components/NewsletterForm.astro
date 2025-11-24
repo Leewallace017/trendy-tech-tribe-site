@@ -1,0 +1,175 @@
+---
+---
+
+<div class="newsletter-form-container">
+  <div class="newsletter-content">
+    <h3>Join the Tribe</h3>
+    <p>Get the latest tech trends and insights delivered to your inbox.</p>
+  </div>
+  
+  <form id="newsletter-form" class="newsletter-form">
+    <div class="input-group">
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Enter your email" 
+        required 
+        aria-label="Email address"
+      />
+      <button type="submit" class="submit-btn">
+        <span>Subscribe</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </div>
+    <div id="form-message" class="form-message"></div>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('newsletter-form') as HTMLFormElement;
+  const messageDiv = document.getElementById('form-message');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const email = formData.get('email');
+      const submitBtn = form.querySelector('.submit-btn') as HTMLButtonElement;
+      
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.classList.add('loading');
+      }
+
+      if (messageDiv) {
+        messageDiv.textContent = '';
+        messageDiv.className = 'form-message';
+      }
+
+      try {
+        const response = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        });
+
+        const data = await response.json();
+
+        if (messageDiv) {
+          messageDiv.textContent = data.message;
+          if (response.ok) {
+            messageDiv.classList.add('success');
+            form.reset();
+          } else {
+            messageDiv.classList.add('error');
+          }
+        }
+      } catch (error) {
+        if (messageDiv) {
+          messageDiv.textContent = 'Something went wrong. Please try again.';
+          messageDiv.classList.add('error');
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('loading');
+        }
+      }
+    });
+  }
+</script>
+
+<style>
+  .newsletter-form-container {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .newsletter-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .newsletter-content p {
+    color: var(--text-2);
+    margin-bottom: 1.5rem;
+  }
+
+  .input-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  input[type="email"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--surface-1);
+    color: var(--text-1);
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+
+  input[type="email"]:focus {
+    outline: none;
+    border-color: var(--brand);
+  }
+
+  .submit-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-md);
+    border: none;
+    background: var(--brand);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .submit-btn:hover {
+    opacity: 0.9;
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  .form-message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    min-height: 1.5em;
+  }
+
+  .form-message.success {
+    color: var(--success, #10b981);
+  }
+
+  .form-message.error {
+    color: var(--error, #ef4444);
+  }
+
+  @media (max-width: 640px) {
+    .input-group {
+      flex-direction: column;
+    }
+    
+    .submit-btn {
+      justify-content: center;
+    }
+  }
+</style>
