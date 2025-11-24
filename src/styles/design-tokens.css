@@ -8,11 +8,10 @@
  */
 
 /* ============================================================================
-   ROOT VARIABLES - DARK MODE (Default/Primary)
+   ROOT VARIABLES - DARK MODE
    ============================================================================ */
 
-:root,
-[data-theme="dark"] {
+:root {
   /* === BACKGROUNDS === */
   --bg-primary: #0a0614;
   --bg-secondary: #1a0f3d;
@@ -74,52 +73,6 @@
   --gradient-tribal: linear-gradient(135deg, #b44aff 0%, #5cff80 100%);
   --gradient-text-neon: linear-gradient(135deg, #ffffff 0%, #00ffff 50%, #ff00ff 100%);
   --gradient-text-subtle: linear-gradient(135deg, #f0f0ff 0%, #b8b8d4 100%);
-}
-
-/* ============================================================================
-   LIGHT MODE OVERRIDES
-   ============================================================================ */
-
-[data-theme="light"] {
-  /* === BACKGROUNDS === */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f7ff;
-  --bg-tertiary: #f0eeff;
-  --bg-glass: rgba(255, 255, 255, 0.7);
-  --bg-elevated: #e8e4ff;
-
-  /* === BRAND COLORS === */
-  --neon-cyan: #00b8d4;
-  --neon-magenta: #d81b60;
-  --neon-green: #00c853;
-  --tribal-purple: #7b1fa2;
-
-  /* === TEXT === */
-  --text-primary: #1a0f3d;
-  --text-secondary: #4a2f8f;
-  --text-tertiary: #7858b3;
-  --text-accent: #7b1fa2;
-
-  /* === BORDERS === */
-  --border-subtle: #f0eeff;
-  --border-normal: #d4c5f9;
-  --border-bright: #b89deb;
-  --border-glow: #9d6bdb;
-
-  /* === SHADOWS === */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.12);
-  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.15);
-
-  /* === SUBTLE EFFECTS === */
-  --glow-cyan: 0 2px 8px rgba(0, 184, 212, 0.15);
-  --glow-magenta: 0 2px 8px rgba(216, 27, 96, 0.15);
-  --glow-soft: 0 4px 16px rgba(123, 31, 162, 0.12);
-
-  /* === GRADIENTS === */
-  --gradient-hero: linear-gradient(135deg, #d81b60 0%, #00b8d4 100%);
-  --gradient-bg: linear-gradient(135deg, #f0eeff 0%, #fef5ff 50%, #f0eeff 100%);
 }
 
 /* ============================================================================
@@ -538,12 +491,6 @@ blockquote {
   box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-[data-theme="light"] .card-glass {
-  background: rgba(255, 255, 255, 0.7);
-  border-color: rgba(123, 31, 162, 0.2);
-  box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.5);
-}
-
 /* Feature Card with Gradient Border */
 .card-feature {
   position: relative;
@@ -614,10 +561,6 @@ blockquote {
 .site-logo img {
   width: 80px;
   height: 80px;
-}
-
-[data-theme="light"] .site-logo {
-  filter: drop-shadow(0 0 5px rgba(123, 31, 162, 0.15));
 }
 
 .nav-list {

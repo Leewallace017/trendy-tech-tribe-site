@@ -36,7 +36,10 @@
       "Bash(then echo -e \"\\n# ScrapingBee API Key\\nSCRAPINGBEE_API_KEY=X0DMMQG690EMHWHMMQY2LDX8C5VPVT0APFMUOQROQJ4FCQAJ6CJ1X8L0TAG7ZR9BMEPTQJY8RXGFOPJ5\")",
       "Bash(else echo \"ScrapingBee API key already in .env\")",
       "Bash(npm run build:*)",
-      "Bash(npx astro build:*)"
+      "Bash(npx astro build:*)",
+      "Bash(sips:*)",
+      "Bash(npx -y playwright screenshot:*)",
+      "Bash(npx:*)"
     ],
     "deny": [],
     "ask": []

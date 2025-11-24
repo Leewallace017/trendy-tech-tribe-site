@@ -1,6 +1,4 @@
 ---
-import ThemeToggle from './ThemeToggle.astro';
-
 const navItems = [
   { label: 'Tech', href: '/tech' },
   { label: 'AI', href: '/ai' },
@@ -17,15 +15,15 @@ const currentPath = Astro.url.pathname;
   <div class="container">
     <div class="header-content">
       <a href="/" class="logo">
-        <img src="/images/logos/logo.svg" alt="Trendy Tech Tribe" width="160" height="160">
+        <img src="/images/logos/logo.svg" alt="Trendy Tech Tribe" width="90" height="90">
       </a>
 
       <!-- Desktop Navigation -->
       <div class="nav-container desktop-nav">
         <nav class="main-nav">
           {navItems.map(item => (
-            <a 
-              href={item.href} 
+            <a
+              href={item.href}
               class="nav-link"
               aria-current={currentPath === item.href ? 'page' : undefined}
             >
@@ -33,7 +31,6 @@ const currentPath = Astro.url.pathname;
             </a>
           ))}
         </nav>
-        <ThemeToggle />
       </div>
 
       <!-- Mobile Menu Button (moved before logo for left placement) -->
@@ -77,9 +74,6 @@ const currentPath = Astro.url.pathname;
           </a>
         ))}
       </div>
-      <div class="mobile-menu-footer">
-        <ThemeToggle />
-      </div>
     </nav>
   </div>
 </header>
@@ -103,11 +97,11 @@ const currentPath = Astro.url.pathname;
   }
 
   .header-content {
-    padding: var(--space-4) 0;
+    padding: var(--space-2) 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: var(--space-8);
+    gap: var(--space-6);
     position: relative;
   }
 
@@ -116,18 +110,18 @@ const currentPath = Astro.url.pathname;
     align-items: center;
     gap: var(--space-3);
     text-decoration: none;
-    filter: drop-shadow(0 0 10px rgba(92, 255, 128, 0.3));
-    transition: filter var(--transition-normal) var(--easing-smooth);
+    filter: drop-shadow(0 0 8px rgba(92, 255, 128, 0.25));
+    transition: all var(--transition-normal) var(--easing-smooth);
     z-index: 2;
   }
 
   .logo:hover {
-    filter: drop-shadow(0 0 20px rgba(92, 255, 128, 0.5));
+    filter: drop-shadow(0 0 16px rgba(92, 255, 128, 0.4));
   }
 
   .logo img {
-    width: 160px;
-    height: 160px;
+    width: 90px;
+    height: 90px;
     transition: transform var(--transition-normal) var(--easing-smooth);
   }
 
@@ -135,34 +129,27 @@ const currentPath = Astro.url.pathname;
     transform: scale(1.05);
   }
 
-  [data-theme="light"] .logo {
-    filter: drop-shadow(0 0 5px rgba(123, 31, 162, 0.15));
-  }
-
-  [data-theme="light"] .logo:hover {
-    filter: drop-shadow(0 0 10px rgba(123, 31, 162, 0.3));
-  }
-
   .nav-container {
     display: flex;
     align-items: center;
-    gap: var(--space-8);
+    gap: var(--space-4);
   }
 
   .main-nav {
     display: flex;
     align-items: center;
-    gap: var(--space-8);
+    gap: var(--space-6);
   }
 
   .nav-link {
     position: relative;
     color: var(--text-secondary);
     font-weight: var(--weight-medium);
-    font-size: var(--text-body);
+    font-size: var(--text-body-sm);
     text-decoration: none;
     transition: color var(--transition-normal) var(--easing-smooth);
-    padding-bottom: var(--space-1);
+    padding: var(--space-2) 0;
+    letter-spacing: 0.02em;
   }
 
   .nav-link::after {
@@ -186,7 +173,7 @@ const currentPath = Astro.url.pathname;
 
   .nav-link[aria-current="page"] {
     color: var(--neon-cyan);
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    font-weight: var(--weight-semibold);
   }
 
   .nav-link[aria-current="page"]::after {
@@ -325,9 +312,9 @@ const currentPath = Astro.url.pathname;
   .mobile-nav-link {
     color: var(--text-secondary);
     font-weight: var(--weight-medium);
-    font-size: var(--text-lg);
+    font-size: var(--text-body);
     text-decoration: none;
-    padding: var(--space-4);
+    padding: var(--space-3) var(--space-4);
     border-radius: var(--radius-md);
     transition: all var(--transition-normal) var(--easing-smooth);
     position: relative;
@@ -357,28 +344,21 @@ const currentPath = Astro.url.pathname;
     border-radius: 0 2px 2px 0;
   }
 
-  .mobile-menu-footer {
-    padding: var(--space-6);
-    border-top: 1px solid var(--border-subtle);
-    display: flex;
-    justify-content: center;
-  }
-
   /* Responsive Breakpoints */
   @media (max-width: 1024px) {
     .logo img {
-      width: 140px;
-      height: 140px;
+      width: 75px;
+      height: 75px;
     }
 
     .main-nav {
-      gap: var(--space-6);
+      gap: var(--space-4);
     }
   }
 
   @media (max-width: 768px) {
     .header-content {
-      padding: var(--space-3) 0;
+      padding: var(--space-2) 0;
       justify-content: center;
     }
 
@@ -389,8 +369,8 @@ const currentPath = Astro.url.pathname;
     }
 
     .logo img {
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
     }
 
     .desktop-nav {

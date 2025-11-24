@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import PostCard from '../components/PostCard.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { getCollection } from 'astro:content';
+import { optimizeUnsplashUrl } from '../utils/imageOptimization';
 
 // Get latest posts from each category
 const techPosts = (await getCollection('tech')).sort(
@@ -31,7 +32,7 @@ const picksPosts = (await getCollection('picks')).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 ).slice(0, 3);
 
-// Get featured post
+// Get featured post (most recent across all categories)
 const allPosts = [
   ...await getCollection('tech'),
   ...await getCollection('ai'),
@@ -39,9 +40,15 @@ const allPosts = [
   ...await getCollection('energy'),
   ...await getCollection('markets'),
   ...await getCollection('picks'),
-];
+].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
-const featuredPost = allPosts.find(post => post.data.featured) || allPosts[0];
+const featuredPost = allPosts[0];
+
+// Prepare hero image
+const isUnsplash = featuredPost?.data.image.includes('unsplash.com');
+const heroImage = isUnsplash 
+  ? optimizeUnsplashUrl(featuredPost.data.image, 1600) 
+  : featuredPost?.data.image;
 
 const categoryMap: Record<string, string> = {
   'Tech & Innovation': 'tech',
@@ -63,6 +70,15 @@ const categoryMap: Record<string, string> = {
     <!-- Hero Section -->
     {featuredPost && (
       <section class="hero">
+        <div class="hero-background">
+          <img 
+            src={heroImage} 
+            alt={featuredPost.data.imageAlt || featuredPost.data.title}
+            loading="eager"
+            decoding="async"
+          />
+          <div class="hero-overlay"></div>
+        </div>
         <div class="container">
           <div class="hero-content">
             <span class="hero-category">{featuredPost.data.category}</span>
@@ -190,40 +206,69 @@ const categoryMap: Record<string, string> = {
 <style>
   .hero {
     position: relative;
-    background: var(--gradient-bg);
+    background: var(--bg-primary);
     color: white;
-    padding: var(--space-24) 0;
+    padding: var(--space-32) 0;
     margin-bottom: var(--space-16);
     overflow: hidden;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(10, 6, 20, 0.95) 0%,
+      rgba(10, 6, 20, 0.8) 50%,
+      rgba(10, 6, 20, 0.4) 100%
+    );
+    z-index: 1;
+  }
+
+  .hero-background::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(123, 31, 162, 0.2) 0%, transparent 50%);
+    z-index: 2;
+    mix-blend-mode: overlay;
   }
 
   @media (max-width: 768px) {
     .hero {
-      padding: var(--space-12) 0;
-      margin-bottom: var(--space-10);
+      padding: var(--space-16) 0;
+      min-height: auto;
     }
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 50%, rgba(255, 0, 255, 0.15) 0%, transparent 50%);
-    animation: pulseGlow 8s ease-in-out infinite;
-    pointer-events: none;
-  }
-
-  @keyframes pulseGlow {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
+    
+    .hero-overlay {
+      background: linear-gradient(
+        180deg,
+        rgba(10, 6, 20, 0.8) 0%,
+        rgba(10, 6, 20, 0.9) 100%
+      );
+    }
   }
 
   .hero-content {
     position: relative;
     max-width: 800px;
-    z-index: 1;
+    z-index: 10;
   }
 
   .hero-category {
@@ -238,12 +283,7 @@ const categoryMap: Record<string, string> = {
     letter-spacing: var(--tracking-wide);
     margin-bottom: var(--space-6);
     box-shadow: var(--glow-purple);
-  }
-
-  [data-theme="light"] .hero-category {
-    background: rgba(123, 31, 162, 0.15);
-    color: var(--tribal-purple);
-    border-color: var(--tribal-purple);
+    backdrop-filter: blur(4px);
   }
 
   .hero-title {
@@ -253,6 +293,7 @@ const categoryMap: Record<string, string> = {
     margin-bottom: var(--space-6);
     line-height: var(--line-tight);
     letter-spacing: var(--tracking-tight);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
 
   .hero-title a {
@@ -272,12 +313,9 @@ const categoryMap: Record<string, string> = {
     font-size: var(--text-body-xl);
     margin-bottom: var(--space-8);
     line-height: var(--line-relaxed);
-    color: var(--text-secondary);
+    color: var(--text-gray-100);
     max-width: 65ch;
-  }
-
-  [data-theme="light"] .hero-summary {
-    color: var(--text-primary);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
   }
 
   .hero-cta {
@@ -290,6 +328,7 @@ const categoryMap: Record<string, string> = {
     font-size: var(--text-body-lg);
     transition: all var(--transition-normal) var(--easing-smooth);
     box-shadow: var(--glow-magenta);
+    border: 1px solid rgba(255,255,255,0.1);
   }
 
   .hero-cta:hover {

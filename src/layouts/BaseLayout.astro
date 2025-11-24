@@ -29,7 +29,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="/images/logos/logo.svg">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0614">
+
   <meta name="generator" content={Astro.generator}>
 
   <!-- Google Consent Mode (must load before ads/analytics) -->
@@ -49,21 +56,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <!-- Preconnect to ad networks for better performance -->
   <link rel="preconnect" href="https://pagead2.googlesyndication.com">
   <link rel="preconnect" href="https://fundingchoicesmessages.google.com">
-
-  <!-- Initialize theme before page renders to prevent flash -->
-  <script is:inline>
-    function getInitialTheme() {
-      if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-        return localStorage.getItem('theme');
-      }
-      if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-        return 'light';
-      }
-      return 'dark';
-    }
-    const theme = getInitialTheme();
-    document.documentElement.setAttribute('data-theme', theme);
-  </script>
 
   <!-- SEO -->
   <title>{fullTitle}</title>
