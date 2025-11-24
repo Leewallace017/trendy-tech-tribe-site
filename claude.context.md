@@ -63,9 +63,21 @@ Trendy Tech Tribe is a modern tech publication website covering technology news,
 │   └── styles/
 │       └── global.css             # Global styles, CSS custom properties, design system
 ├── public/
-│   └── logo.svg                   # Site logo (neon green #07fa2f + magenta #ee1ef6)
+│   ├── images/
+│   │   └── logos/
+│   │       ├── logo.svg           # Site logo (neon green #07fa2f + magenta #ee1ef6)
+│   │       ├── logo-new.png       # Alternative logo format
+│   │       └── logo-icon.png      # Logo icon variant
+│   └── ads.txt                    # AdSense verification
+├── docs/
+│   ├── templates/                 # Content templates for articles
+│   ├── CONTENT_CALENDAR_WEEK1.md  # Content planning
+│   ├── LOGO-DESIGN-PLAN.md        # Logo design documentation
+│   └── *.md                       # Other documentation files
+├── scripts/
+│   ├── Snapshot.mjs               # Puppeteer script for visual testing
+│   └── SnapshotDarkMode.mjs       # Dark mode screenshot script
 ├── screenshots/                   # Puppeteer screenshot output directory
-├── Snapshot.mjs                   # Puppeteer script for visual testing
 ├── package.json                   # Dependencies and scripts
 ├── astro.config.mjs               # Astro configuration
 ├── tsconfig.json                  # TypeScript configuration
@@ -176,7 +188,7 @@ affiliateProducts: array?          # Optional affiliate product links
 - Astro components: `PascalCase.astro` (e.g., `ArticleLayout.astro`)
 - Content files: `kebab-case.md` (e.g., `ai-agents-guide-2025.md`)
 - CSS files: `lowercase.css` (e.g., `global.css`)
-- Utility scripts: `camelCase.mjs` (e.g., `Snapshot.mjs`)
+- Utility scripts: `camelCase.mjs` (e.g., `scripts/Snapshot.mjs`)
 
 ### CSS Conventions
 - Use CSS custom properties (defined in `global.css`)
@@ -190,7 +202,7 @@ affiliateProducts: array?          # Optional affiliate product links
 
 ### When to Take Action Independently
 1. **File edits**: Read file first, then make surgical edits (no asking)
-2. **Running scripts**: Execute `npm run dev`, `node Snapshot.mjs`, git commands
+2. **Running scripts**: Execute `npm run dev`, `node scripts/Snapshot.mjs`, git commands
 3. **Creating content**: Sample articles, markdown files (when instructed)
 4. **Bug fixes**: Fix obvious errors (validation errors, typos, broken imports)
 5. **Style tweaks**: CSS adjustments matching established design system
@@ -247,7 +259,7 @@ affiliateProducts: array?          # Optional affiliate product links
 
 2. **How to run**:
    ```bash
-   node Snapshot.mjs
+   node scripts/Snapshot.mjs
    ```
 
 3. **What gets captured**:
@@ -419,7 +431,7 @@ npm run dev
 npm run build
 
 # Run visual tests
-node Snapshot.mjs
+node scripts/Snapshot.mjs
 
 # Git commit
 git add . && git commit -m "message"
