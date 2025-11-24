@@ -241,6 +241,61 @@ const schema = {
     color: var(--color-text-light);
   }
 
+  /* Table Styles */
+  .article-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-xl) 0;
+    font-size: 0.9rem;
+    background-color: var(--color-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  [data-theme="dark"] .article-content :global(table) {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .article-content :global(thead) {
+    background-color: var(--color-primary);
+    color: white;
+  }
+
+  .article-content :global(th) {
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .article-content :global(td) {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .article-content :global(tbody tr:last-child td) {
+    border-bottom: none;
+  }
+
+  .article-content :global(tbody tr) {
+    transition: background-color 0.2s;
+  }
+
+  .article-content :global(tbody tr:hover) {
+    background-color: var(--color-bg-alt);
+  }
+
+  /* Mobile table responsiveness - horizontal scroll wrapper */
+  .article-content :global(.table-wrapper) {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: var(--space-xl) 0;
+  }
+
   @media (max-width: 1024px) {
     .article-layout {
       grid-template-columns: 1fr 250px;
@@ -267,6 +322,26 @@ const schema = {
 
     .article-content {
       font-size: 1rem;
+    }
+
+    /* Mobile table adjustments */
+    .article-content :global(table) {
+      font-size: 0.8rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap;
+    }
+
+    .article-content :global(th),
+    .article-content :global(td) {
+      padding: 0.5rem;
+      min-width: 100px;
+    }
+
+    .article-content :global(th) {
+      font-size: 0.75rem;
     }
   }
 </style>

@@ -139,6 +139,59 @@ sources:
 - [Yahoo Finance - Gemini Enterprise](https://finance.yahoo.com/...)
 ```
 
+### Step 6: VERIFY ALL LINKS (MANDATORY)
+
+**🚨 CRITICAL: Every link must be verified before publishing!**
+
+Many dead links have been found in previously generated content. This is unacceptable. Every article must have all links verified.
+
+**Run the link verification script:**
+
+```bash
+npm run verify-article src/content/[category]/[article-name].md
+```
+
+**The script will:**
+- ✅ Check all Amazon affiliate links are valid
+- ✅ Verify all source URLs return 200 OK
+- ❌ Flag any 404s or broken links
+- ❌ Detect timeouts and connection errors
+
+**Common Link Problems:**
+
+1. **Made-up Amazon ASINs**
+   - ❌ Wrong: `B0XXXXXXXXX` (guessed ASIN)
+   - ✅ Correct: Search Amazon, copy real ASIN from product page
+
+2. **Speculative source URLs**
+   - ❌ Wrong: `https://blog.google/products/gemini-3/` (doesn't exist)
+   - ✅ Correct: Use WebSearch to find actual published article URL
+
+3. **Outdated links**
+   - ❌ Wrong: Articles that have moved or been removed
+   - ✅ Correct: Verify URL loads in browser before adding
+
+4. **Typos in URLs**
+   - ❌ Wrong: `https://www.techcrunch.com/...` (missing domain part)
+   - ✅ Correct: Copy-paste URLs directly from browser address bar
+
+**MANDATORY PROCESS:**
+
+1. Write article with source URLs from WebSearch results
+2. Add Amazon affiliate links with REAL product ASINs
+3. Run `npm run verify-article [file]`
+4. Fix ALL broken links (re-run script until all pass)
+5. Only then is article ready for publication
+
+**If script shows broken links:**
+```bash
+❌ https://amazon.com/dp/B0FAKE123
+   Status: invalid (404)
+   → Search Amazon for real product and update ASIN
+```
+
+**DO NOT publish with broken links. Period.**
+
 ---
 
 ## Updated Content Calendar (November 2025)
@@ -266,10 +319,14 @@ Before publishing, verify:
 - [ ] **All facts verified across 3+ sources**
 - [ ] **Quotes are real** (not made up)
 - [ ] **Statistics come from real sources**
-- [ ] **Source URLs work** (clicked each one)
+- [ ] **ALL LINKS VERIFIED** with `npm run verify-article` ⚠️ MANDATORY
+- [ ] **Amazon ASINs are real products** (not guessed)
+- [ ] **Source URLs loaded in browser** (not speculative URLs)
 - [ ] **Events have actual dates** (not fictional)
 - [ ] **Company info is current** (not outdated)
 - [ ] **Prices removed or handled correctly** (per Amazon rules)
+
+**🚨 NEVER publish with broken links. Run link verification script first!**
 
 ---
 

@@ -16,11 +16,28 @@ export interface LinkCheckResult {
  */
 export async function checkLink(url: string): Promise<LinkCheckResult> {
   try {
-    const response = await fetch(url, {
+    // Try HEAD request first (faster)
+    let response = await fetch(url, {
       method: 'HEAD',
       redirect: 'follow',
-      signal: AbortSignal.timeout(10000) // 10 second timeout
+      signal: AbortSignal.timeout(10000), // 10 second timeout
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; LinkChecker/1.0; +https://trendytechtribe.com)'
+      }
     });
+
+    // If HEAD fails with 405 (Method Not Allowed) or 403, try GET request
+    // Some servers (like Amazon) don't allow HEAD requests
+    if (response.status === 405 || response.status === 403) {
+      response = await fetch(url, {
+        method: 'GET',
+        redirect: 'follow',
+        signal: AbortSignal.timeout(10000),
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (compatible; LinkChecker/1.0; +https://trendytechtribe.com)'
+        }
+      });
+    }
 
     return {
       url,
@@ -73,6 +90,69 @@ export function extractUrlsFromFrontmatter(frontmatter: any): string[] {
   }
 
   return urls;
+}
+
+/**
+ * Extracts all Amazon links from markdown content
+ * @param content - Markdown content string
+ * @returns Array of Amazon URLs found in the content
+ */
+export function extractAmazonLinksFromContent(content: string): string[] {
+  const amazonUrls: string[] = [];
+
+  // Match markdown links: [text](url)
+  const markdownLinkRegex = /\[([^\]]+)\]\((https?:\/\/[^\)]+amazon\.com[^\)]+)\)/gi;
+  let match;
+
+  while ((match = markdownLinkRegex.exec(content)) !== null) {
+    amazonUrls.push(match[2]);
+  }
+
+  // Match bare URLs
+  const bareUrlRegex = /https?:\/\/[^\s]+amazon\.com[^\s]*/gi;
+  const bareMatches = content.match(bareUrlRegex) || [];
+
+  // Filter out duplicates and URLs already captured
+  bareMatches.forEach(url => {
+    // Clean up URL (remove trailing punctuation)
+    const cleanUrl = url.replace(/[,\.\)\]]+$/, '');
+    if (!amazonUrls.includes(cleanUrl)) {
+      amazonUrls.push(cleanUrl);
+    }
+  });
+
+  return amazonUrls;
+}
+
+/**
+ * Validates Amazon URLs have the correct affiliate tag
+ * @param urls - Array of Amazon URLs to check
+ * @param affiliateTag - Expected affiliate tag (default: trendytecht0a-20)
+ * @returns Object with valid/invalid URLs
+ */
+export function validateAmazonAffiliateTags(
+  urls: string[],
+  affiliateTag: string = 'trendytecht0a-20'
+): { valid: string[]; missing: string[] } {
+  const valid: string[] = [];
+  const missing: string[] = [];
+
+  urls.forEach(url => {
+    try {
+      const urlObj = new URL(url);
+      const tag = urlObj.searchParams.get('tag');
+
+      if (tag === affiliateTag) {
+        valid.push(url);
+      } else {
+        missing.push(url);
+      }
+    } catch (error) {
+      missing.push(url);
+    }
+  });
+
+  return { valid, missing };
 }
 
 /**

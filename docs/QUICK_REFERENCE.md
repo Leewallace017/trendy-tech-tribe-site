@@ -4,9 +4,9 @@
 
 - [ ] Choose topic (newsworthy or evergreen)
 - [ ] Select appropriate template
-- [ ] Identify 3+ reputable sources
+- [ ] Identify 3+ reputable sources (with REAL, working URLs)
 - [ ] Generate or find suitable image (see Image Workflow below)
-- [ ] For product articles: verify current Amazon pricing
+- [ ] For product articles: find REAL Amazon product ASINs (not guessed)
 
 ---
 
@@ -48,7 +48,18 @@ https://www.amazon.com/dp/[ASIN]?tag=trendytecht0a-20
 
 **Your Tracking ID:** `trendytecht0a-20`
 
-**Never forget the `?tag=` parameter!**
+**CRITICAL REQUIREMENTS:**
+- ✅ Use REAL product ASINs from Amazon search
+- ✅ Include `?tag=trendytecht0a-20` on every Amazon link
+- ✅ Verify link works before adding to article
+- ❌ Never guess or make up ASINs
+- ❌ Never use placeholder links like `B0XXXXXXXXX`
+
+**How to find real ASINs:**
+1. Search for product on Amazon.com
+2. Open product page
+3. Look in URL: `amazon.com/dp/B09B8V1LZ3` ← that's the ASIN
+4. Copy exact ASIN into your link
 
 ---
 
@@ -160,11 +171,14 @@ imageCredit: "Image courtesy of [Company Name]"
 - [ ] 3-5 relevant tags
 - [ ] Image credit included
 
-**Links:**
+**🚨 LINK VERIFICATION (MANDATORY):**
+- [ ] **RUN LINK CHECKER:** `npm run verify-article src/content/[category]/[file].md`
+- [ ] All links return ✅ (no ❌ broken links)
+- [ ] All Amazon ASINs are real products (not guessed)
+- [ ] All source URLs are real, published articles (not speculative)
 - [ ] All Amazon links include `?tag=trendytecht0a-20`
-- [ ] Clicked every link to verify works
-- [ ] Source URLs in frontmatter array
-- [ ] No broken/404 links
+- [ ] Fixed ALL broken links and re-ran checker
+- [ ] **NO ARTICLE PUBLISHED WITH BROKEN LINKS**
 
 **SEO:**
 - [ ] SEO title 50-60 characters
@@ -206,11 +220,14 @@ imageCredit: "Image courtesy of [Company Name]"
 
 ## Common Mistakes to Avoid
 
+❌ **Broken/dead links** (run `npm run verify-article` first!)
+❌ **Made-up Amazon ASINs** (use real product IDs only)
+❌ **Speculative source URLs** (URLs that don't actually exist)
 ❌ **Missing affiliate tracking ID** on Amazon links
 ❌ **Wrong category name** (must match exactly)
 ❌ **No image credit** (copyright risk)
 ❌ **Single source** for facts (need 3+)
-❌ **Broken links** (always test)
+❌ **Not running link verification before publishing**
 ❌ **Empty tags array**
 ❌ **SEO fields too long** (title 50-60, description 150-160)
 ❌ **Wrong date format** (must be YYYY-MM-DD)
@@ -236,6 +253,12 @@ git push
 ## Quick Commands
 
 ```bash
+# Verify all links in a specific article (RUN BEFORE PUBLISHING!)
+npm run verify-article src/content/picks/article-name.md
+
+# Verify all links in all articles
+npm run verify-links
+
 # Build site
 npm run build
 
@@ -244,6 +267,9 @@ npm run dev
 
 # Check for errors
 npm run astro check
+
+# Generate AI image
+npm run generate-image "description of image"
 ```
 
 ---

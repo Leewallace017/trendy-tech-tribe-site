@@ -1,0 +1,108 @@
+---
+// Inline affiliate disclosure component for article pages
+// Use this at the top of articles that contain affiliate links
+
+interface Props {
+  variant?: 'default' | 'compact';
+}
+
+const { variant = 'default' } = Astro.props;
+---
+
+<aside class={`affiliate-disclosure ${variant}`}>
+  <div class="disclosure-icon">ℹ️</div>
+  <div class="disclosure-content">
+    {variant === 'compact' ? (
+      <p>
+        <strong>Affiliate Disclosure:</strong> This article contains affiliate links. We may earn a commission from purchases made through these links at no additional cost to you. <a href="/affiliate-disclosure">Learn more</a>
+      </p>
+    ) : (
+      <>
+        <h4>Affiliate Disclosure</h4>
+        <p>
+          This article contains affiliate links, which means we may earn a small commission if you make a purchase through these links at no additional cost to you. These commissions help support our site and allow us to continue creating free content. We only recommend products we genuinely believe in. For more information, please read our <a href="/affiliate-disclosure">full Affiliate Disclosure</a>.
+        </p>
+      </>
+    )}
+  </div>
+</aside>
+
+<style>
+  .affiliate-disclosure {
+    display: flex;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    margin: var(--space-8) 0;
+    background: linear-gradient(135deg, rgba(180, 74, 255, 0.1), rgba(0, 255, 255, 0.1));
+    border-left: 4px solid var(--neon-cyan);
+    border-radius: var(--radius-md);
+    font-size: var(--text-body-sm);
+    line-height: var(--line-relaxed);
+  }
+
+  .affiliate-disclosure.compact {
+    padding: var(--space-4);
+    margin: var(--space-6) 0;
+  }
+
+  .disclosure-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .affiliate-disclosure.compact .disclosure-icon {
+    font-size: 1.25rem;
+  }
+
+  .disclosure-content {
+    flex: 1;
+  }
+
+  .affiliate-disclosure h4 {
+    font-size: var(--text-body-lg);
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+    margin: 0 0 var(--space-2) 0;
+  }
+
+  .affiliate-disclosure p {
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: var(--line-relaxed);
+  }
+
+  .affiliate-disclosure a {
+    color: var(--neon-cyan);
+    text-decoration: underline;
+    transition: color var(--transition-normal);
+    font-weight: var(--weight-semibold);
+  }
+
+  .affiliate-disclosure a:hover {
+    color: var(--neon-magenta);
+  }
+
+  .affiliate-disclosure strong {
+    color: var(--text-primary);
+    font-weight: var(--weight-bold);
+  }
+
+  @media (max-width: 768px) {
+    .affiliate-disclosure {
+      padding: var(--space-5);
+      gap: var(--space-3);
+    }
+
+    .affiliate-disclosure.compact {
+      padding: var(--space-3);
+    }
+
+    .disclosure-icon {
+      font-size: 1.25rem;
+    }
+
+    .affiliate-disclosure.compact .disclosure-icon {
+      font-size: 1rem;
+    }
+  }
+</style>

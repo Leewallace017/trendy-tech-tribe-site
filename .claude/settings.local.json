@@ -11,7 +11,14 @@
       "Bash(lsof:*)",
       "Bash(gh auth status:*)",
       "Bash(gh repo create:*)",
-      "Bash(npm run generate-image:*)"
+      "Bash(npm run generate-image:*)",
+      "Bash(git push)",
+      "Bash(npm run verify-links:*)",
+      "Bash(npm run verify-article:*)",
+      "Bash(npm run pre-publish:*)",
+      "Bash(npm run audit-sources:*)",
+      "Bash(rm:*)",
+      "Bash(npx tsc --build --clean)"
     ],
     "deny": [],
     "ask": []
