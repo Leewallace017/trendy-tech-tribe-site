@@ -99,12 +99,13 @@ ai/apple-google-gemini-siri-deal-2025.md
 
 ### Step 2: Use WebSearch to Find Real URLs
 
-**For each broken source:**
+**For each broken link:**
 
-1. **Extract the topic** from the source title
-2. **Use WebSearch** to find real articles on that topic
-3. **Choose reputable sources** (prioritize free/accessible over paywalled)
-4. **Copy the exact URL** from search results
+1. **Extract the topic** from the source/product title
+2. **Use WebSearch** to find real articles or Amazon products
+3. **For sources:** Choose reputable, accessible sources
+4. **For Amazon:** Search Amazon.com and copy ASIN from product page
+5. **Copy the exact URL** from search results or browser
 
 **Example:**
 

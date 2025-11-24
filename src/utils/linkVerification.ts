@@ -16,18 +16,75 @@ export interface LinkCheckResult {
  */
 export async function checkLink(url: string): Promise<LinkCheckResult> {
   try {
-    // Try HEAD request first (faster)
+    // For Amazon links, we need to do a GET request to check the actual content
+    const isAmazonLink = url.includes('amazon.com');
+
+    if (isAmazonLink) {
+      // Always GET for Amazon to check page content
+      const response = await fetch(url, {
+        method: 'GET',
+        redirect: 'follow',
+        signal: AbortSignal.timeout(10000),
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+      });
+
+      if (!response.ok) {
+        return {
+          url,
+          status: 'invalid',
+          statusCode: response.status
+        };
+      }
+
+      // Check if Amazon is showing a "product not found" page
+      const html = await response.text();
+
+      // Amazon shows these messages when a product doesn't exist
+      const notFoundIndicators = [
+        'Sorry, we couldn\'t find that page',
+        'Page Not Found',
+        'Looking for something?',
+        'Dogs of Amazon', // Amazon's 404 page has this
+        'requested URL was not found',
+      ];
+
+      const pageNotFound = notFoundIndicators.some(indicator =>
+        html.includes(indicator)
+      );
+
+      // Check if it's a valid product page (has typical product elements)
+      const hasProductTitle = html.includes('id="productTitle"') || html.includes('product-title');
+      const hasAddToCart = html.includes('add-to-cart') || html.includes('Add to Cart');
+
+      if (pageNotFound || (!hasProductTitle && !hasAddToCart)) {
+        return {
+          url,
+          status: 'invalid',
+          statusCode: 200,
+          error: 'Amazon product not found (ASIN may be incorrect or product discontinued)'
+        };
+      }
+
+      return {
+        url,
+        status: 'valid',
+        statusCode: response.status
+      };
+    }
+
+    // For non-Amazon links, use HEAD request first (faster)
     let response = await fetch(url, {
       method: 'HEAD',
       redirect: 'follow',
-      signal: AbortSignal.timeout(10000), // 10 second timeout
+      signal: AbortSignal.timeout(10000),
       headers: {
         'User-Agent': 'Mozilla/5.0 (compatible; LinkChecker/1.0; +https://trendytechtribe.com)'
       }
     });
 
     // If HEAD fails with 405 (Method Not Allowed) or 403, try GET request
-    // Some servers (like Amazon) don't allow HEAD requests
     if (response.status === 405 || response.status === 403) {
       response = await fetch(url, {
         method: 'GET',
