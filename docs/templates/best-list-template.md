@@ -291,6 +291,21 @@ When shopping for [product category], these factors matter most:
 - [ ] **Comparison table accurate** (verified specs)
 - [ ] **All source links work**
 - [ ] **Date is current** (today or later)
+- [ ] **ASIN VERIFICATION COMPLETE** (see below)
+
+**ASIN Verification Checklist (MANDATORY):**
+- [ ] All Amazon product ASINs extracted from article
+- [ ] Each ASIN manually tested: `https://www.amazon.com/dp/[ASIN]`
+- [ ] All product pages load successfully (no 404 errors)
+- [ ] All products show as available (not "Currently unavailable")
+- [ ] All Amazon URLs include affiliate tag: `?tag=trendytecht0a-20`
+- [ ] All Amazon URLs use correct format: `https://www.amazon.com` (with "www.")
+
+**Quick ASIN Test:**
+1. Extract ASINs: Run `npm run verify-asins` or manually find all `/dp/XXXXXXXXXX` in article
+2. Test each: Open `https://www.amazon.com/dp/[ASIN]` in browser
+3. Verify: Product page loads and matches article description
+4. See: `docs/ASIN_VERIFICATION_GUIDE.md` for detailed instructions
 
 **Amazon Link Format - CRITICAL:**
 - ✅ **CORRECT:** https://www.amazon.com/dp/ASIN?tag=trendytecht0a-20

@@ -238,9 +238,67 @@ https://amazon.com/dp/ASIN?tag=trendytecht0a-20  (missing www.)
 [Check Price](https://www.amazon.com/dp/B00X5RV14Y?tag=trendytecht0a-20)
 ```
 
+```
+
+---
+
+## ASIN Verification Requirements
+
+**CRITICAL: All Amazon product ASINs must be verified before publishing**
+
+### Pre-Publishing Checklist
+
+Before publishing ANY article with Amazon affiliate links:
+
+- [ ] **Extract all ASINs** from the article
+- [ ] **Manually verify each ASIN** by opening `https://www.amazon.com/dp/[ASIN]` in browser
+- [ ] **Confirm product page loads** (not 404 error)
+- [ ] **Verify product availability** (not "Currently unavailable")
+- [ ] **Check affiliate tag present** in all URLs (`?tag=trendytecht0a-20`)
+- [ ] **Test all final links** in article preview
+
+### Why ASIN Verification Matters
+
+Invalid ASINs cause:
+- Broken affiliate links (lost revenue)
+- Poor user experience (404 errors)  
+- Reduced article credibility
+- Wasted reader trust
+
+### How to Verify ASINs
+
+**See the comprehensive guide:** [`docs/ASIN_VERIFICATION_GUIDE.md`](./ASIN_VERIFICATION_GUIDE.md)
+
+The guide covers:
+- How to find and extract ASINs
+- Step-by-step verification process
+- Common issues and solutions
+- Best practices for product selection
+- Monthly audit procedures
+
+### Quick ASIN Verification
+
+1. **Find ASIN in URL**: `https://www.amazon.com/dp/B09B8V1LZ3` → ASIN is `B09B8V1LZ3`
+2. **Test ASIN**: Open `https://www.amazon.com/dp/[ASIN]` in browser
+3. **Verify**: Product page loads and matches your article description
+4. **Check Tag**: URL includes `?tag=trendytecht0a-20`
+
+### Monthly ASIN Audits
+
+Run monthly audits to catch products that become unavailable:
+
+```bash
+npm run verify-asins
+```
+
+This extracts all ASINs from articles for manual verification.
+
+**See:** [`docs/ASIN_VERIFICATION_GUIDE.md`](./ASIN_VERIFICATION_GUIDE.md) for complete audit process.
+
 ---
 
 ## Summary
+
 
 **Safest approach for compliance:**
 1. **Never** put specific prices in article body text
