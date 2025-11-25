@@ -14,20 +14,42 @@ This workflow ensures all best-list articles are created with accurate, verified
 - [ ] Check competition (what exists already)
 - [ ] Confirm target audience interest
 
-### Step 2: Product Research
-- [ ] Search Amazon for top products in category
+### Step 2: Research with Perplexity (RECOMMENDED)
+**Use Perplexity for fast, accurate research:**
+
+```bash
+# Compare top products in category
+npm run perplexity -- compare "product1" "product2" "product3"
+
+# Get specific product details and ASINs
+npm run perplexity -- products "product name"
+
+# Find review sources
+npm run perplexity -- sources "best [category] 2025"
+```
+
+**What you get from Perplexity:**
+- [ ] Detailed product comparisons with specs
+- [ ] Pros and cons for each product
+- [ ] Amazon ASINs
+- [ ] Credible review sources with URLs
+- [ ] Current pricing context
+- [ ] Real user feedback context
+
+**Manual Research (if needed):**
 - [ ] Read manufacturer specs for each product
-- [ ] Review at least 3 sources per product:
-  - Amazon customer reviews
-  - Tech review sites (CNET, Wirecutter, etc.)
-  - YouTube reviews
-  - Reddit discussions
-- [ ] Document key features, pros, cons for each
-- [ ] Note current availability and model numbers
+- [ ] Amazon customer reviews
+- [ ] Tech review sites (CNET, Wirecutter, etc.)
+- [ ] YouTube reviews
 
 ### Step 3: ASIN Collection (CRITICAL)
+**From Perplexity:**
+- [ ] Run: `npm run perplexity -- products "product name"` for each product
+- [ ] Extract ASINs from Perplexity output
+- [ ] Format: `https://www.amazon.com/dp/[ASIN]?tag=trendytecht0a-20`
+
+**Manual Method (backup):**
 - [ ] For each product, extract ASIN from Amazon URL
-- [ ] Format: `https://www.amazon.com/dp/[ASIN]`
 - [ ] Create list of all ASINs to verify
 - [ ] **DO NOT PROCEED** until ASINs are collected
 

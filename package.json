@@ -13,7 +13,8 @@
     "verify-article": "tsx scripts/verify-article-links.ts",
     "pre-publish": "tsx scripts/pre-publish-check.ts",
     "audit-sources": "tsx scripts/audit-source-links.ts",
-    "verify-asins": "node scripts/verify-asins.js"
+    "verify-asins": "node scripts/verify-asins.js",
+    "perplexity": "tsx scripts/perplexity-research.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",

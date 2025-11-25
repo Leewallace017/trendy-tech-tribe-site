@@ -278,18 +278,22 @@ When shopping for [product category], these factors matter most:
 
 ---
 
+**Pre-Writing Research Checklist (Use Perplexity First!):**
+- [ ] **Perplexity product comparison**: `npm run perplexity -- compare "product1" "product2" "product3"`
+- [ ] **Perplexity product ASINs**: `npm run perplexity -- products "product name"` for each
+- [ ] **Perplexity sources**: `npm run perplexity -- sources "best [category] 2025"`
+- [ ] **Specs verified** from Perplexity results and manufacturer websites
+- [ ] **Multiple sources** (Perplexity provides 5-7 credible sources automatically)
+
 **Pre-Publishing Checklist:**
-- [ ] **Web search** for latest product reviews and releases
 - [ ] **All products verified** on Amazon (ASINs correct, products available)
-- [ ] **Specs verified** against manufacturer websites
-- [ ] **Multiple reviews** consulted for each product (3+ sources)
-- [ ] **Affiliate tracking ID** in ALL Amazon URLs
+- [ ] **Affiliate tracking ID** in ALL Amazon URLs: `?tag=trendytecht0a-20`
 - [ ] **Amazon URLs use CORRECT format** - https://www.amazon.com (with "www.")
 - [ ] **NO specific prices** anywhere in article
 - [ ] **Price ranges only** (budget/mid/premium tiers)
 - [ ] **Image shows actual products** from the list
 - [ ] **Comparison table accurate** (verified specs)
-- [ ] **All source links work**
+- [ ] **All source links work** (from Perplexity or manual research)
 - [ ] **Date is current** (today or later)
 - [ ] **ASIN VERIFICATION COMPLETE** (see below)
 

@@ -39,7 +39,8 @@
       "Bash(npx astro build:*)",
       "Bash(sips:*)",
       "Bash(npx -y playwright screenshot:*)",
-      "Bash(npx:*)"
+      "Bash(npx:*)",
+      "Bash(npm run perplexity:*)"
     ],
     "deny": [],
     "ask": []

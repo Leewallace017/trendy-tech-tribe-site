@@ -1,275 +1,255 @@
-# Content Creation Master Guide
+# Trendy Tech Tribe - Documentation Hub
 
 **Last Updated:** November 24, 2025
 
-This guide consolidates all content creation instructions for Trendy Tech Tribe.
-
-## Quick Start
-
-1. **Choose workflow:**
-   - Single article: Use [`REAL_CONTENT_WORKFLOW.md`](./REAL_CONTENT_WORKFLOW.md)
-   - Multiple articles: Use [`workflows/write-multiple-articles.md`](./workflows/write-multiple-articles.md)
-   - Best-list article: Use [`workflows/create-best-list-article.md`](./workflows/create-best-list-article.md)
-
-2. **Select template** from [`templates/`](./templates/) directory
-
-3. **Follow verification steps** before publishing
+Welcome to the Trendy Tech Tribe documentation. Everything you need to create, verify, and publish content.
 
 ---
 
-## Core Principles
+## 🚀 Quick Start
 
-### Always Use Real Research
-- Web search for current news (last 7 days)
-- Verify facts across 3+ sources
-- Never make up quotes, statistics, or sources
-- Use actual dates from research
+### For AI Assistants
+**Start here:** [CONTENT_CREATION_INSTRUCTIONS.md](CONTENT_CREATION_INSTRUCTIONS.md)
+The complete guide for creating content using Perplexity AI.
 
-### Current Dates Only
-- Article date: TODAY or later (never past dates)
-- Event dates: Actual dates from research
-- Example: `date: "2025-11-24"` for article published today
-
-### Source Everything
-- Include sources in frontmatter
-- Add Sources section at end of article
-- Verify all URLs load successfully
-- Cross-reference facts across multiple sources
-
-### Follow Templates
-- Templates in [`templates/`](./templates/) directory
-- Don't skip sections
-- Maintain consistent structure
-- Use appropriate template for content type
+### For Humans
+1. Review [CONTENT_CREATION_GUIDE.md](CONTENT_CREATION_GUIDE.md) for overview
+2. Choose a template from [`templates/`](templates/)
+3. Follow the [Perplexity Guide](../PERPLEXITY-GUIDE.md) for research
 
 ---
 
-## Article Types & Templates
+## 📚 Core Documentation
 
-### Quick-Take (News/Analysis)
-**Template:** [`templates/quick-take-template.md`](./templates/quick-take-template.md)
+### Content Creation
+- **[CONTENT_CREATION_INSTRUCTIONS.md](CONTENT_CREATION_INSTRUCTIONS.md)** ⭐ PRIMARY GUIDE
+  Complete workflow for AI assistants with Perplexity integration
 
-**Use for:** Breaking news, company announcements, market analysis
+- **[CONTENT_CREATION_GUIDE.md](CONTENT_CREATION_GUIDE.md)**
+  Human-readable overview of content creation process
 
-**Structure:**
-- What Happened
-- Key Details
-- Why It Matters
-- The Backstory
-- Expert Reactions
-- What's Next
-- Our Take
-- The Bottom Line
+- **[Perplexity Guide](../PERPLEXITY-GUIDE.md)**
+  How to use Perplexity AI for research, sources, and Amazon products
 
-**Time:** 5-10 minutes per article
+### Templates
+- **[best-list-template.md](templates/best-list-template.md)** - Product roundups
+- **[quick-take-template.md](templates/quick-take-template.md)** - News articles
+- **[deep-dive-template.md](templates/deep-dive-template.md)** - Long-form analysis
+- **[opinion-template.md](templates/opinion-template.md)** - Editorial pieces
+- **[product-review-template.md](templates/product-review-template.md)** - Single product reviews
 
----
+### Amazon Affiliate Guidelines
+- **[AMAZON_PRICING_RULES.md](AMAZON_PRICING_RULES.md)**
+  Pricing rules and compliance (NO specific prices!)
 
-### Best-List (Product Roundups)
-**Template:** [`templates/best-list-template.md`](./templates/best-list-template.md)
+- **[ASIN_VERIFICATION_GUIDE.md](ASIN_VERIFICATION_GUIDE.md)**
+  How to verify Amazon ASINs work correctly
 
-**Use for:** Product recommendations, buying guides, comparisons
+- **[AFFILIATE_TAG_ENFORCEMENT.md](AFFILIATE_TAG_ENFORCEMENT.md)**
+  Ensuring affiliate tags are present
 
-**Structure:**
-- Quick Picks
-- What to Look For
-- Detailed Product Reviews
-- Comparison Table
-- Buying Guide
-- FAQs
-- Final Verdict
+### Verification & Quality
+- **[LINK_VERIFICATION_GUIDE.md](LINK_VERIFICATION_GUIDE.md)**
+  How to verify all links work
 
-**Time:** 15-20 minutes per article
-
-**CRITICAL:** Must verify all Amazon ASINs before publishing (see Amazon Guidelines below)
+- **[SOURCE_LINKS_GUIDE.md](SOURCE_LINKS_GUIDE.md)**
+  Guidelines for credible sources
 
 ---
 
-### Deep-Dive (Detailed Analysis)
-**Template:** [`templates/deep-dive-template.md`](./templates/deep-dive-template.md)
+## 🔧 Tools & Commands
 
-**Use for:** Complex topics requiring detailed explanation
+### Research (Perplexity)
+```bash
+# General research
+npm run perplexity -- research "topic with date"
 
-**Time:** 20-30 minutes per article
+# Find article sources
+npm run perplexity -- sources "topic"
 
----
+# Find Amazon products/ASINs
+npm run perplexity -- products "product name"
 
-### Opinion (Editorial)
-**Template:** [`templates/opinion-template.md`](./templates/opinion-template.md)
-
-**Use for:** Editorial perspective on trends, controversial topics
-
-**Time:** 15-20 minutes per article
-
----
-
-## Amazon Affiliate Guidelines
-
-### Link Format
-✅ **CORRECT:**
-```
-https://www.amazon.com/dp/B09B8V1LZ3?tag=trendytecht0a-20
+# Compare products
+npm run perplexity -- compare "product1" "product2" "product3"
 ```
 
-❌ **WRONG:**
+### Verification
+```bash
+# Verify article sources
+npm run verify-article src/content/[category]/[file].md
+
+# Verify Amazon ASINs
+npm run verify-asins
+
+# Full pre-publish check
+npm run pre-publish
+
+# Audit all source links
+npm run audit-sources
 ```
-https://amazon.com/dp/B09B8V1LZ3?tag=trendytecht0a-20  (missing www.)
-https://www.amazon.com/dp/B09B8V1LZ3  (missing affiliate tag)
+
+### Development
+```bash
+# Run dev server
+npm run dev
+
+# Build site
+npm run build
+
+# Generate AI image
+npm run generate-image
 ```
 
-### Pricing Rules
-❌ **NEVER:**
-- List specific prices ($79, $149, etc.)
-- Show prices in comparison tables
-- Make price comparisons with exact numbers
+---
 
-✅ **ALWAYS:**
-- Use price ranges (under $100, $100-200 range)
-- Use "Check price on Amazon" CTAs
-- Include disclaimer that prices change
-- Add `?tag=trendytecht0a-20` to ALL Amazon links
+## 📋 Workflows
 
-### ASIN Verification (MANDATORY for Product Articles)
+### Creating Best-List Articles
+1. Research with Perplexity: `npm run perplexity -- compare "products"`
+2. Get ASINs: `npm run perplexity -- products "product"`
+3. Use template: [best-list-template.md](templates/best-list-template.md)
+4. Verify ASINs: `npm run verify-asins`
+5. Publish
 
-**Before publishing ANY article with Amazon links:**
+**Full workflow:** [create-best-list-article.md](workflows/create-best-list-article.md)
 
-1. **Extract ASINs** from article
-2. **Test each ASIN** in browser:
-   ```
-   https://www.amazon.com/dp/[ASIN]?tag=trendytecht0a-20
-   ```
-3. **Verify:**
-   - Page loads (not 404)
-   - Product is in stock/available
-   - Product name matches article
-   - Affiliate tag visible in URL
+### Creating News Articles
+1. Research: `npm run perplexity -- research "topic"`
+2. Get sources: `npm run perplexity -- sources "topic"`
+3. Use template: [quick-take-template.md](templates/quick-take-template.md)
+4. Verify: `npm run verify-article`
+5. Publish
 
-4. **Run script** (if available):
-   ```bash
-   npm run verify-asins
-   ```
-
-**DO NOT publish with unverified ASINs!**
+### Monthly Maintenance
+- **[monthly-asin-audit.md](workflows/monthly-asin-audit.md)**
+  Verify all Amazon links still work
 
 ---
 
-## Image Guidelines
+## ✅ Quality Checklist
 
-### Priority Order
+### Every Article Must Have:
+- [ ] Current date (today or future, never past)
+- [ ] Research from Perplexity (November 2025)
+- [ ] Verified sources with URLs
+- [ ] Relevant image with credit
+- [ ] Followed template structure
+- [ ] No spelling/grammar errors
 
-**For News/Quick-Take Articles:**
-1. Official press release image
-2. AI-generated conceptual image
-3. Specific Unsplash search (not generic!)
-
-**For Best-List Articles:**
-1. Hero product image (Best Overall pick)
-2. Composite of top 3-4 products
-3. AI-generated product comparison
-4. Specific category image from Unsplash
-
-### Never Use:
-- Completely unrelated stock photos
-- Generic images that don't connect to story
-- Images used in other articles
-- Low-quality or pixelated images
-
-### Image Credits:
-- Official images: "Image courtesy of [Company Name]"
-- AI-generated: "AI Generated Image"
-- Unsplash: "Photo by [Name] on Unsplash"
+### Product Articles Must Also Have:
+- [ ] ASINs from Perplexity or manual verification
+- [ ] All ASINs tested in browser
+- [ ] Affiliate tag on ALL links: `?tag=trendytecht0a-20`
+- [ ] Price ranges only (NO specific prices)
+- [ ] Screenshots of ASIN verification
 
 ---
 
-## Verification Checklist
+## 🚫 Common Mistakes
 
-Before publishing ANY article:
+### Research
+❌ Using outdated information
+❌ Not using Perplexity first
+❌ Making up sources or quotes
+❌ Single-source claims
 
-### Content Quality
-- [ ] Date is current (today or future, never past)
-- [ ] All facts verified across 3+ sources
-- [ ] Quotes are real (not made up)
-- [ ] Statistics from verified sources
-- [ ] No speculation presented as fact
+### Amazon
+❌ Specific prices ($79, $149)
+❌ Missing affiliate tag
+❌ Missing "www." in URL
+❌ Unverified ASINs
 
-### Sources & Links
-- [ ] Source URLs in frontmatter
-- [ ] Sources section at end of article
-- [ ] All source links tested and working
-- [ ] No broken or 404 links
-
-### Amazon Compliance (if applicable)
-- [ ] All Amazon links include `?tag=trendytecht0a-20`
-- [ ] All Amazon URLs use `https://www.amazon.com` (with www.)
-- [ ] NO specific prices anywhere
-- [ ] Price ranges only
-- [ ] ALL ASINs verified in browser
-
-### Template Compliance
-- [ ] Correct template used
-- [ ] All required sections included
-- [ ] Structure maintained
-- [ ] Image relevant to topic
+### Templates
+❌ Skipping sections
+❌ Using past dates
+❌ Generic images
+❌ Wrong category
 
 ---
 
-## Common Mistakes to Avoid
+## 📁 File Structure
 
-❌ **Content Mistakes:**
-- Using past dates for articles
-- Making up sources or quotes
-- Copying existing articles without new information
-- Speculation without labeling it as such
+```
+src/content/
+  ├── tech/         # Tech & Innovation
+  ├── ai/           # AI & Automation
+  ├── evs/          # EVs & Mobility
+  ├── energy/       # Energy & Policy
+  ├── markets/      # Markets & Money
+  └── picks/        # Picks & Reviews (products)
 
-❌ **Amazon Mistakes:**
-- Skipping ASIN verification
-- Including specific prices
-- Missing affiliate tags
-- Using amazon.com without www.
+docs/
+  ├── templates/    # Article templates
+  ├── workflows/    # Step-by-step workflows
+  ├── *.md          # Guides and documentation
+  └── README.md     # This file
 
-❌ **Template Mistakes:**
-- Skipping required sections
-- Using wrong template for content type
-- Generic/unrelated images
-- Inconsistent formatting
-
----
-
-## Workflows
-
-### Single Article
-See: [`REAL_CONTENT_WORKFLOW.md`](./REAL_CONTENT_WORKFLOW.md)
-
-### Multiple Articles (Bulk Creation)
-See: [`workflows/write-multiple-articles.md`](./workflows/write-multiple-articles.md)
-
-### Best-List Article
-See: [`workflows/create-best-list-article.md`](./workflows/create-best-list-article.md)
-
-### Monthly ASIN Audit
-See: [`workflows/monthly-asin-audit.md`](./workflows/monthly-asin-audit.md)
+scripts/
+  ├── perplexity-research.ts    # Perplexity research tool
+  ├── verify-*.ts               # Verification scripts
+  └── *.ts                      # Other utilities
+```
 
 ---
 
-## Additional Resources
+## 🔗 Key Links
 
-- **Link Verification:** [`LINK_VERIFICATION_GUIDE.md`](./LINK_VERIFICATION_GUIDE.md)
-- **ASIN Verification:** [`ASIN_VERIFICATION_GUIDE.md`](./ASIN_VERIFICATION_GUIDE.md)
-- **Amazon Pricing:** [`AMAZON_PRICING_RULES.md`](./AMAZON_PRICING_RULES.md)
-- **Affiliate Tags:** [`AFFILIATE_TAG_ENFORCEMENT.md`](./AFFILIATE_TAG_ENFORCEMENT.md)
-- **Image Sourcing:** [`IMAGE_SOURCING_GUIDE.md`](./IMAGE_SOURCING_GUIDE.md)
-- **AI Images:** [`AI_IMAGE_SETUP.md`](./AI_IMAGE_SETUP.md)
+- **Perplexity Guide:** [../PERPLEXITY-GUIDE.md](../PERPLEXITY-GUIDE.md) ⭐
+- **Main Instructions:** [CONTENT_CREATION_INSTRUCTIONS.md](CONTENT_CREATION_INSTRUCTIONS.md)
+- **Amazon Rules:** [AMAZON_PRICING_RULES.md](AMAZON_PRICING_RULES.md)
+- **Templates:** [templates/](templates/)
 
 ---
 
-## Quick Reference
+## 🆘 Help & Troubleshooting
 
-**Templates:** `docs/templates/`
-**Workflows:** `docs/workflows/`
-**Current Date:** November 24, 2025 (always use current or future dates)
-**Affiliate Tag:** `?tag=trendytecht0a-20`
-**Amazon URL Format:** `https://www.amazon.com/dp/[ASIN]?tag=trendytecht0a-20`
+### Perplexity Not Working
+Check: `.env` contains `PERPLEXITY_API_KEY=...`
+
+### ASINs Invalid
+1. Try: `npm run perplexity -- products "product name"`
+2. Test in browser manually
+3. Search Amazon for replacement if needed
+
+### Links Broken
+1. Use: `npm run perplexity -- sources "topic"`
+2. Verify each URL loads
+3. Replace with working alternatives
+
+### Article Not Showing
+1. Check YAML frontmatter is valid
+2. Verify category matches directory
+3. Check date format: `YYYY-MM-DD`
+4. Run: `npm run build` to see errors
 
 ---
 
-**Need help?** Check the specific guides linked above or review the templates for examples.
+## 📊 Performance Targets
+
+### Creation Time
+- News article: 5-10 minutes
+- Best-list: 15-20 minutes
+- Deep-dive: 30-45 minutes
+
+### Quality Metrics
+- All sources verified
+- All ASINs working
+- All affiliate tags present
+- No specific prices
+- Template structure followed
+
+---
+
+## 🎯 Success Criteria
+
+A well-created article:
+- ✅ Uses Perplexity for research
+- ✅ Has working, credible sources
+- ✅ Follows template structure
+- ✅ Passes verification scripts
+- ✅ Provides real value to readers
+
+---
+
+**Remember:** Start with Perplexity. It's your primary research tool for everything.
