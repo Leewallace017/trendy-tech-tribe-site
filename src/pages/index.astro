@@ -32,7 +32,7 @@ const picksPosts = (await getCollection('picks')).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 ).slice(0, 3);
 
-// Get featured post (most recent across all categories)
+// Get featured post (rotate among top 5 featured or latest)
 const allPosts = [
   ...await getCollection('tech'),
   ...await getCollection('ai'),
@@ -42,7 +42,18 @@ const allPosts = [
   ...await getCollection('picks'),
 ].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
-const featuredPost = allPosts[0];
+// 1. Filter for explicitly featured posts
+const featuredCandidates = allPosts.filter(post => post.data.featured === true);
+
+// 2. Select pool of candidates (top 5 featured OR top 5 latest if no featured)
+const candidatePool = featuredCandidates.length > 0 
+  ? featuredCandidates.slice(0, 5) 
+  : allPosts.slice(0, 5);
+
+// 3. Randomly select one from the pool
+// Note: In a static build, this "random" selection happens at build time.
+// In SSR or Dev, it happens on each request.
+const featuredPost = candidatePool[Math.floor(Math.random() * candidatePool.length)];
 
 // Prepare hero image
 const isUnsplash = featuredPost?.data.image.includes('unsplash.com');
