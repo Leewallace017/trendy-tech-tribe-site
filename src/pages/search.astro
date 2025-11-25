@@ -1,0 +1,278 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+// Get all posts for the search index
+const allPosts = [
+  ...await getCollection('tech'),
+  ...await getCollection('ai'),
+  ...await getCollection('evs'),
+  ...await getCollection('energy'),
+  ...await getCollection('markets'),
+  ...await getCollection('picks'),
+].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+// Create a lightweight search index
+const searchIndex = allPosts.map(post => ({
+  title: post.data.title,
+  summary: post.data.summary,
+  category: post.data.category,
+  tags: post.data.tags,
+  slug: post.slug,
+  date: post.data.date,
+  image: post.data.image,
+  url: `/${post.collection}/${post.slug}` // Approximate URL construction
+}));
+
+const categoryMap: Record<string, string> = {
+  'Tech & Innovation': 'tech',
+  'AI & Automation': 'ai',
+  'EVs & Mobility': 'evs',
+  'Energy & Policy': 'energy',
+  'Markets & Money': 'markets',
+  'Picks & Reviews': 'picks',
+};
+---
+
+<BaseLayout
+  title="Search - Trendy Tech Tribe"
+  description="Search for articles on Trendy Tech Tribe."
+>
+  <Header />
+
+  <main class="container search-page">
+    <div class="search-header">
+      <h1 class="search-title">Search the Tribe</h1>
+      <div class="search-input-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Search articles, topics, or keywords..."
+          autofocus
+        />
+      </div>
+    </div>
+
+    <div id="search-results" class="posts-grid">
+      <!-- Results will be injected here -->
+    </div>
+    
+    <div id="no-results" class="no-results hidden">
+      <p>No matches found. Try a different keyword.</p>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<script define:vars={{ searchIndex, categoryMap }}>
+  const searchInput = document.getElementById('search-input');
+  const resultsContainer = document.getElementById('search-results');
+  const noResults = document.getElementById('no-results');
+
+  function renderResults(results) {
+    resultsContainer.innerHTML = '';
+    
+    if (results.length === 0) {
+      noResults.classList.remove('hidden');
+      return;
+    }
+
+    noResults.classList.add('hidden');
+
+    results.forEach(post => {
+      const article = document.createElement('article');
+      article.className = 'post-card';
+      
+      // Correct URL construction using category map
+      const categorySlug = categoryMap[post.category] || 'tech';
+      const url = `/${categorySlug}/${post.slug}`;
+
+      article.innerHTML = `
+        <a href="${url}" class="post-link">
+          <div class="post-image">
+            <img src="${post.image}" alt="${post.title}" loading="lazy" />
+          </div>
+          <div class="post-content">
+            <span class="post-category">${post.category}</span>
+            <h3 class="post-title">${post.title}</h3>
+            <p class="post-summary">${post.summary}</p>
+          </div>
+        </a>
+      `;
+      resultsContainer.appendChild(article);
+    });
+  }
+
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase();
+    
+    if (query.length < 2) {
+      resultsContainer.innerHTML = '';
+      noResults.classList.add('hidden');
+      return;
+    }
+
+    const filteredPosts = searchIndex.filter(post => {
+      return (
+        post.title.toLowerCase().includes(query) ||
+        post.summary.toLowerCase().includes(query) ||
+        post.tags.some(tag => tag.toLowerCase().includes(query))
+      );
+    });
+
+    renderResults(filteredPosts);
+  });
+</script>
+
+<style>
+  .search-page {
+    min-height: 60vh;
+    padding-top: var(--space-xl);
+  }
+
+  .search-header {
+    max-width: 800px;
+    margin: 0 auto var(--space-2xl);
+    text-align: center;
+  }
+
+  .search-title {
+    font-family: var(--font-display);
+    font-size: var(--text-h1);
+    margin-bottom: var(--space-lg);
+    background: var(--gradient-text-neon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .search-input-wrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-tertiary);
+    pointer-events: none;
+  }
+
+  #search-input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    font-size: 1.125rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-dim);
+    border-radius: var(--radius-full);
+    color: var(--text-primary);
+    transition: all 0.2s;
+    box-shadow: var(--shadow-sm);
+  }
+
+  #search-input:focus {
+    outline: none;
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+    background: var(--bg-primary);
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-8);
+    margin-bottom: var(--space-24);
+  }
+
+  .no-results {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    margin-top: var(--space-xl);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* Reusing PostCard styles roughly for client-side rendering */
+  :global(.post-card) {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-dim);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+  }
+
+  :global(.post-card:hover) {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-bright);
+  }
+
+  :global(.post-link) {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  :global(.post-image) {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+  }
+
+  :global(.post-image img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  :global(.post-card:hover .post-image img) {
+    transform: scale(1.05);
+  }
+
+  :global(.post-content) {
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  :global(.post-category) {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--neon-cyan);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+    letter-spacing: 0.05em;
+  }
+
+  :global(.post-title) {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+    line-height: 1.3;
+    color: var(--text-primary);
+  }
+
+  :global(.post-summary) {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
