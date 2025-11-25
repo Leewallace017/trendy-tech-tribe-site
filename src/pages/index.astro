@@ -32,7 +32,7 @@ const picksPosts = (await getCollection('picks')).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 ).slice(0, 3);
 
-// Get featured post (rotate among top 5 featured or latest)
+// Get featured posts (Top 3 featured or latest)
 const allPosts = [
   ...await getCollection('tech'),
   ...await getCollection('ai'),
@@ -45,21 +45,28 @@ const allPosts = [
 // 1. Filter for explicitly featured posts
 const featuredCandidates = allPosts.filter(post => post.data.featured === true);
 
-// 2. Select pool of candidates (top 5 featured OR top 5 latest if no featured)
-const candidatePool = featuredCandidates.length > 0 
-  ? featuredCandidates.slice(0, 5) 
-  : allPosts.slice(0, 5);
+// 2. Select top 3 (prefer featured, fill with latest if needed)
+let featuredPosts = [];
+if (featuredCandidates.length >= 3) {
+  featuredPosts = featuredCandidates.slice(0, 3);
+} else {
+  // Take all featured, then fill the rest with latest non-featured
+  featuredPosts = [...featuredCandidates];
+  const remainingCount = 3 - featuredPosts.length;
+  const nonFeatured = allPosts.filter(p => !p.data.featured);
+  featuredPosts = [...featuredPosts, ...nonFeatured.slice(0, remainingCount)];
+}
 
-// 3. Randomly select one from the pool
-// Note: In a static build, this "random" selection happens at build time.
-// In SSR or Dev, it happens on each request.
-const featuredPost = candidatePool[Math.floor(Math.random() * candidatePool.length)];
+// Ensure we have unique posts (dedupe by slug just in case)
+featuredPosts = Array.from(new Map(featuredPosts.map(p => [p.slug, p])).values()).slice(0, 3);
 
-// Prepare hero image
-const isUnsplash = featuredPost?.data.image.includes('unsplash.com');
-const heroImage = isUnsplash 
-  ? optimizeUnsplashUrl(featuredPost.data.image, 1600) 
-  : featuredPost?.data.image;
+const [mainFeature, ...sideFeatures] = featuredPosts;
+
+// Prepare hero image for main feature
+const isUnsplash = mainFeature?.data.image.includes('unsplash.com');
+const mainHeroImage = isUnsplash 
+  ? optimizeUnsplashUrl(mainFeature.data.image, 1600) 
+  : mainFeature?.data.image;
 
 const categoryMap: Record<string, string> = {
   'Tech & Innovation': 'tech',
@@ -78,31 +85,66 @@ const categoryMap: Record<string, string> = {
   <Header />
 
   <main>
-    <!-- Hero Section -->
-    {featuredPost && (
-      <section class="hero">
-        <div class="hero-background">
-          <img 
-            src={heroImage} 
-            alt={featuredPost.data.imageAlt || featuredPost.data.title}
-            loading="eager"
-            decoding="async"
-          />
-          <div class="hero-overlay"></div>
-        </div>
-        <div class="container">
-          <div class="hero-content">
-            <span class="hero-category">{featuredPost.data.category}</span>
-            <h1 class="hero-title">
-              <a href={`/${categoryMap[featuredPost.data.category]}/${featuredPost.slug}`}>
-                {featuredPost.data.title}
+    <!-- Featured Grid Section -->
+    {mainFeature && (
+      <section class="featured-grid container">
+        <!-- Main Feature (Left) -->
+        <div class="main-feature">
+          <div class="feature-card main">
+            <div class="feature-bg">
+              <img 
+                src={mainHeroImage} 
+                alt={mainFeature.data.imageAlt || mainFeature.data.title}
+                loading="eager"
+                decoding="async"
+              />
+              <div class="feature-overlay"></div>
+            </div>
+            <div class="feature-content">
+              <span class="feature-category">{mainFeature.data.category}</span>
+              <h1 class="feature-title main-title">
+                <a href={`/${categoryMap[mainFeature.data.category]}/${mainFeature.slug}`}>
+                  {mainFeature.data.title}
+                </a>
+              </h1>
+              <p class="feature-summary">{mainFeature.data.summary}</p>
+              <a href={`/${categoryMap[mainFeature.data.category]}/${mainFeature.slug}`} class="feature-cta">
+                Read Now →
               </a>
-            </h1>
-            <p class="hero-summary">{featuredPost.data.summary}</p>
-            <a href={`/${categoryMap[featuredPost.data.category]}/${featuredPost.slug}`} class="hero-cta">
-              Read More →
-            </a>
+            </div>
           </div>
+        </div>
+
+        <!-- Side Features (Right) -->
+        <div class="side-features">
+          {sideFeatures.map(post => {
+            const isUnsplashSide = post.data.image.includes('unsplash.com');
+            const sideImage = isUnsplashSide 
+              ? optimizeUnsplashUrl(post.data.image, 800) 
+              : post.data.image;
+            
+            return (
+              <div class="feature-card side">
+                <div class="feature-bg">
+                  <img 
+                    src={sideImage} 
+                    alt={post.data.imageAlt || post.data.title}
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <div class="feature-overlay side-overlay"></div>
+                </div>
+                <div class="feature-content side-content">
+                  <span class="feature-category small">{post.data.category}</span>
+                  <h2 class="feature-title side-title">
+                    <a href={`/${categoryMap[post.data.category]}/${post.slug}`}>
+                      {post.data.title}
+                    </a>
+                  </h2>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     )}
@@ -215,74 +257,101 @@ const categoryMap: Record<string, string> = {
 </BaseLayout>
 
 <style>
-  .hero {
-    position: relative;
-    background: var(--bg-primary);
-    color: white;
-    padding: var(--space-32) 0;
-    margin-bottom: var(--space-16);
-    overflow: hidden;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
+  /* Featured Grid Layout */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-20);
+    height: 600px; /* Fixed height for desktop grid */
   }
 
-  .hero-background {
+  .main-feature {
+    height: 100%;
+  }
+
+  .side-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    height: 100%;
+  }
+
+  .feature-card {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid var(--border-dim);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg), var(--glow-soft);
+    border-color: var(--border-bright);
+  }
+
+  .feature-card.main {
+    height: 100%;
+  }
+
+  .feature-card.side {
+    flex: 1; /* Split height equally */
+  }
+
+  .feature-bg {
     position: absolute;
     inset: 0;
     z-index: 0;
   }
 
-  .hero-background img {
+  .feature-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.6;
+    transition: transform 0.7s ease;
   }
 
-  .hero-overlay {
+  .feature-card:hover .feature-bg img {
+    transform: scale(1.05);
+  }
+
+  .feature-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
-      90deg,
+      0deg,
       rgba(10, 6, 20, 0.95) 0%,
-      rgba(10, 6, 20, 0.8) 50%,
-      rgba(10, 6, 20, 0.4) 100%
+      rgba(10, 6, 20, 0.6) 50%,
+      rgba(10, 6, 20, 0.1) 100%
     );
     z-index: 1;
   }
 
-  .hero-background::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(123, 31, 162, 0.2) 0%, transparent 50%);
-    z-index: 2;
-    mix-blend-mode: overlay;
+  .side-overlay {
+    background: linear-gradient(
+      0deg,
+      rgba(10, 6, 20, 0.95) 0%,
+      rgba(10, 6, 20, 0.4) 100%
+    );
   }
 
-  @media (max-width: 768px) {
-    .hero {
-      padding: var(--space-16) 0;
-      min-height: auto;
-    }
-    
-    .hero-overlay {
-      background: linear-gradient(
-        180deg,
-        rgba(10, 6, 20, 0.8) 0%,
-        rgba(10, 6, 20, 0.9) 100%
-      );
-    }
-  }
-
-  .hero-content {
+  .feature-content {
     position: relative;
-    max-width: 800px;
     z-index: 10;
+    padding: var(--space-8);
+    width: 100%;
   }
 
-  .hero-category {
+  .side-content {
+    padding: var(--space-6);
+  }
+
+  .feature-category {
     display: inline-block;
     background: rgba(180, 74, 255, 0.3);
     border: 1px solid var(--tribal-purple);
@@ -292,22 +361,36 @@ const categoryMap: Record<string, string> = {
     font-weight: var(--weight-semibold);
     text-transform: uppercase;
     letter-spacing: var(--tracking-wide);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-4);
     box-shadow: var(--glow-purple);
     backdrop-filter: blur(4px);
   }
 
-  .hero-title {
-    font-family: var(--font-display);
-    font-size: var(--text-display);
-    font-weight: var(--weight-black);
-    margin-bottom: var(--space-6);
-    line-height: var(--line-tight);
-    letter-spacing: var(--tracking-tight);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  .feature-category.small {
+    padding: 0.25rem 0.625rem;
+    font-size: 0.75rem;
+    margin-bottom: var(--space-3);
   }
 
-  .hero-title a {
+  .feature-title {
+    font-family: var(--font-display);
+    font-weight: var(--weight-black);
+    line-height: var(--line-tight);
+    letter-spacing: var(--tracking-tight);
+    margin-bottom: var(--space-4);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+
+  .main-title {
+    font-size: var(--text-display);
+  }
+
+  .side-title {
+    font-size: var(--text-h3);
+    margin-bottom: 0; /* No summary on side cards */
+  }
+
+  .feature-title a {
     color: white;
     background: var(--gradient-text-neon);
     background-clip: text;
@@ -316,38 +399,88 @@ const categoryMap: Record<string, string> = {
     transition: opacity var(--transition-normal);
   }
 
-  .hero-title a:hover {
+  .feature-title a:hover {
     opacity: 0.8;
   }
 
-  .hero-summary {
-    font-size: var(--text-body-xl);
-    margin-bottom: var(--space-8);
-    line-height: var(--line-relaxed);
+  .feature-summary {
+    font-size: var(--text-body-lg);
     color: var(--text-gray-100);
+    margin-bottom: var(--space-6);
+    line-height: var(--line-relaxed);
     max-width: 65ch;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     text-shadow: 0 1px 2px rgba(0,0,0,0.5);
   }
 
-  .hero-cta {
+  .feature-cta {
     display: inline-block;
     background: linear-gradient(135deg, var(--neon-magenta), var(--neon-cyan));
     color: white;
-    padding: var(--space-4) var(--space-8);
+    padding: var(--space-3) var(--space-6);
     border-radius: var(--radius-md);
     font-weight: var(--weight-semibold);
-    font-size: var(--text-body-lg);
+    font-size: var(--text-body-md);
     transition: all var(--transition-normal) var(--easing-smooth);
     box-shadow: var(--glow-magenta);
     border: 1px solid rgba(255,255,255,0.1);
   }
 
-  .hero-cta:hover {
+  .feature-cta:hover {
     transform: translateY(-2px);
-    color: white;
     box-shadow: var(--glow-magenta-intense), var(--shadow-lg);
   }
 
+  /* Mobile / Tablet Responsive */
+  @media (max-width: 1024px) {
+    .featured-grid {
+      grid-template-columns: 1fr;
+      height: auto;
+      gap: var(--space-4);
+    }
+
+    .side-features {
+      flex-direction: row;
+      height: 300px;
+    }
+
+    .feature-card.main {
+      height: 400px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .featured-grid {
+      margin-top: var(--space-4);
+    }
+
+    .side-features {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .feature-card.main {
+      height: 350px;
+    }
+
+    .feature-card.side {
+      height: 250px;
+    }
+
+    .main-title {
+      font-size: 2rem;
+    }
+
+    .feature-summary {
+      font-size: 1rem;
+      -webkit-line-clamp: 2;
+    }
+  }
+
+  /* Existing Styles */
   .category-section {
     margin-bottom: var(--space-20);
   }
@@ -490,13 +623,5 @@ const categoryMap: Record<string, string> = {
     .tribe-content p {
       font-size: 1rem;
     }
-    
-    .hero-title {
-      font-size: 2.5rem;
-    }
-
-    .hero-summary {
-      font-size: 1.125rem;
-    }
   }
-</style>
+

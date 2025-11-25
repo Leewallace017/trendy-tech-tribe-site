@@ -2,7 +2,7 @@
 title: "Google's New Antigravity IDE is a Game Changer"
 date: "2025-11-24"
 author: "Trendy Tech Tribe Staff"
-category: "Software"
+category: "Tech & Innovation"
 tags: ["google", "ide", "ai", "coding", "antigravity"]
 type: "quick-take"
 summary: "Google has officially launched Antigravity, an AI-native IDE that promises to revolutionize software development with agentic workflows and 'antigravity' coding."

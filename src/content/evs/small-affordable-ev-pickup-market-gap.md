@@ -2,7 +2,7 @@
 title: "We Need a Small Affordable EV Pickup: Why Legacy Automakers Are Missing the Mark"
 date: "2025-11-24"
 author: "Trendy Tech Tribe Staff"
-category: "EVs"
+category: "EVs & Mobility"
 tags: ["ev", "trucks", "opinion", "automotive", "market-gap"]
 type: "opinion"
 summary: "The world doesn't need another $100k electric tank. We need an electric Ford Maverick. Here's why automakers are ignoring the most obvious gap in the market."
@@ -75,6 +75,16 @@ It means you have to wait or look at startups. But hold onto your wallets—don'
 
 ### For the Industry
 It's a warning. If Ford or Toyota doesn't build a compact EV truck soon, Chinese automakers (who have been building these for years) will find a way to bring them here, tariffs or not.
+
+## The Bigger Picture
+
+This gap in the market represents a disconnect between the automotive industry's "bigger is better" obsession and the reality of urban living. It highlights a failure of imagination and a dangerous reliance on high-margin, resource-heavy vehicles that are increasingly out of step with sustainability goals.
+
+## Where We Go From Here
+
+1.  **Startups Lead the Way**: Expect companies like Telo and Canoo to gain traction if they can actually reach production.
+2.  **Legacy Auto Plays Catch-Up**: Ford will likely electrify the Maverick by 2027, but they might be too late to own the segment.
+3.  **Regulatory Pressure**: Governments may start taxing vehicles by weight, forcing automakers to downsize their EV offerings.
 
 ## The Uncomfortable Truth
 

@@ -2,7 +2,7 @@
 title: "Why a Used Tesla Model 3 Might Be the Best Value EV in 2025"
 date: "2025-11-24"
 author: "Trendy Tech Tribe Staff"
-category: "EVs"
+category: "EVs & Mobility"
 tags: ["tesla", "model 3", "ev", "used cars", "value"]
 type: "deep-dive"
 summary: "With depreciation hitting hard, the 2022-2023 Tesla Model 3 has entered the 'value sweet spot.' We analyze reliability, range, and why it beats new budget EVs."
@@ -95,6 +95,22 @@ The Model 3 will likely become the "Civic of EVs"—the default, reliable, affor
 
 **If you're a Road Tripper:**
 - Look for a 2021+ Long Range. The heat pump is essential for winter travel, and the extra range gives you more buffer between Superchargers.
+
+## Opportunities & Potential
+
+1.  **Aftermarket Upgrades**: A thriving market for suspension upgrades and tech mods allows owners to modernize older Model 3s.
+2.  **V2G Technology**: Future software updates may unlock Vehicle-to-Grid capabilities, allowing your car to power your home.
+
+## Frequently Asked Questions
+
+### Is the battery warranty transferable?
+Yes, the 8-year/100,000-mile (or 120,000-mile) battery and drive unit warranty stays with the car, regardless of owners.
+
+### Does a used Model 3 have Autopilot?
+Yes, all Model 3s come with Basic Autopilot (Traffic-Aware Cruise Control and Autosteer) standard.
+
+### How much range has it lost?
+On average, a 3-year-old Model 3 loses about 5-8% of its original range. You can check the exact health in the service menu.
 
 ## Conclusion
 

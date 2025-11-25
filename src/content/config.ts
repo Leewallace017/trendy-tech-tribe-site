@@ -13,7 +13,7 @@ const articleSchema = z.object({
     'Picks & Reviews'
   ]),
   tags: z.array(z.string()),
-  type: z.enum(['quick-take', 'deep-dive', 'product-review', 'best-list', 'opinion']),
+  type: z.enum(['quick-take', 'deep-dive', 'product-review', 'best-list', 'opinion', 'news-roundup']),
   summary: z.string(),
   seoTitle: z.string(),
   seoDescription: z.string(),
@@ -24,7 +24,8 @@ const articleSchema = z.object({
   affiliateProducts: z.array(z.object({
     name: z.string(),
     url: z.string(),
-    price: z.string().optional()
+    price: z.string().optional(),
+    description: z.string().optional()
   })).optional().default([]),
   sources: z.array(z.object({
     title: z.string(),
