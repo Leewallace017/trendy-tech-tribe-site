@@ -376,7 +376,16 @@ const categoryMap: Record<string, string> = {
 
   @media (max-width: 768px) {
     .hero-bg {
-      height: 400px;
+      height: auto !important; /* Override tablet breakpoint */
+      min-height: 0 !important; /* Remove min-height: 100% constraint */
+      flex: none !important; /* Remove flex sizing */
+      background: var(--bg-secondary);
+    }
+
+    .hero-bg img {
+      object-fit: contain !important; /* Override base cover setting */
+      width: 100%;
+      height: auto !important; /* Override base 100% height */
     }
   }
 
