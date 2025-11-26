@@ -14,13 +14,13 @@ imageCredit: "Photo by Kindel Media on Unsplash"
 featured: false
 affiliateProducts: []
 sources:
-  - title: "ArenaEV - BYD maintains lead in global BEV market with 15.4% share"
 
-  - title: "The Guardian - UK announces £1.5bn boost to EV subsidies"
 
-  - title: "IEA - Global EV Outlook 2025: China dominates manufacturing"
 
-  - title: "JD Supra - US EV sales decline 30% in October 2025"
+
+
+
+
 
 ---
 

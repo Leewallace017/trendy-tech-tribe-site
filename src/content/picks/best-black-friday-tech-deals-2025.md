@@ -22,11 +22,11 @@ affiliateProducts:
   - name: "Anker Portable Charger 20K"
     url: "https://www.amazon.com/dp/B0D5CQ9CHQ?tag=trendytecht0a-20"
 sources:
-  - title: "Forbes - Best Black Friday tech deals 2025"
+
 
   - title: "CNET - Black Friday 2025: Best tech deals available now"
     url: "https://www.cnet.com/deals/black-friday/"
-  - title: "Engadget - The best Black Friday tech deals for 2025"
+
 
   - title: "ZDNET - Black Friday 2025 deals live now"
     url: "https://www.zdnet.com/article/best-black-friday-deals-2025/"

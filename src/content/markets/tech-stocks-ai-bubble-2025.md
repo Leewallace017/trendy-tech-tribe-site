@@ -14,11 +14,11 @@ imageCredit: "Photo by Nicholas Cappello on Unsplash"
 featured: false
 affiliateProducts: []
 sources:
-  - title: "Economic Times - AI-linked stocks rebound on Fed rate cut optimism"
 
-  - title: "Investopedia - Tech stocks slide after Nvidia rally fades"
 
-  - title: "Simply Wall St - Tech sector leads market gains in November"
+
+
+
 
   - title: "ThoughtWorks - Technology Radar highlights AI infrastructure shifts"
     url: "https://www.thoughtworks.com/radar/techniques/context-engineering"

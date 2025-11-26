@@ -16,7 +16,7 @@ affiliateProducts: []
 sources:
   - title: "Apple to use Google's AI model to run new Siri - Reuters"
     url: "https://www.reuters.com/business/apple-use-googles-ai-model-run-new-siri-bloomberg-news-reports-2025-11-05/"
-  - title: "Google reveals its own version of Apple AI Cloud"
+
 
 ---
 

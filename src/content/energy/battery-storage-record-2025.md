@@ -14,13 +14,13 @@ imageCredit: "Photo by American Public Power Association on Unsplash"
 featured: false
 affiliateProducts: []
 sources:
-  - title: "ESS News - Global BESS deployments reach 156 GWh through October 2025"
 
-  - title: "Energy Live News - Battery energy storage market to reach $100bn by 2033"
+
+
 
   - title: "Sustainability Online - Battery storage deployments surge 38% in 2025"
     url: "https://www.sustainabilityonline.net/battery-storage-deployments-surge-38-in-2025"
-  - title: "PV Magazine - China announces 20 GWh sodium-ion battery plant"
+
 
 ---
 

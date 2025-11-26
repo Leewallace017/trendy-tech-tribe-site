@@ -16,7 +16,7 @@ affiliateProducts: []
 sources:
   - title: "Google announces Gemini 3 as battle with OpenAI intensifies"
     url: "https://www.cnbc.com/2025/11/18/google-announces-gemini-3-as-battle-with-openai-intensifies.html"
-  - title: "Google launches Gemini Enterprise, taking aim at Microsoft and OpenAI"
+
 
 ---
 

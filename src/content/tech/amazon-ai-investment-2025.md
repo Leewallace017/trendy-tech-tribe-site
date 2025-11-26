@@ -14,11 +14,11 @@ imageCredit: "Photo by NASA on Unsplash"
 featured: false
 affiliateProducts: []
 sources:
-  - title: "About Amazon - Amazon to invest up to $50B in AI infrastructure for government"
 
-  - title: "Tech Startups - November 2025 tech news roundup"
 
-  - title: "Medium - Major tech announcements November 2025"
+
+
+
 ---
 
 ## What Happened

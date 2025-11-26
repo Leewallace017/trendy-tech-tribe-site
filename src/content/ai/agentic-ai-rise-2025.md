@@ -14,13 +14,13 @@ imageCredit: "Photo by Google DeepMind on Unsplash"
 featured: false
 affiliateProducts: []
 sources:
-  - title: "Medium - The shift from assistive to agentic AI"
+
 
   - title: "McKinsey - The state of AI in 2025: Agentic systems take center stage"
     url: "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
-  - title: "TechNet - November 2025 AI developments roundup"
 
-  - title: "AI Apps - Top AI trends transforming industries in November 2025"
+
+
 
 ---
 
