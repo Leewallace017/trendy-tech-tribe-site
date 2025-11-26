@@ -13,12 +13,7 @@ imageAlt: "Modern data center server infrastructure with blue lighting"
 imageCredit: "Photo by NASA on Unsplash"
 featured: false
 affiliateProducts: []
-sources:
-
-
-
-
-
+sources: []
 ---
 
 ## What Happened

@@ -14,10 +14,6 @@ imageCredit: "Photo by American Public Power Association on Unsplash"
 featured: false
 affiliateProducts: []
 sources:
-
-
-
-
   - title: "Sustainability Online - Battery storage deployments surge 38% in 2025"
     url: "https://www.sustainabilityonline.net/battery-storage-deployments-surge-38-in-2025"
 

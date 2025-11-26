@@ -13,12 +13,7 @@ imageAlt: "Modern electric vehicle charging at a charging station"
 imageCredit: "Photo by Kindel Media on Unsplash"
 featured: false
 affiliateProducts: []
-sources:
-
-
-
-
-
+sources: []
 
 
 

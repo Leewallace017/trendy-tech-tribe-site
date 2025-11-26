@@ -14,8 +14,6 @@ imageCredit: "Photo by Google DeepMind on Unsplash"
 featured: false
 affiliateProducts: []
 sources:
-
-
   - title: "McKinsey - The state of AI in 2025: Agentic systems take center stage"
     url: "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
 

@@ -14,12 +14,6 @@ imageCredit: "Photo by Nicholas Cappello on Unsplash"
 featured: false
 affiliateProducts: []
 sources:
-
-
-
-
-
-
   - title: "ThoughtWorks - Technology Radar highlights AI infrastructure shifts"
     url: "https://www.thoughtworks.com/radar/techniques/context-engineering"
 ---
