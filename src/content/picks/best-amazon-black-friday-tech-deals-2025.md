@@ -20,7 +20,7 @@ affiliateProducts:
   - name: "Sony WH-1000XM5 Headphones"
     url: "https://www.amazon.com/dp/B09XS7JWHH?tag=trendytecht0a-20"
   - name: "Kindle Paperwhite Signature Edition"
-    url: "https://www.amazon.com/dp/B09SWW583J?tag=trendytecht0a-20"
+    url: "https://amzn.to/4imLaQP"
   - name: "Bose QuietComfort Ultra Earbuds"
     url: "https://www.amazon.com/dp/B0CCZ26B5V?tag=trendytecht0a-20"
   - name: "Meta Ray-Ban Smart Glasses"
@@ -48,7 +48,7 @@ IMAGE SOURCING DECISION GUIDE:
 - **Best Overall**: [Amazon Fire TV Stick 4K Max](https://www.amazon.com/dp/B0BP9MDCQZ?tag=trendytecht0a-20) - The ultimate streaming upgrade at a rock-bottom price.
 - **Best Wearable**: [Apple Watch Series 11](https://amzn.to/3K6pETX) - The king of smartwatches just got cheaper.
 - **Best Audio**: [Sony WH-1000XM5](https://www.amazon.com/dp/B09XS7JWHH?tag=trendytecht0a-20) - Silence the world with the best noise canceling in the game.
-- **Best for Readers**: [Kindle Paperwhite Signature](https://www.amazon.com/dp/B09SWW583J?tag=trendytecht0a-20) - Your library, waterproof and wireless charging ready.
+- **Best for Readers**: [Kindle Paperwhite Signature](https://amzn.to/4imLaQP) - Your library, waterproof and wireless charging ready.
 
 ## What to Look For
 
@@ -142,7 +142,7 @@ When shopping for tech on Black Friday, keep your wits about you:
 
 **Rating: 9.6/10**
 
-[View on Amazon](https://www.amazon.com/dp/B09SWW583J?tag=trendytecht0a-20)
+[View on Amazon](https://amzn.to/4imLaQP)
 
 **Key Features:**
 - Wireless charging
@@ -275,7 +275,7 @@ Black Friday is overwhelming, but you don't need to buy everything. Focus on the
 **Our Top Recommendations:**
 1. **Most Users**: [Amazon Fire TV Stick 4K Max](https://www.amazon.com/dp/B0BP9MDCQZ?tag=trendytecht0a-20) - A cheap way to make your TV feel new.
 2. **Premium Pick**: [Sony WH-1000XM5](https://www.amazon.com/dp/B09XS7JWHH?tag=trendytecht0a-20) - An investment in peace and quiet.
-3. **Best Gift**: [Kindle Paperwhite](https://www.amazon.com/dp/B09SWW583J?tag=trendytecht0a-20) - The gift that keeps on giving (stories).
+3. **Best Gift**: [Kindle Paperwhite](https://amzn.to/4imLaQP) - The gift that keeps on giving (stories).
 
 ---
 
