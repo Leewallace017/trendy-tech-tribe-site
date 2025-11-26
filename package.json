@@ -9,11 +9,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "generate-image": "node scripts/generate-image.js",
-    "verify-links": "tsx scripts/verify-all-links.ts",
-    "verify-article": "tsx scripts/verify-article-links.ts",
+    "verify-links": "tsx scripts/verify-links.ts",
+    "verify-article": "tsx scripts/verify-links.ts",
     "pre-publish": "tsx scripts/pre-publish-check.ts",
-    "audit-sources": "tsx scripts/audit-source-links.ts",
-    "verify-asins": "node scripts/verify-asins.js",
     "perplexity": "tsx scripts/perplexity-research.ts"
   },
   "dependencies": {
@@ -22,9 +20,7 @@
     "@astrojs/vercel": "^9.0.1",
     "@vercel/speed-insights": "^1.2.0",
     "astro": "^5.0.0",
-    "dotenv": "^17.2.3",
-    "request": "^2.88.2",
-    "request-promise": "^4.2.6"
+    "dotenv": "^17.2.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.0",

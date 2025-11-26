@@ -291,8 +291,6 @@ For maximum value:
 3. **Best ANC**: Liberty 4 NC - Rivals $200+ models, $80-90
 
 ---
-
 ## Sources
 
 - [Best Budget Wireless Earbuds - Wirecutter](https://www.nytimes.com/wirecutter/reviews/best-wireless-earbuds/)
-- [Budget Earbuds Reviews - RTINGS](https://www.rtings.com/headphones/reviews/best/earbuds-in-ear-headphones-under-100)

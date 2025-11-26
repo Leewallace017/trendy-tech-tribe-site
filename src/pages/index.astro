@@ -57,8 +57,8 @@ if (featuredCandidates.length >= 3) {
   featuredPosts = [...featuredPosts, ...nonFeatured.slice(0, remainingCount)];
 }
 
-// Ensure we have unique posts (dedupe by slug just in case)
-featuredPosts = Array.from(new Map(featuredPosts.map(p => [p.slug, p])).values()).slice(0, 3);
+// Ensure we have unique posts (dedupe by id just in case)
+featuredPosts = Array.from(new Map(featuredPosts.map(p => [p.id, p])).values()).slice(0, 3);
 
 const [mainFeature, ...sideFeatures] = featuredPosts;
 
@@ -103,12 +103,12 @@ const categoryMap: Record<string, string> = {
             <div class="feature-content">
               <span class="feature-category">{mainFeature.data.category}</span>
               <h1 class="feature-title main-title">
-                <a href={`/${categoryMap[mainFeature.data.category]}/${mainFeature.slug}`}>
+                <a href={`/${categoryMap[mainFeature.data.category]}/${mainFeature.id}`}>
                   {mainFeature.data.title}
                 </a>
               </h1>
               <p class="feature-summary">{mainFeature.data.summary}</p>
-              <a href={`/${categoryMap[mainFeature.data.category]}/${mainFeature.slug}`} class="feature-cta">
+              <a href={`/${categoryMap[mainFeature.data.category]}/${mainFeature.id}`} class="feature-cta">
                 Read Now →
               </a>
             </div>
@@ -137,7 +137,7 @@ const categoryMap: Record<string, string> = {
                 <div class="feature-content side-content">
                   <span class="feature-category small">{post.data.category}</span>
                   <h2 class="feature-title side-title">
-                    <a href={`/${categoryMap[post.data.category]}/${post.slug}`}>
+                    <a href={`/${categoryMap[post.data.category]}/${post.id}`}>
                       {post.data.title}
                     </a>
                   </h2>

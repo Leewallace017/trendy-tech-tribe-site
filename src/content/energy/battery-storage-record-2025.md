@@ -15,13 +15,13 @@ featured: false
 affiliateProducts: []
 sources:
   - title: "ESS News - Global BESS deployments reach 156 GWh through October 2025"
-    url: "https://www.ess-news.com/global-bess-deployments-reach-156-gwh-through-october-2025/"
+
   - title: "Energy Live News - Battery energy storage market to reach $100bn by 2033"
-    url: "https://www.energylivenews.com/2025/11/18/battery-energy-storage-market-to-reach-100bn-by-2033/"
+
   - title: "Sustainability Online - Battery storage deployments surge 38% in 2025"
     url: "https://www.sustainabilityonline.net/battery-storage-deployments-surge-38-in-2025"
   - title: "PV Magazine - China announces 20 GWh sodium-ion battery plant"
-    url: "https://www.pv-magazine.com/2025/11/15/china-announces-20-gwh-sodium-ion-battery-plant/"
+
 ---
 
 ## What Happened
@@ -105,7 +105,4 @@ Global battery energy storage has hit a critical inflection point, with 156 GWh 
 
 ## Sources
 
-- [ESS News - Global BESS deployments reach 156 GWh through October 2025](https://www.ess-news.com/global-bess-deployments-reach-156-gwh-through-october-2025/)
-- [Energy Live News - Battery energy storage market to reach $100bn by 2033](https://www.energylivenews.com/2025/11/18/battery-energy-storage-market-to-reach-100bn-by-2033/)
 - [Sustainability Online - Battery storage deployments surge 38% in 2025](https://www.sustainabilityonline.net/battery-storage-deployments-surge-38-in-2025)
-- [PV Magazine - China announces 20 GWh sodium-ion battery plant](https://www.pv-magazine.com/2025/11/15/china-announces-20-gwh-sodium-ion-battery-plant/)

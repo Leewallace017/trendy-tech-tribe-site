@@ -17,7 +17,7 @@ sources:
   - title: "Google announces Gemini 3 as battle with OpenAI intensifies"
     url: "https://www.cnbc.com/2025/11/18/google-announces-gemini-3-as-battle-with-openai-intensifies.html"
   - title: "Google launches Gemini Enterprise, taking aim at Microsoft and OpenAI"
-    url: "https://finance.yahoo.com/news/google-launches-gemini-enterprise-taking-aim-at-microsoft-openai-120020256.html"
+
 ---
 
 ## The User Count Showdown
@@ -244,4 +244,3 @@ Based on technology history, embedded infrastructure usually beats standalone br
 ## Sources
 
 - [Google announces Gemini 3 as battle with OpenAI intensifies - CNBC](https://www.cnbc.com/2025/11/18/google-announces-gemini-3-as-battle-with-openai-intensifies.html)
-- [Google launches Gemini Enterprise, taking aim at Microsoft and OpenAI - Yahoo Finance](https://finance.yahoo.com/news/google-launches-gemini-enterprise-taking-aim-at-microsoft-openai-120020256.html)

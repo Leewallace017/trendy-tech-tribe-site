@@ -27,7 +27,7 @@ const posts = (await getCollection('tech')).sort(
       <div class="posts-grid">
         {posts.map(post => (
           <article class="post-card">
-            <a href={`/tech/${post.slug}`} class="post-image">
+            <a href={`/tech/${post.id}`} class="post-image">
               <img src={post.data.image} alt={post.data.imageAlt || post.data.title} />
             </a>
             <div class="post-content">
@@ -39,7 +39,7 @@ const posts = (await getCollection('tech')).sort(
                 })}
               </time>
               <h2>
-                <a href={`/tech/${post.slug}`}>{post.data.title}</a>
+                <a href={`/tech/${post.id}`}>{post.data.title}</a>
               </h2>
               <p class="post-summary">{post.data.summary}</p>
               <div class="post-meta">

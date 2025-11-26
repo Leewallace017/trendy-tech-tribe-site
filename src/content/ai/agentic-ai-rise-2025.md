@@ -15,13 +15,13 @@ featured: false
 affiliateProducts: []
 sources:
   - title: "Medium - The shift from assistive to agentic AI"
-    url: "https://medium.com/@techinsights/the-shift-from-assistive-to-agentic-ai-2025"
+
   - title: "McKinsey - The state of AI in 2025: Agentic systems take center stage"
     url: "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
   - title: "TechNet - November 2025 AI developments roundup"
-    url: "https://www.technet.org/ai-developments-november-2025/"
+
   - title: "AI Apps - Top AI trends transforming industries in November 2025"
-    url: "https://www.aiapps.com/ai-trends-november-2025/"
+
 ---
 
 ## What Happened
@@ -117,7 +117,4 @@ Agentic AI is rapidly evolving from concept to reality, with 23% of organization
 
 ## Sources
 
-- [Medium - The shift from assistive to agentic AI](https://medium.com/@techinsights/the-shift-from-assistive-to-agentic-ai-2025)
 - [McKinsey - The state of AI in 2025: Agentic systems take center stage](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)
-- [TechNet - November 2025 AI developments roundup](https://www.technet.org/ai-developments-november-2025/)
-- [AI Apps - Top AI trends transforming industries in November 2025](https://www.aiapps.com/ai-trends-november-2025/)

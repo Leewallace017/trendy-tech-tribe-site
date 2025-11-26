@@ -23,11 +23,11 @@ affiliateProducts:
     url: "https://www.amazon.com/dp/B0D5CQ9CHQ?tag=trendytecht0a-20"
 sources:
   - title: "Forbes - Best Black Friday tech deals 2025"
-    url: "https://www.forbes.com/sites/forbes-personal-shopper/article/best-black-friday-tech-deals-2025/"
+
   - title: "CNET - Black Friday 2025: Best tech deals available now"
     url: "https://www.cnet.com/deals/black-friday/"
   - title: "Engadget - The best Black Friday tech deals for 2025"
-    url: "https://www.engadget.com/deals/black-friday-tech-deals-2025/"
+
   - title: "ZDNET - Black Friday 2025 deals live now"
     url: "https://www.zdnet.com/article/best-black-friday-deals-2025/"
 ---
@@ -237,7 +237,5 @@ The Anker 20K power bank rounds out our recommendations as the practical choice 
 
 ## Sources
 
-- [Forbes - Best Black Friday tech deals 2025](https://www.forbes.com/sites/forbes-personal-shopper/article/best-black-friday-tech-deals-2025/)
 - [CNET - Black Friday 2025: Best tech deals available now](https://www.cnet.com/deals/black-friday/)
-- [Engadget - The best Black Friday tech deals for 2025](https://www.engadget.com/deals/black-friday-tech-deals-2025/)
 - [ZDNET - Black Friday 2025 deals live now](https://www.zdnet.com/article/best-black-friday-deals-2025/)

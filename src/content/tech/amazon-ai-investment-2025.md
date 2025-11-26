@@ -15,11 +15,10 @@ featured: false
 affiliateProducts: []
 sources:
   - title: "About Amazon - Amazon to invest up to $50B in AI infrastructure for government"
-    url: "https://www.aboutamazon.com/news/aws/amazon-ai-infrastructure-investment-government"
+
   - title: "Tech Startups - November 2025 tech news roundup"
-    url: "https://techstartups.com/2025/11/20/tech-news-november-2025/"
+
   - title: "Medium - Major tech announcements November 2025"
-    url: "https://medium.com/@techupdates/major-tech-announcements-november-2025"
 ---
 
 ## What Happened
@@ -112,9 +111,3 @@ The broader implication is that AI infrastructure is becoming a strategic asset 
 Amazon's $50 billion investment to build AI and supercomputing infrastructure for U.S. government customers represents one of the largest cloud infrastructure commitments in history and a strategic bet on explosive growth in public sector AI adoption. By adding 1.3 gigawatts of capacity beginning in 2026, Amazon is positioning AWS as the default platform for government AI workloads, potentially locking in relationships with federal, state, and local agencies for years to come. The investment signals that AI infrastructure is becoming critical national infrastructure, while also raising questions about government dependence on commercial cloud providers and the long-term costs to taxpayers of this AI transformation.
 
 ---
-
-## Sources
-
-- [About Amazon - Amazon to invest up to $50B in AI infrastructure for government](https://www.aboutamazon.com/news/aws/amazon-ai-infrastructure-investment-government)
-- [Tech Startups - November 2025 tech news roundup](https://techstartups.com/2025/11/20/tech-news-november-2025/)
-- [Medium - Major tech announcements November 2025](https://medium.com/@techupdates/major-tech-announcements-november-2025)

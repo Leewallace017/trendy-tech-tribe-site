@@ -247,8 +247,13 @@ const schema = {
   }
 
   .article-content :global(img) {
-    margin: var(--space-xl) 0;
+    margin: var(--space-xl) auto;
     border-radius: 8px;
+    max-height: 600px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
   }
 
   .article-content :global(blockquote) {

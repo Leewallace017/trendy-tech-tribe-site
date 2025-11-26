@@ -153,6 +153,3 @@ The broader implications ripple across the tech industry: Big Tech companies gai
 
 ---
 
-## Sources
-
-- [Meta, Google, Apple, Amazon antitrust efforts face challenges - Washington Post](https://www.washingtonpost.com/technology/2025/11/20/meta-google-apple-amazon-antitrust/)

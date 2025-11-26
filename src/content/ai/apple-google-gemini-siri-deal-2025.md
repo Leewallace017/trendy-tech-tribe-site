@@ -17,7 +17,7 @@ sources:
   - title: "Apple to use Google's AI model to run new Siri - Reuters"
     url: "https://www.reuters.com/business/apple-use-googles-ai-model-run-new-siri-bloomberg-news-reports-2025-11-05/"
   - title: "Google reveals its own version of Apple AI Cloud"
-    url: "https://www.artificialintelligence-news.com/news/google-reveals-its-own-version-of-apple-ai-cloud/"
+
 ---
 
 ## What Happened
@@ -124,5 +124,5 @@ For users, this means a smarter Siri in 2026. For the industry, it signals that 
 
 ## Sources
 
-- [Apple plans to use 1.2 trillion parameter Google Gemini model to power new Siri - Bloomberg](https://www.bloomberg.com/news/articles/2025-11-05/apple-plans-to-use-1-2-trillion-parameter-google-gemini-model-to-power-new-siri)
-- [Google reveals its own version of Apple AI Cloud - AI News](https://www.artificialintelligence-news.com/news/google-reveals-its-own-version-of-apple-ai-cloud/)
+
+

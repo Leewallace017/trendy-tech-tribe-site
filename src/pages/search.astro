@@ -20,10 +20,10 @@ const searchIndex = allPosts.map(post => ({
   summary: post.data.summary,
   category: post.data.category,
   tags: post.data.tags,
-  slug: post.slug,
+  slug: post.id,
   date: post.data.date,
   image: post.data.image,
-  url: `/${post.collection}/${post.slug}` // Approximate URL construction
+  url: `/${post.collection}/${post.id}` // Approximate URL construction
 }));
 
 const categoryMap: Record<string, string> = {
@@ -89,7 +89,7 @@ const categoryMap: Record<string, string> = {
       
       // Correct URL construction using category map
       const categorySlug = categoryMap[post.category] || 'tech';
-      const url = `/${categorySlug}/${post.slug}`;
+      const url = `/${categorySlug}/${post.id}`;
 
       article.innerHTML = `
         <a href="${url}" class="post-link">

@@ -15,13 +15,13 @@ featured: false
 affiliateProducts: []
 sources:
   - title: "ArenaEV - BYD maintains lead in global BEV market with 15.4% share"
-    url: "https://arenaev.com/byd-maintains-lead-global-bev-market-q3-2025/"
+
   - title: "The Guardian - UK announces £1.5bn boost to EV subsidies"
-    url: "https://www.theguardian.com/business/2025/nov/uk-ev-subsidies-boost"
+
   - title: "IEA - Global EV Outlook 2025: China dominates manufacturing"
-    url: "https://www.iea.org/reports/global-ev-outlook-2025"
+
   - title: "JD Supra - US EV sales decline 30% in October 2025"
-    url: "https://www.jdsupra.com/legalnews/us-ev-sales-decline-october-2025/"
+
 ---
 
 ## What Happened
@@ -116,9 +116,3 @@ BYD's narrow lead over Tesla in the global BEV market—15.4% versus 13.4%—ref
 
 ---
 
-## Sources
-
-- [ArenaEV - BYD maintains lead in global BEV market with 15.4% share](https://arenaev.com/byd-maintains-lead-global-bev-market-q3-2025/)
-- [The Guardian - UK announces £1.5bn boost to EV subsidies](https://www.theguardian.com/business/2025/nov/uk-ev-subsidies-boost)
-- [IEA - Global EV Outlook 2025: China dominates manufacturing](https://www.iea.org/reports/global-ev-outlook-2025)
-- [JD Supra - US EV sales decline 30% in October 2025](https://www.jdsupra.com/legalnews/us-ev-sales-decline-october-2025/)

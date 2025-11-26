@@ -15,11 +15,11 @@ featured: false
 affiliateProducts: []
 sources:
   - title: "Economic Times - AI-linked stocks rebound on Fed rate cut optimism"
-    url: "https://economictimes.indiatimes.com/markets/stocks/news/ai-linked-stocks-rebound-on-fed-rate-cut-optimism/articleshow/115425678.cms"
+
   - title: "Investopedia - Tech stocks slide after Nvidia rally fades"
-    url: "https://www.investopedia.com/tech-stocks-slide-after-nvidia-rally-fades-8749562"
+
   - title: "Simply Wall St - Tech sector leads market gains in November"
-    url: "https://simplywall.st/markets/us/technology/tech-sector-november-2025"
+
   - title: "ThoughtWorks - Technology Radar highlights AI infrastructure shifts"
     url: "https://www.thoughtworks.com/radar/techniques/context-engineering"
 ---
@@ -109,7 +109,4 @@ Tech stocks are caught in a tug-of-war between genuine AI innovation and bubble 
 
 ## Sources
 
-- [Economic Times - AI-linked stocks rebound on Fed rate cut optimism](https://economictimes.indiatimes.com/markets/stocks/news/ai-linked-stocks-rebound-on-fed-rate-cut-optimism/articleshow/115425678.cms)
-- [Investopedia - Tech stocks slide after Nvidia rally fades](https://www.investopedia.com/tech-stocks-slide-after-nvidia-rally-fades-8749562)
-- [Simply Wall St - Tech sector leads market gains in November](https://simplywall.st/markets/us/technology/tech-sector-november-2025)
 - [ThoughtWorks - Technology Radar highlights AI infrastructure shifts](https://www.thoughtworks.com/radar/techniques/context-engineering)
