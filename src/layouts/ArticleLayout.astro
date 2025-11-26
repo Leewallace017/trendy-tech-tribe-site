@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import AdSenseAnchor from '../components/AdSenseAnchor.astro';
 import AdSenseSidebar from '../components/AdSenseSidebar.astro';
+import { Image } from 'astro:assets';
 
 interface Props {
   title: string;
@@ -108,7 +109,22 @@ const schema = {
             />
           </picture>
         ) : (
-          <img src={image} alt={imageAlt || title} fetchpriority="high" />
+          image.startsWith('http') ? (
+            <img src={image} alt={imageAlt || title} fetchpriority="high" />
+          ) : (
+            <Image
+              src={image}
+              alt={imageAlt || title}
+              width={1200}
+              height={675}
+              widths={[640, 1024, 1200]}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
+              fetchpriority="high"
+              loading="eager"
+              format="webp"
+              quality={80}
+            />
+          )
         )}
       </div>
 
@@ -249,7 +265,7 @@ const schema = {
   .article-content :global(img) {
     margin: var(--space-xl) auto;
     border-radius: 8px;
-    max-height: 600px;
+    height: auto;
     width: auto;
     max-width: 100%;
     display: block;

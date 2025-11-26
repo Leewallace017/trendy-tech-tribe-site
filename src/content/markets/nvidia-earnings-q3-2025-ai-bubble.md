@@ -8,9 +8,9 @@ type: "quick-take"
 summary: "Nvidia reported Q3 revenue of $57 billion and profit of $31.9 billion, beating expectations—but concerns about an AI bubble are growing despite the strong numbers."
 seoTitle: "Nvidia Q3 Earnings: $57B Revenue Amid AI Bubble Fears"
 seoDescription: "Nvidia crushed Q3 expectations with $57B revenue and $31.9B profit. But are AI valuations sustainable? What investors need to know about bubble concerns."
-image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=630&fit=crop"
-imageAlt: "Stock market trading screens showing financial data and earnings analysis"
-imageCredit: "Photo by Adam Nowakowski on Unsplash"
+image: "/images/articles/nvidia-earnings-2025.png"
+imageAlt: "Abstract visualization of AI chip technology and financial growth with glowing green circuits"
+imageCredit: "AI Generated Image"
 featured: false
 affiliateProducts: []
 sources:

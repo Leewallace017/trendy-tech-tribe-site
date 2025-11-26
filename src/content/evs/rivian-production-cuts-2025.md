@@ -8,8 +8,8 @@ type: "quick-take"
 summary: "Rivian cut its production guidance and earnings expectations for 2025, citing a challenging market after the elimination of federal EV incentives."
 seoTitle: "Rivian Cuts Production Targets as EV Market Struggles"
 seoDescription: "Rivian reduced 2025 production guidance amid challenging EV market conditions following the loss of federal tax incentives. What it means for buyers."
-image: "/images/optimized/articles/modern-electric-pickup-truck-in-automotive-product-1763945221811.webp"
-imageAlt: "Modern electric pickup truck in automotive production facility with assembly line"
+image: "/images/articles/rivian-production-cuts-2025.png"
+imageAlt: "Rivian electric truck on a production line in a clean modern factory"
 imageCredit: "AI Generated Image"
 featured: false
 affiliateProducts: []

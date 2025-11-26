@@ -12,6 +12,15 @@ export default defineConfig({
   // Astro 5.0 optimizations
   compressHTML: true,
 
+  // Image optimization
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+    },
+    format: ['webp'],
+    quality: 80,
+  },
+
   build: {
     inlineStylesheets: 'auto',
   },

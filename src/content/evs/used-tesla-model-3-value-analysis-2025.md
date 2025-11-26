@@ -8,8 +8,8 @@ type: "deep-dive"
 summary: "With depreciation hitting hard, the 2022-2023 Tesla Model 3 has entered the 'value sweet spot.' We analyze reliability, range, and why it beats new budget EVs."
 seoTitle: "Used Tesla Model 3 Review 2025: Best Value EV?"
 seoDescription: "A deep dive into buying a used Tesla Model 3 in 2025. We analyze depreciation, battery health, and why it's a better buy than new competitors."
-image: "/images/tesla_model_3_value_analysis.png"
-imageAlt: "Tesla Model 3 on a coastal road"
+image: "/images/articles/tesla-model-3-city-2025.png"
+imageAlt: "White Tesla Model 3 driving on a modern city street at twilight with motion blur"
 imageCredit: "AI Generated Image"
 featured: false
 affiliateProducts: []

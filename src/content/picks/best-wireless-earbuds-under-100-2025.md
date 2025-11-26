@@ -8,8 +8,8 @@ type: "best-list"
 summary: "You don't need to spend $250 for great wireless earbuds. We've tested the best options under $100 that deliver impressive sound, ANC, and battery life."
 seoTitle: "Best Wireless Earbuds Under $100 - 2025 Tested Picks"
 seoDescription: "Top wireless earbuds under $100 for 2025. Sound quality, ANC, battery life tested. From Anker to JBL, find the best affordable earbuds for your needs."
-image: "/images/articles/premium-wireless-earbuds-with-charging-case-on-mod-1763945286399.png"
-imageAlt: "Premium wireless earbuds with charging case on modern minimalist desk"
+image: "/images/articles/best-wireless-earbuds-under-100-2025.png"
+imageAlt: "Product photography of sleek wireless earbuds in a charging case on clean background"
 imageCredit: "AI Generated Image"
 featured: false
 affiliateProducts:

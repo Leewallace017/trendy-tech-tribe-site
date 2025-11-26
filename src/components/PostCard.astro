@@ -12,14 +12,29 @@ const { post, categorySlug } = Astro.props;
 
 <article class="post-card">
   <a href={`/${categorySlug}/${post.id}`} class="post-image">
-    <img
-      src={post.data.image}
-      alt={post.data.imageAlt || post.data.title}
-      width="600"
-      height="338"
-      loading="lazy"
-      decoding="async"
-    />
+    {post.data.image.startsWith('http') ? (
+      <img
+        src={post.data.image}
+        alt={post.data.imageAlt || post.data.title}
+        width="600"
+        height="338"
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <Image
+        src={post.data.image}
+        alt={post.data.imageAlt || post.data.title}
+        width={600}
+        height={338}
+        widths={[400, 800]}
+        sizes="(max-width: 768px) 100vw, 600px"
+        loading="lazy"
+        decoding="async"
+        format="webp"
+        quality={80}
+      />
+    )}
   </a>
   <div class="post-content">
     <span class="post-date">{new Date(post.data.date).toLocaleDateString()}</span>

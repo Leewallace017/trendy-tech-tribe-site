@@ -8,8 +8,8 @@ type: "best-list"
 summary: "Stop losing your keys, wallet, and luggage. We've built the ultimate tracking setup using Apple's Find My network."
 seoTitle: "Best Apple Find My Trackers 2025: AirTags, Cards & More"
 seoDescription: "The best trackers for the Apple Find My network in 2025. We review AirTags, UGREEN, and wallet cards to help you track all your stuff."
-image: "/images/tracking_ecosystem_concept.png"
-imageAlt: "Collection of smart tracking devices on a desk"
+image: "/images/articles/tracking-ecosystem-2025.png"
+imageAlt: "Collection of smart tracking devices arranged on a clean white surface"
 imageCredit: "AI Generated Image"
 featured: false
 affiliateProducts:

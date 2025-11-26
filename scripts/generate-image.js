@@ -62,6 +62,8 @@ function parseArgs() {
       style = args[++i];
     } else if (args[i] === '--output' || args[i] === '-o') {
       outputName = args[++i];
+    } else if (args[i] === '--model' || args[i] === '-m') {
+      process.env.OPENAI_MODEL = args[++i];
     } else if (!args[i].startsWith('--')) {
       prompt = args[i];
     }
@@ -165,13 +167,16 @@ async function generateWithOpenAI(prompt, config) {
   console.log('🎨 Generating image with OpenAI DALL-E 3...');
   console.log(`📝 Prompt: ${prompt}\n`);
 
+  const isGptImage1 = (config.model || '').includes('gpt-image-1');
+  const quality = isGptImage1 ? 'high' : config.defaultQuality;
+  const size = isGptImage1 ? '1536x1024' : config.defaultSize;
+
   const requestBody = JSON.stringify({
-    model: 'dall-e-3',
+    model: config.model || 'dall-e-3',
     prompt: prompt,
     n: 1,
-    size: config.defaultSize,
-    quality: config.defaultQuality,
-    response_format: 'url'
+    size: size,
+    quality: quality
   });
 
   return new Promise((resolve, reject) => {
@@ -198,13 +203,22 @@ async function generateWithOpenAI(prompt, config) {
         }
 
         try {
+          // console.log('Raw OpenAI Response:', data); // Keep commented to avoid noise
           const response = JSON.parse(data);
-          if (response.data && response.data[0] && response.data[0].url) {
-            resolve({
-              url: response.data[0].url,
-              revisedPrompt: response.data[0].revised_prompt
-            });
+
+          if (response.data && response.data[0]) {
+            if (response.data[0].url) {
+              resolve({
+                url: response.data[0].url,
+                revisedPrompt: response.data[0].revised_prompt
+              });
+            } else {
+              console.log('Missing URL in data[0]. Keys:', Object.keys(response.data[0]));
+              console.log('Full Item:', JSON.stringify(response.data[0], null, 2));
+              reject(new Error('Unexpected response format: URL missing'));
+            }
           } else {
+            console.log('Unexpected structure:', JSON.stringify(response, null, 2));
             reject(new Error('Unexpected response format from OpenAI'));
           }
         } catch (error) {
@@ -366,7 +380,7 @@ async function downloadImage(url, outputPath) {
         resolve(outputPath);
       });
     }).on('error', (error) => {
-      fs.unlink(outputPath, () => {});
+      fs.unlink(outputPath, () => { });
       reject(new Error(`Download failed: ${error.message}`));
     });
   });
@@ -410,6 +424,9 @@ async function main() {
     // Generate image based on provider
     let result;
     if (provider === 'openai') {
+      if (process.env.OPENAI_MODEL) {
+        providerConfig.model = process.env.OPENAI_MODEL;
+      }
       result = await generateWithOpenAI(enhancedPrompt, providerConfig);
     } else if (provider === 'replicate') {
       result = await generateWithReplicate(enhancedPrompt, providerConfig);

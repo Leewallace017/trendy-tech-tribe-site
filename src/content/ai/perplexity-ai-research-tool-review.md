@@ -8,8 +8,8 @@ type: "opinion"
 summary: "In the battle for AI supremacy, Perplexity AI's citation-first approach might just be the 'Plus Ultra' tool researchers have been waiting for, beating Google at its own game."
 seoTitle: "Perplexity AI vs Google Gemini: The Real Research King?"
 seoDescription: "We analyze why Perplexity AI might be the superior research tool in 2025 compared to Google Gemini, focusing on citations, speed, and focus."
-image: "/images/perplexity_ai_research_concept.png"
-imageAlt: "Abstract visualization of Perplexity AI's citation-based research engine"
+image: "/images/articles/perplexity-ai-research-2025.png"
+imageAlt: "Abstract visualization of AI research and knowledge discovery with glowing nodes"
 imageCredit: "AI Generated Image"
 featured: false
 affiliateProducts: []

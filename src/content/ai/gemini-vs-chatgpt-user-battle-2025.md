@@ -8,9 +8,9 @@ type: "deep-dive"
 summary: "Google Gemini has 650 million monthly users while ChatGPT claims 700 million. But raw user counts don't tell the full story of who's winning the AI assistant wars."
 seoTitle: "Gemini vs ChatGPT: Who's Winning the 650M vs 700M User Battle?"
 seoDescription: "Deep dive into Gemini (650M users) vs ChatGPT (700M users) competition. User counts, engagement, revenue, and which AI assistant is actually winning."
-image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop"
-imageAlt: "AI neural network visualization representing the battle between Gemini and ChatGPT"
-imageCredit: "Photo by Google DeepMind on Unsplash"
+image: "/images/articles/gemini-vs-chatgpt-2025.png"
+imageAlt: "Split composition showing abstract representations of Gemini and ChatGPT AI models facing off"
+imageCredit: "AI Generated Image"
 featured: false
 affiliateProducts: []
 sources:

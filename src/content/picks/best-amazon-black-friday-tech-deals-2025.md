@@ -8,9 +8,9 @@ type: "best-list"
 summary: "We sifted through the garbage so you don't have to. Here are the actually good tech deals on Amazon this Black Friday."
 seoTitle: "Best Amazon Black Friday Tech Deals 2025 - Expert Picks"
 seoDescription: "Don't waste money on e-waste. We found the best Amazon Black Friday tech deals for 2025, from Apple Watches to Sony headphones."
-image: "/images/articles/black_friday_tech_2025.png"
-imageAlt: "Futuristic shopping cart with glowing tech gadgets"
-imageCredit: "Gemini Generated Image"
+image: "/images/articles/amazon-black-friday-premium-2025.png"
+imageAlt: "Curated collection of high-end tech gadgets on a sleek dark surface with gold accents"
+imageCredit: "AI Generated Image"
 featured: true
 affiliateProducts:
   - name: "Amazon Fire TV Stick 4K Max"
