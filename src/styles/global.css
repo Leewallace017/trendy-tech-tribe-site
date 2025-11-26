@@ -637,3 +637,38 @@ a:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* ============================================================================
+   ANIMATION UTILITIES
+   ============================================================================ */
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--easing-smooth), transform 0.8s var(--easing-smooth);
+  will-change: opacity, transform;
+}
+
+.fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Scroll Trigger Base */
+.scroll-trigger {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--easing-smooth), transform 0.8s var(--easing-smooth);
+}
+
+.scroll-trigger.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -22,21 +22,36 @@ import NewsletterSignup from '../components/NewsletterSignup.astro';
       </div>
 
       <div class="benefits-grid">
-        <div class="benefit-card">
+        <a href="/tech" class="benefit-card">
           <div class="icon">🚀</div>
           <h3>Tech Trends</h3>
           <p>Be the first to know about emerging technologies and industry shifts.</p>
-        </div>
-        <div class="benefit-card">
+        </a>
+        <a href="/ai" class="benefit-card">
           <div class="icon">🤖</div>
           <h3>AI Updates</h3>
           <p>Weekly breakdowns of the latest developments in Artificial Intelligence.</p>
-        </div>
-        <div class="benefit-card">
+        </a>
+        <a href="/evs" class="benefit-card">
+          <div class="icon">🚘</div>
+          <h3>EVs & Mobility</h3>
+          <p>In-depth coverage of the electric vehicle revolution and future transport.</p>
+        </a>
+        <a href="/energy" class="benefit-card">
           <div class="icon">⚡</div>
-          <h3>Energy & EVs</h3>
-          <p>In-depth coverage of the green energy revolution and electric vehicles.</p>
-        </div>
+          <h3>Energy & Policy</h3>
+          <p>Analysis of green energy solutions, climate policy, and sustainability.</p>
+        </a>
+        <a href="/markets" class="benefit-card">
+          <div class="icon">📈</div>
+          <h3>Markets & Money</h3>
+          <p>Financial insights on tech stocks, crypto, and market movements.</p>
+        </a>
+        <a href="/picks" class="benefit-card">
+          <div class="icon">⭐</div>
+          <h3>Product Reviews</h3>
+          <p>Unbiased reviews and curated picks for the best tech gear.</p>
+        </a>
       </div>
     </div>
   </main>
@@ -90,6 +105,9 @@ import NewsletterSignup from '../components/NewsletterSignup.astro';
     border: 1px solid var(--border-subtle);
     text-align: center;
     transition: transform var(--transition-normal);
+    text-decoration: none;
+    display: block;
+    color: inherit;
   }
 
   .benefit-card:hover {

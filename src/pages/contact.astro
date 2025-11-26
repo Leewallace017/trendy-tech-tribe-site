@@ -53,12 +53,12 @@ import Footer from '../components/Footer.astro';
             </div>
             <h2>What We Cover</h2>
             <ul class="topics-list">
-              <li>Tech & Innovation</li>
-              <li>AI & Automation</li>
-              <li>EVs & Mobility</li>
-              <li>Energy & Policy</li>
-              <li>Markets & Money</li>
-              <li>Product Reviews & Picks</li>
+              <li><a href="/tech">Tech & Innovation</a></li>
+              <li><a href="/ai">AI & Automation</a></li>
+              <li><a href="/evs">EVs & Mobility</a></li>
+              <li><a href="/energy">Energy & Policy</a></li>
+              <li><a href="/markets">Markets & Money</a></li>
+              <li><a href="/picks">Product Reviews & Picks</a></li>
             </ul>
           </div>
         </div>
@@ -221,20 +221,26 @@ import Footer from '../components/Footer.astro';
   }
 
   .topics-list li {
+    margin-bottom: var(--space-2);
+  }
+
+  .topics-list a {
+    display: block;
     font-size: var(--text-body);
     color: var(--text-secondary);
     padding: var(--space-2) var(--space-4);
-    margin-bottom: var(--space-2);
     border-left: 3px solid var(--neon-cyan);
     background: var(--bg-tertiary);
     border-radius: var(--radius-sm);
     transition: all var(--transition-normal) var(--easing-smooth);
+    text-decoration: none;
   }
 
-  .topics-list li:hover {
+  .topics-list a:hover {
     border-left-color: var(--neon-magenta);
     background: var(--bg-secondary);
     transform: translateX(4px);
+    color: var(--text-primary);
   }
 
   .response-note {

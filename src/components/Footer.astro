@@ -2,7 +2,6 @@
 import NewsletterForm from './NewsletterForm.astro';
 
 const currentYear = new Date().getFullYear();
-const today = new Date();
 ---
 
 <footer class="site-footer">
@@ -45,8 +44,18 @@ const today = new Date();
       </div>
     </div>
 
-    <div class="footer-newsletter">
-      <NewsletterForm />
+    <!-- Join the Tribe CTA (Compact) -->
+    <div class="tribe-cta-compact" id="newsletter">
+      <div class="tribe-image-compact">
+        <img src="/images/optimized/join-the-tribe-small.webp" alt="Trendy Tech Tribe" width="220" height="220" loading="lazy" />
+      </div>
+      <div class="tribe-content-compact">
+        <h2>Join the Tribe</h2>
+        <p>Navigate the fast-paced universe of technology with us. Get the latest gadgets, trends, and insights delivered to your inbox.</p>
+      </div>
+      <div class="tribe-form-compact">
+        <NewsletterForm />
+      </div>
     </div>
 
     <div class="footer-bottom">
@@ -61,8 +70,8 @@ const today = new Date();
     position: relative;
     background: var(--gradient-bg);
     color: var(--text-primary);
-    padding: var(--space-24) 0 var(--space-8);
-    margin-top: var(--space-24);
+    padding: var(--space-12) 0 var(--space-6);
+    margin-top: var(--space-16);
     border-top: 1px solid var(--border-bright);
     box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -72,8 +81,10 @@ const today = new Date();
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--gradient-glow);
-    opacity: 0.3;
+    background: 
+      radial-gradient(circle at 0% 0%, rgba(180, 74, 255, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
+    opacity: 0.5;
     pointer-events: none;
   }
 
@@ -85,17 +96,21 @@ const today = new Date();
   .footer-content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: var(--space-12);
-    margin-bottom: var(--space-16);
+    gap: var(--space-8);
+    margin-bottom: var(--space-8);
   }
 
   .footer-brand {
     max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .footer-logo {
     display: inline-block;
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-2);
     transition: opacity var(--transition-normal) var(--easing-smooth);
   }
 
@@ -104,23 +119,24 @@ const today = new Date();
   }
 
   .footer-logo img {
-    width: 180px;
+    width: 220px; /* Increased from 150px */
     height: auto;
     display: block;
   }
 
   .footer-brand p {
     color: var(--text-secondary);
-    line-height: var(--line-relaxed);
-    font-size: var(--text-body);
+    line-height: var(--line-normal);
+    font-size: var(--text-body-sm);
+    text-align: center;
   }
 
   .footer-section h3 {
     font-family: var(--font-display);
-    font-size: var(--text-h3);
+    font-size: var(--text-h4);
     font-weight: var(--weight-black);
     color: var(--text-primary);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-3);
     background: var(--gradient-text-neon);
     background-clip: text;
     -webkit-background-clip: text;
@@ -128,17 +144,18 @@ const today = new Date();
   }
 
   .footer-section h4 {
-    font-size: var(--text-h5);
+    font-size: var(--text-body-lg);
     font-weight: var(--weight-bold);
     color: var(--text-primary);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-3);
     letter-spacing: var(--tracking-wide);
   }
 
   .footer-section p {
     color: var(--text-secondary);
-    line-height: var(--line-relaxed);
+    line-height: var(--line-normal);
     max-width: 35ch;
+    font-size: var(--text-body-sm);
   }
 
   .footer-section ul {
@@ -147,7 +164,7 @@ const today = new Date();
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
+    gap: var(--space-1);
   }
 
   .footer-section ul li {
@@ -157,6 +174,7 @@ const today = new Date();
   .footer-section a {
     color: var(--text-secondary);
     font-weight: var(--weight-medium);
+    font-size: var(--text-body-sm);
     transition: all var(--transition-normal) var(--easing-smooth);
     display: inline-block;
     position: relative;
@@ -184,10 +202,10 @@ const today = new Date();
 
   .footer-bottom {
     border-top: 1px solid var(--border-normal);
-    padding-top: var(--space-8);
+    padding-top: var(--space-6);
     text-align: center;
     color: var(--text-tertiary);
-    font-size: var(--text-body-sm);
+    font-size: var(--text-body-xs);
   }
 
   .footer-bottom p {
@@ -201,56 +219,129 @@ const today = new Date();
     opacity: 0.8;
   }
 
-  /* Footer newsletter styling */
-  .footer-newsletter {
-    margin-bottom: var(--space-12);
-    padding: var(--space-8);
-    background: rgba(255, 255, 255, 0.02);
+  /* Join the Tribe Compact Banner */
+  .tribe-cta-compact {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    padding: var(--space-8) var(--space-12);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--space-8);
+    border: 1px solid var(--border-bright);
+    box-shadow: var(--glow-soft), var(--shadow-lg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-8);
+  }
+
+  .tribe-cta-compact::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-glow);
+    opacity: 0.3;
+    pointer-events: none;
+    animation: pulse-glow 4s infinite alternate ease-in-out;
+  }
+
+  .tribe-image-compact {
+    flex-shrink: 0;
+    width: 220px; /* Increased size */
+    height: 220px;
     border-radius: var(--radius-lg);
-    border: 1px solid var(--border-normal);
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--glow-soft);
   }
 
-  @media (max-width: 968px) {
-    .footer-content {
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-8);
-    }
-
-    .footer-brand {
-      grid-column: 1 / -1;
-      max-width: 100%;
-    }
+  .tribe-image-compact img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  @media (max-width: 640px) {
-    .footer-content {
-      grid-template-columns: 1fr;
-      gap: var(--space-8);
-    }
-
-    .site-footer {
-      padding: var(--space-16) 0 var(--space-6);
-    }
-
-    .footer-logo img {
-      width: 150px;
-    }
-
-    .footer-brand {
-      text-align: center;
-    }
-
-    .footer-logo {
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .tribe-content-compact {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    max-width: 450px;
   }
 
-  .footer-newsletter .newsletter-form-container {
+  .tribe-content-compact h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-h3);
+    font-weight: var(--weight-black);
+    margin-bottom: var(--space-2);
+    background: var(--gradient-text-neon);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .tribe-content-compact p {
+    font-size: var(--text-body-lg);
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  .tribe-form-compact {
+    flex: 0 0 350px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Override NewsletterForm styles for this context */
+  .tribe-form-compact :global(.newsletter-form-container) {
     background: none;
     border: none;
     padding: 0;
-    margin: 0 auto;
-    max-width: 600px;
+    margin: 0;
+    max-width: 100%;
+    box-shadow: none;
+  }
+
+  @keyframes pulse-glow {
+    0% { opacity: 0.2; transform: scale(1); }
+    100% { opacity: 0.4; transform: scale(1.05); }
+  }
+
+  @media (max-width: 1024px) {
+    .tribe-cta-compact {
+      flex-direction: column;
+      text-align: center;
+      padding: var(--space-8);
+      gap: var(--space-6);
+    }
+
+    .tribe-image-compact {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+    }
+
+    .tribe-content-compact {
+      max-width: 100%;
+    }
+
+    .tribe-form-compact {
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .tribe-cta-compact {
+      padding: var(--space-6);
+    }
+
+    .tribe-content-compact h2 {
+      font-size: var(--text-h4);
+    }
+
+    .tribe-content-compact p {
+      font-size: var(--text-body);
+    }
   }
 </style>

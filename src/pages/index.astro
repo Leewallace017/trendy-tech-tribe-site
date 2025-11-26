@@ -87,95 +87,95 @@ const categoryMap: Record<string, string> = {
 
   <main>
     <!-- Featured Grid Section -->
+    <!-- Hero Section -->
     {mainFeature && (
-      <section class="featured-grid container">
-        <!-- Main Feature (Left) -->
-        <div class="main-feature">
-          <div class="feature-card main">
-            <div class="feature-bg">
-              {isUnsplash ? (
-                <img 
-                  src={mainHeroImage} 
-                  alt={mainFeature.data.imageAlt || mainFeature.data.title}
-                  loading="eager"
-                  decoding="async"
-                  fetchpriority="high"
-                />
-              ) : (
-                <Image 
-                  src={mainHeroImage} 
-                  alt={mainFeature.data.imageAlt || mainFeature.data.title}
-                  width={1600}
-                  height={900}
-                  widths={[800, 1200, 1600]}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 1200px, 1600px"
-                  loading="eager"
-                  decoding="async"
-                  fetchpriority="high"
-                  format="webp"
-                  quality={80}
-                />
-              )}
-              <div class="feature-overlay"></div>
-            </div>
-            <div class="feature-content">
-              <span class="feature-category">{mainFeature.data.category}</span>
-              <h1 class="feature-title main-title">
-                <a href={`/${categoryMap[mainFeature.data.category]}/${mainFeature.id}`}>
-                  {mainFeature.data.title}
-                </a>
-              </h1>
-              <p class="feature-summary">{mainFeature.data.summary}</p>
-              <a href={`/${categoryMap[mainFeature.data.category]}/${mainFeature.id}`} class="feature-cta">
-                Read Now →
+      <section class="hero-section container scroll-trigger">
+        <div class="hero-card hover-lift">
+          <div class="hero-content">
+            <span class="feature-category">{mainFeature.data.category}</span>
+            <h1 class="hero-title">
+              <a href={`/${categoryMap[mainFeature.data.category]}/${mainFeature.id}`}>
+                {mainFeature.data.title}
               </a>
-            </div>
+            </h1>
+            <p class="hero-summary">{mainFeature.data.summary}</p>
+            <a href={`/${categoryMap[mainFeature.data.category]}/${mainFeature.id}`} class="feature-cta">
+              Read Now →
+            </a>
+          </div>
+          <div class="hero-bg">
+            {isUnsplash ? (
+              <img 
+                src={mainHeroImage} 
+                alt={mainFeature.data.imageAlt || mainFeature.data.title}
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              />
+            ) : (
+              <Image 
+                src={mainHeroImage} 
+                alt={mainFeature.data.imageAlt || mainFeature.data.title}
+                width={1600}
+                height={900}
+                widths={[800, 1200, 1600]}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 1200px, 1600px"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+                format="webp"
+                quality={80}
+              />
+            )}
           </div>
         </div>
+      </section>
+    )}
 
-        <!-- Side Features (Right) -->
-        <div class="side-features">
-          {sideFeatures.map(post => {
+    <!-- Trending Strip -->
+    {sideFeatures.length > 0 && (
+      <section class="trending-section container scroll-trigger">
+        <div class="trending-header">
+          <span class="trending-label">Trending Now</span>
+          <div class="trending-line"></div>
+        </div>
+        <div class="trending-grid">
+          {sideFeatures.map((post, index) => {
             const isUnsplashSide = post.data.image.includes('unsplash.com');
             const sideImage = isUnsplashSide 
-              ? optimizeUnsplashUrl(post.data.image, 800) 
+              ? optimizeUnsplashUrl(post.data.image, 600) 
               : post.data.image;
             
             return (
-              <div class="feature-card side">
-                <div class="feature-bg">
+              <a href={`/${categoryMap[post.data.category]}/${post.id}`} class={`trending-card hover-lift delay-${(index + 1) * 100}`}>
+                <div class="trending-image">
                   {isUnsplashSide ? (
                     <img 
                       src={sideImage} 
                       alt={post.data.imageAlt || post.data.title}
-                      loading="eager"
+                      loading="lazy"
                       decoding="async"
                     />
                   ) : (
                     <Image 
                       src={sideImage} 
                       alt={post.data.imageAlt || post.data.title}
-                      width={800}
-                      height={450}
-                      widths={[400, 600, 800]}
-                      sizes="(max-width: 768px) 100vw, 400px"
-                      loading="eager"
+                      width={600}
+                      height={338}
+                      widths={[300, 600]}
+                      sizes="(max-width: 768px) 100vw, 300px"
+                      loading="lazy"
                       decoding="async"
                       format="webp"
                       quality={80}
                     />
                   )}
-                  <div class="feature-overlay side-overlay"></div>
                 </div>
-                <div class="feature-content side-content">
-                  <span class="feature-category small">{post.data.category}</span>
-                  <h2 class="feature-title side-title">
-                    <a href={`/${categoryMap[post.data.category]}/${post.id}`}>
-                      {post.data.title}
-                    </a>
-                  </h2>
+                <div class="trending-content">
+                  <span class="trending-category">{post.data.category}</span>
+                  <h3 class="trending-title">{post.data.title}</h3>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>
@@ -184,7 +184,7 @@ const categoryMap: Record<string, string> = {
 
     <!-- Category Sections -->
     <div class="container">
-      <section class="category-section">
+      <section class="category-section scroll-trigger">
         <h2>Tech & Innovation</h2>
         <div class="posts-grid">
           {techPosts.length > 0 ? techPosts.map(post => (
@@ -196,7 +196,7 @@ const categoryMap: Record<string, string> = {
         <a href="/tech" class="section-link">View all Tech posts →</a>
       </section>
 
-      <section class="category-section">
+      <section class="category-section scroll-trigger">
         <h2>AI & Automation</h2>
         <div class="posts-grid">
           {aiPosts.length > 0 ? aiPosts.map(post => (
@@ -208,7 +208,7 @@ const categoryMap: Record<string, string> = {
         <a href="/ai" class="section-link">View all AI posts →</a>
       </section>
 
-      <section class="category-section">
+      <section class="category-section scroll-trigger">
         <h2>EVs & Mobility</h2>
         <div class="posts-grid">
           {evsPosts.length > 0 ? evsPosts.map(post => (
@@ -220,35 +220,9 @@ const categoryMap: Record<string, string> = {
         <a href="/evs" class="section-link">View all EV posts →</a>
       </section>
 
-      <!-- Join the Tribe CTA -->
-      <section class="tribe-cta">
-        <div class="tribe-content">
-          <h2>Join the Tribe</h2>
-          <p>Trendy Tech Tribe is here to help you navigate the fast-paced universe of technology. From revealing the latest gadgets to decoding complex tech trends, we empower our tribe with the knowledge they need to stay ahead of the curve.</p>
-          <div class="tribe-image">
-            <picture>
-              <source
-                type="image/webp"
-                srcset="/images/optimized/join-the-tribe-small.webp 640w,
-                        /images/optimized/join-the-tribe-medium.webp 1024w,
-                        /images/optimized/join-the-tribe.webp 1456w"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 900px, 900px"
-              />
-              <img
-                src="/images/optimized/join-the-tribe.webp"
-                alt="Join the Trendy Tech Tribe community"
-                loading="lazy"
-                decoding="async"
-                width="1456"
-                height="832"
-              />
-            </picture>
-          </div>
-          <NewsletterSignup />
-        </div>
-      </section>
 
-      <section class="category-section">
+
+      <section class="category-section scroll-trigger">
         <h2>Energy & Policy</h2>
         <div class="posts-grid">
           {energyPosts.length > 0 ? energyPosts.map(post => (
@@ -260,7 +234,7 @@ const categoryMap: Record<string, string> = {
         <a href="/energy" class="section-link">View all Energy posts →</a>
       </section>
 
-      <section class="category-section">
+      <section class="category-section scroll-trigger">
         <h2>Markets & Money</h2>
         <div class="posts-grid">
           {marketsPosts.length > 0 ? marketsPosts.map(post => (
@@ -272,7 +246,7 @@ const categoryMap: Record<string, string> = {
         <a href="/markets" class="section-link">View all Markets posts →</a>
       </section>
 
-      <section class="category-section">
+      <section class="category-section scroll-trigger">
         <h2>Picks & Reviews</h2>
         <div class="posts-grid">
           {picksPosts.length > 0 ? picksPosts.map(post => (
@@ -283,6 +257,8 @@ const categoryMap: Record<string, string> = {
         </div>
         <a href="/picks" class="section-link">View all Picks posts →</a>
       </section>
+
+
     </div>
   </main>
 
@@ -290,140 +266,70 @@ const categoryMap: Record<string, string> = {
 </BaseLayout>
 
 <style>
-  /* Featured Grid Layout */
-  .featured-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: var(--space-4);
+  /* Hero Section */
+  .hero-section {
     margin-top: var(--space-8);
-    margin-bottom: var(--space-20);
-    height: 600px; /* Fixed height for desktop grid */
+    margin-bottom: var(--space-12);
   }
 
-  .main-feature {
-    height: 100%;
-  }
-
-  .side-features {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-    height: 100%;
-  }
-
-  .feature-card {
+  .hero-card {
     position: relative;
     border-radius: var(--radius-xl);
     overflow: hidden;
-    height: 100%;
+    min-height: 500px;
     display: flex;
-    align-items: flex-end;
+    align-items: stretch; /* Stretch both sides */
     border: 1px solid var(--border-dim);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    background: var(--bg-secondary); /* Background for the content side */
   }
 
-  .feature-card:hover {
+  .hero-card:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg), var(--glow-soft);
     border-color: var(--border-bright);
   }
 
-  .feature-card.main {
-    height: 100%;
+  .hero-bg {
+    flex: 1; /* Takes remaining space (approx 60%) */
+    position: relative;
+    min-height: 100%;
+    overflow: hidden; /* Ensure image scaling is contained */
   }
 
-  .feature-card.side {
-    flex: 1; /* Split height equally */
-  }
-
-  .feature-bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-  }
-
-  .feature-bg img {
+  .hero-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.7s ease;
   }
 
-  .feature-card:hover .feature-bg img {
+  .hero-card:hover .hero-bg img {
     transform: scale(1.05);
   }
 
-  .feature-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      0deg,
-      rgba(10, 6, 20, 0.95) 0%,
-      rgba(10, 6, 20, 0.6) 50%,
-      rgba(10, 6, 20, 0.1) 100%
-    );
-    z-index: 1;
-  }
-
-  .side-overlay {
-    background: linear-gradient(
-      0deg,
-      rgba(10, 6, 20, 0.95) 0%,
-      rgba(10, 6, 20, 0.4) 100%
-    );
-  }
-
-  .feature-content {
+  .hero-content {
+    flex: 0 0 40%; /* Fixed width for content */
     position: relative;
     z-index: 10;
-    padding: var(--space-8);
-    width: 100%;
+    padding: var(--space-12);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bg-secondary); /* Ensure solid background */
+    /* Removed border-right to fix visual artifact */
   }
 
-  .side-content {
-    padding: var(--space-6);
-  }
-
-  .feature-category {
-    display: inline-block;
-    background: rgba(180, 74, 255, 0.3);
-    border: 1px solid var(--tribal-purple);
-    padding: 0.375rem 0.875rem;
-    border-radius: var(--radius-full);
-    font-size: var(--text-body-sm);
-    font-weight: var(--weight-semibold);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-wide);
-    margin-bottom: var(--space-4);
-    box-shadow: var(--glow-purple);
-    backdrop-filter: blur(4px);
-  }
-
-  .feature-category.small {
-    padding: 0.25rem 0.625rem;
-    font-size: 0.75rem;
-    margin-bottom: var(--space-3);
-  }
-
-  .feature-title {
+  .hero-title {
     font-family: var(--font-display);
     font-weight: var(--weight-black);
+    font-size: var(--text-h2);
     line-height: var(--line-tight);
     letter-spacing: var(--tracking-tight);
     margin-bottom: var(--space-4);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   }
 
-  .main-title {
-    font-size: var(--text-display);
-  }
-
-  .side-title {
-    font-size: var(--text-h3);
-    margin-bottom: 0; /* No summary on side cards */
-  }
-
-  .feature-title a {
+  .hero-title a {
     color: white;
     background: var(--gradient-text-neon);
     background-clip: text;
@@ -432,84 +338,181 @@ const categoryMap: Record<string, string> = {
     transition: opacity var(--transition-normal);
   }
 
-  .feature-title a:hover {
+  .hero-title a:hover {
     opacity: 0.8;
   }
 
-  .feature-summary {
+  .hero-summary {
     font-size: var(--text-body-lg);
-    color: var(--text-gray-100);
+    color: var(--text-gray-200);
     margin-bottom: var(--space-6);
     line-height: var(--line-relaxed);
-    max-width: 65ch;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
   }
 
-  .feature-cta {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--neon-magenta), var(--neon-cyan));
-    color: white;
-    padding: var(--space-3) var(--space-6);
-    border-radius: var(--radius-md);
-    font-weight: var(--weight-semibold);
-    font-size: var(--text-body-md);
-    transition: all var(--transition-normal) var(--easing-smooth);
-    box-shadow: var(--glow-magenta);
-    border: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .feature-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--glow-magenta-intense), var(--shadow-lg);
-  }
-
-  /* Mobile / Tablet Responsive */
   @media (max-width: 1024px) {
-    .featured-grid {
-      grid-template-columns: 1fr;
+    .hero-card {
+      flex-direction: column-reverse; /* Image top, Content bottom */
       height: auto;
-      gap: var(--space-4);
     }
 
-    .side-features {
-      flex-direction: row;
+    .hero-bg {
       height: 300px;
+      flex: none;
     }
 
-    .feature-card.main {
-      height: 400px;
+    .hero-content {
+      flex: none;
+      width: 100%;
+      border-right: none;
+      border-top: 1px solid var(--border-subtle);
+      padding: var(--space-8);
     }
   }
 
   @media (max-width: 768px) {
-    .featured-grid {
-      margin-top: var(--space-4);
+    .hero-bg {
+      height: 250px;
     }
+  }
 
-    .side-features {
-      flex-direction: column;
-      height: auto;
+  /* Trending Strip */
+  .trending-section {
+    margin-bottom: var(--space-20);
+  }
+
+  .trending-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+
+  .trending-label {
+    font-family: var(--font-display);
+    font-size: var(--text-h5);
+    font-weight: var(--weight-bold);
+    color: var(--neon-cyan);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    white-space: nowrap;
+  }
+
+  .trending-line {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--neon-cyan), transparent);
+    opacity: 0.5;
+  }
+
+  .trending-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+  }
+
+  .trending-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    text-decoration: none;
+    group: hover;
+  }
+
+  .trending-image {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--border-subtle);
+    transition: border-color var(--transition-normal);
+  }
+
+  .trending-card:hover .trending-image {
+    border-color: var(--neon-cyan);
+    box-shadow: var(--glow-cyan);
+  }
+
+  .trending-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+  }
+
+  .trending-card:hover .trending-image img {
+    transform: scale(1.05);
+  }
+
+  .trending-category {
+    font-size: var(--text-body-xs);
+    color: var(--neon-magenta);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .trending-title {
+    font-size: var(--text-body-lg);
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+    line-height: var(--line-snug);
+    margin: 0;
+    transition: color var(--transition-normal);
+  }
+
+  .trending-card:hover .trending-title {
+    color: var(--neon-cyan);
+  }
+
+  /* Mobile / Tablet Responsive */
+  @media (max-width: 1024px) {
+    .hero-card {
+      height: 400px;
     }
+    
+    .hero-title {
+      font-size: 3rem;
+    }
+  }
 
-    .feature-card.main {
+  @media (max-width: 768px) {
+    .hero-card {
       height: 350px;
     }
 
-    .feature-card.side {
-      height: 250px;
+    .hero-content {
+      padding: var(--space-6);
     }
 
-    .main-title {
+    .hero-title {
       font-size: 2rem;
     }
 
-    .feature-summary {
+    .hero-summary {
       font-size: 1rem;
       -webkit-line-clamp: 2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .trending-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+    
+    .trending-card {
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .trending-image {
+      width: 100px;
+      aspect-ratio: 1;
+      flex-shrink: 0;
     }
   }
 
@@ -575,86 +578,30 @@ const categoryMap: Record<string, string> = {
     transform: translateX(4px);
   }
 
-  .tribe-cta {
-    position: relative;
-    background: var(--gradient-bg);
-    padding: var(--space-24);
-    border-radius: var(--radius-2xl);
-    margin: var(--space-24) 0;
-    border: 1px solid var(--border-bright);
-    box-shadow: var(--glow-soft), var(--shadow-xl);
-    overflow: hidden;
-  }
 
-  @media (max-width: 768px) {
-    .tribe-cta {
-      padding: var(--space-8);
-      margin: var(--space-12) 0;
-      border-radius: var(--radius-lg);
-    }
-  }
 
-  .tribe-cta::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--gradient-glow);
-    opacity: 0.5;
-    pointer-events: none;
-  }
 
-  .tribe-content {
-    position: relative;
-    z-index: 1;
-  }
+</style>
 
-  .tribe-content h2 {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: var(--weight-black);
-    margin-bottom: var(--space-8);
-    border: none;
-    padding: 0;
-    text-align: center;
-    background: var(--gradient-text-neon);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+<script>
+  // Scroll Observer for Fade-in Animations
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
 
-  .tribe-content > p {
-    font-size: var(--text-body-lg);
-    line-height: var(--line-relaxed);
-    max-width: 800px;
-    margin: 0 auto var(--space-12);
-    text-align: center;
-    color: var(--text-secondary);
-  }
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target); // Only animate once
+      }
+    });
+  }, observerOptions);
 
-  .tribe-image {
-    max-width: 900px;
-    margin: 0 auto var(--space-16);
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    box-shadow:
-      var(--glow-magenta),
-      0 16px 48px rgba(0, 0, 0, 0.4);
-    border: 1px solid var(--border-bright);
-  }
-
-  .tribe-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  @media (max-width: 768px) {
-    .tribe-content h2 {
-      font-size: 2rem;
-    }
-
-    .tribe-content p {
-      font-size: 1rem;
-    }
-  }
-
+  document.querySelectorAll('.scroll-trigger').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+```

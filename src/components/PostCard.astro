@@ -5,19 +5,22 @@ import type { CollectionEntry } from 'astro:content';
 interface Props {
   post: CollectionEntry<'tech' | 'ai' | 'evs' | 'energy' | 'markets' | 'picks'>;
   categorySlug: string;
+  categorySlug: string;
+  isHighlight?: boolean;
+  isHorizontal?: boolean;
 }
 
-const { post, categorySlug } = Astro.props;
+const { post, categorySlug, isHighlight = false, isHorizontal = false } = Astro.props;
 ---
 
-<article class="post-card">
+<article class={`post-card ${isHighlight ? 'post-card--highlight' : ''} ${isHorizontal ? 'post-card--horizontal' : ''}`}>
   <a href={`/${categorySlug}/${post.id}`} class="post-image">
     {post.data.image.startsWith('http') ? (
       <img
         src={post.data.image}
         alt={post.data.imageAlt || post.data.title}
-        width="600"
-        height="338"
+        width={isHighlight ? 800 : 600}
+        height={isHighlight ? 450 : 338}
         loading="lazy"
         decoding="async"
       />
@@ -25,10 +28,10 @@ const { post, categorySlug } = Astro.props;
       <Image
         src={post.data.image}
         alt={post.data.imageAlt || post.data.title}
-        width={600}
-        height={338}
+        width={isHighlight ? 800 : 600}
+        height={isHighlight ? 450 : 338}
         widths={[400, 800]}
-        sizes="(max-width: 768px) 100vw, 600px"
+        sizes={isHighlight ? "(max-width: 768px) 100vw, 800px" : isHorizontal ? "120px" : "(max-width: 768px) 100vw, 600px"}
         loading="lazy"
         decoding="async"
         format="webp"
@@ -42,6 +45,11 @@ const { post, categorySlug } = Astro.props;
       <a href={`/${categorySlug}/${post.id}`}>{post.data.title}</a>
     </h3>
     <p>{post.data.summary}</p>
+    {isHighlight && (
+      <a href={`/${categorySlug}/${post.id}`} class="read-more">
+        Read Article →
+      </a>
+    )}
   </div>
 </article>
 
@@ -55,6 +63,92 @@ const { post, categorySlug } = Astro.props;
     overflow: hidden;
     transition: all var(--transition-normal) var(--easing-smooth);
     height: 100%;
+  }
+
+  /* Highlight Card Layout */
+  .post-card--highlight {
+    flex-direction: row;
+    height: 100%;
+    min-height: 280px; /* Reduced from 300px */
+  }
+
+  .post-card--highlight .post-image {
+    width: 60%; /* Increased from 55% */
+    aspect-ratio: auto;
+    height: 100%;
+  }
+
+  .post-card--highlight .post-content {
+    width: 40%; /* Reduced from 45% */
+    justify-content: center;
+    padding: var(--space-6); /* Reduced padding */
+  }
+
+  .post-card--highlight h3 {
+    font-size: var(--text-h4); /* Slightly smaller heading */
+    margin-bottom: var(--space-3);
+  }
+
+  .post-card--highlight p {
+    font-size: var(--text-body);
+    -webkit-line-clamp: 4; /* Allow one more line if needed, or keep 3 */
+  }
+
+  @media (max-width: 768px) {
+    .post-card--highlight {
+      flex-direction: column;
+      min-height: auto;
+    }
+
+    .post-card--highlight .post-image,
+    .post-card--highlight .post-content {
+      width: 100%;
+    }
+
+    .post-card--highlight .post-image {
+      aspect-ratio: 16 / 9;
+    }
+    .post-card--highlight .post-image {
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  /* Horizontal Card Layout (Small) */
+  .post-card--horizontal {
+    flex-direction: row;
+    height: auto;
+    min-height: 100px;
+    align-items: center;
+    border: none;
+    background: transparent;
+  }
+
+  .post-card--horizontal .post-image {
+    width: 120px;
+    height: 90px;
+    flex-shrink: 0;
+    aspect-ratio: 4/3;
+    border-radius: var(--radius-md);
+    margin-right: var(--space-4);
+  }
+
+  .post-card--horizontal .post-content {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .post-card--horizontal h3 {
+    font-size: var(--text-body-lg);
+    margin-bottom: var(--space-1);
+  }
+
+  .post-card--horizontal p {
+    display: none; /* Hide summary on small horizontal cards */
+  }
+
+  .post-card--horizontal .post-date {
+    font-size: var(--text-body-xs);
+    margin-bottom: var(--space-1);
   }
 
   .post-card:hover {
@@ -134,5 +228,22 @@ const { post, categorySlug } = Astro.props;
     color: var(--text-secondary);
     line-height: var(--line-normal);
     margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .read-more {
+    display: inline-block;
+    margin-top: var(--space-2);
+    font-weight: var(--weight-semibold);
+    color: var(--neon-cyan);
+    font-size: var(--text-body-sm);
+  }
+
+  .read-more:hover {
+    color: var(--neon-magenta);
+    text-decoration: underline;
   }
 </style>

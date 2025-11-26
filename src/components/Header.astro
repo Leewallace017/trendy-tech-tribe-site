@@ -31,6 +31,9 @@ const currentPath = Astro.url.pathname;
               {item.label}
             </a>
           ))}
+          <a href="/newsletter" class="btn btn-primary btn-sm subscribe-btn">
+            Subscribe
+          </a>
         </nav>
       </div>
 
@@ -74,6 +77,9 @@ const currentPath = Astro.url.pathname;
             {item.label}
           </a>
         ))}
+        <a href="/newsletter" class="mobile-nav-link subscribe-mobile">
+          Subscribe
+        </a>
       </div>
     </nav>
   </div>
@@ -118,6 +124,11 @@ const currentPath = Astro.url.pathname;
 
   .logo:hover {
     filter: drop-shadow(0 0 16px rgba(92, 255, 128, 0.4));
+  }
+
+  .logo:focus,
+  .logo:active {
+    outline: none;
   }
 
   .logo img {
@@ -388,6 +399,24 @@ const currentPath = Astro.url.pathname;
   /* Prevent body scroll when menu is open */
   body.mobile-menu-open {
     overflow: hidden;
+  }
+
+  .subscribe-btn {
+    margin-left: var(--space-2);
+    box-shadow: var(--glow-magenta);
+  }
+
+  .subscribe-btn:hover {
+    box-shadow: var(--glow-magenta-intense);
+  }
+
+  .subscribe-mobile {
+    margin-top: var(--space-4);
+    background: linear-gradient(135deg, var(--neon-magenta), var(--neon-cyan));
+    color: white !important;
+    text-align: center;
+    font-weight: var(--weight-bold);
+    border: none;
   }
 </style>
 
