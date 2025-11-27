@@ -1,5 +1,5 @@
 ---
-title: "Best Apple Black Friday Deals on Amazon 2025: iPhones, MacBooks & Apple Watch"
+title: "Best Apple Black Friday Deals on Amazon 2025: iPhones, MacBooks & Apple Watches"
 date: "2025-11-26"
 author: "Trendy Tech Tribe Staff"
 category: "Picks & Reviews"
@@ -49,17 +49,18 @@ IMAGE SOURCING DECISION GUIDE:
 - **Best iPhone on Sale**: [iPhone 16 (256GB)](https://www.amazon.com/dp/B0DPDJ2DK8?tag=trendytecht0a-20) - Last year's model with great features at a discount.
 - **Best Laptop Value**: [MacBook Air 13" M4 (256GB)](https://www.amazon.com/dp/B0DZD9S5GC?tag=trendytecht0a-20) - 25% off the latest M4 chip.
 - **Best Big Screen Laptop**: [MacBook Air 15" M4 (512GB)](https://www.amazon.com/dp/B0DZDB168B?tag=trendytecht0a-20) - Maximum screen and storage.
-- **Best Wearable**: [Apple Watch Ultra 2](https://www.amazon.com/dp/B0CSVGDV7Q?tag=trendytecht0a-20) - The ultimate adventure watch at 23% off.
+- **Best Wearable**: [Apple Watch Ultra 2](https://www.amazon.com/dp/B0CSVGDV7Q?tag=trendytecht0a-20) - Last year's Ultra model at 23% off.
 
 ## What to Look For
 
 Apple products rarely go on sale, so Black Friday is your best shot at scoring a deal. Here's what to keep in mind:
 
 1. **iPhone 17 Not on Sale**: The current iPhone 17 (2025) isn't discounted for Black Friday. The iPhone 16 from 2024 is what's on sale.
-2. **Renewed vs. New**: Amazon Renewed Premium offers like-new iPhones at significant discounts with full warranty. Great for flagship models.
-3. **M4 Chip is the Real Deal**: The 2025 MacBook Air with M4 is a massive upgrade over M3. Built for Apple Intelligence, it's faster, more efficient, and future-proof.
-4. **Check the Storage**: 256GB fills up fast. If you're a creative or store lots of files, spring for the 512GB model.
-5. **Color Choices**: All MacBooks come in multiple colors (Midnight, Starlight, Sky Blue, Silver). Choose based on your preference - they're all the same price.
+2. **Apple Watch Ultra 3 Not on Sale**: The current Apple Watch Ultra 3 (2025) isn't discounted. The Ultra 2 from 2023 is on sale.
+3. **Renewed vs. New**: Amazon Renewed Premium offers like-new iPhones at significant discounts with full warranty. Great for flagship models.
+4. **M4 Chip is the Real Deal**: The 2025 MacBook Air with M4 is a massive upgrade over M3. Built for Apple Intelligence, it's faster, more efficient, and future-proof.
+5. **Check the Storage**: 256GB fills up fast. If you're a creative or store lots of files, spring for the 512GB model.
+6. **Color Choices**: All MacBooks come in multiple colors (Midnight, Starlight, Sky Blue, Silver). Choose based on your preference - they're all the same price.
 
 ## Our Top Picks
 
@@ -291,7 +292,7 @@ Apple products rarely go on sale, so Black Friday is your best shot at scoring a
 
 ---
 
-### 8. Apple Watch Ultra 2 - Best Adventure Watch
+### 8. Apple Watch Ultra 2 - Best Adventure Watch (Last-Gen)
 
 **Rating: 9.9/10**
 
@@ -313,13 +314,16 @@ Apple products rarely go on sale, so Black Friday is your best shot at scoring a
 - 23% discount
 
 **Cons:**
+- Not the current Ultra 3 model (2025)
+- Lower display brightness than Ultra 3 (2000 vs 3000 nits)
+- No 5G or satellite SOS (Ultra 3 features)
 - Expensive even on sale
 - Overkill for casual users
 - Large size might not fit smaller wrists
 
 **Who It's For:** Athletes, adventurers, and anyone who wants the absolute best Apple Watch.
 
-**Why We Picked It:** The Apple Watch Ultra 2 is the king of smartwatches. It's built like a tank, has insane battery life, and the Precision GPS is unmatched. If you're serious about fitness or outdoor activities, this is the one.
+**Why We Picked It:** The Apple Watch Ultra 2 (2023) is still an incredible watch with rugged titanium build, amazing battery life, and Precision GPS. While the Ultra 3 is the current 2025 model, the Ultra 2 on sale offers excellent value for outdoor enthusiasts.
 
 **More Buying Choices:** Multiple used and new offers available
 
@@ -380,7 +384,7 @@ Black Friday is the best time to buy Apple products, and these deals are legit. 
 
 1. **Best Overall iPhone**: [iPhone 15 Pro Max (Renewed, 512GB)](https://www.amazon.com/dp/B0CRJK7V6D?tag=trendytecht0a-20) - Flagship performance at renewed pricing.
 2. **Best Overall Laptop**: [MacBook Air 13" M4 (256GB)](https://www.amazon.com/dp/B0DZD9S5GC?tag=trendytecht0a-20) - 25% off is an absolute steal for the latest M4 chip.
-3. **Best Overall Watch**: [Apple Watch Ultra 2](https://www.amazon.com/dp/B0CSVGDV7Q?tag=trendytecht0a-20) - The ultimate smartwatch for adventurers.
+3. **Best Overall Watch**: [Apple Watch Ultra 2](https://www.amazon.com/dp/B0CSVGDV7Q?tag=trendytecht0a-20) - Last year's Ultra model still excellent for adventurers.
 
 **Quick Decision Guide:**
 
@@ -396,8 +400,8 @@ Black Friday is the best time to buy Apple products, and these deals are legit. 
 - **Want maximum everything?** → [MacBook Air 15" M4 (512GB)](https://www.amazon.com/dp/B0DZDB168B?tag=trendytecht0a-20)
 
 **Watches:**
-- **Serious about fitness?** → [Apple Watch Ultra 2](https://www.amazon.com/dp/B0CSVGDV7Q?tag=trendytecht0a-20)
-- **Want everyday premium?** → [Apple Watch Series 10](https://www.amazon.com/dp/B0DGVXPTZW?tag=trendytecht0a-20)
+- **Serious about fitness?** → [Apple Watch Ultra 2](https://www.amazon.com/dp/B0CSVGDV7Q?tag=trendytecht0a-20) (2023 model on sale)
+- **Want everyday premium?** → [Apple Watch Series 10](https://www.amazon.com/dp/B0DGVXPTZW?tag=trendytecht0a-20) (2024 model)
 
 **Color Note**: All MacBook Air models are available in multiple colors (Midnight, Starlight, Sky Blue, Silver) at the same price. iPhones also come in various colors. Choose the color you like best - the specs and performance are identical.
 
