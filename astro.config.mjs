@@ -15,7 +15,7 @@ export default defineConfig({
       includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
       manifest: {
         name: 'Trendy Tech Tribe',
-        short_name: 'TTT',
+        short_name: 'Trendy Tech',
         description: 'Your source for tech news, AI insights, EV updates, energy policy, market analysis, and product reviews.',
         theme_color: '#0a0614',
         background_color: '#0a0614',
