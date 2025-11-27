@@ -23,7 +23,7 @@ Use this workflow for creating all new articles.
 - `docs/templates/deep-dive-template.md` (Analysis)
 
 ### 2. Research & Product Selection (For "Best List" / Reviews)
-2.  **Agent**: Research topics/products using the **Perplexity API** to ensure accurate, up-to-date sources and avoid broken links.
+2.  **Agent**: Research topics/products using the local Perplexity tool: `npm run perplexity -- research "topic"`. This tool provides more specific, sourced details (e.g., specific battery chemistry tips, niche competitor names) compared to generic web search.
 3.  **User**: Selects products and provides specific links (Affiliate/Amazon).
 4.  **Agent**: **VISUALLY VERIFY** every link provided by the user.
     -   Use `open_browser_url` to open the link.
