@@ -46,7 +46,7 @@ IMAGE SOURCING DECISION GUIDE:
 ## Quick Picks
 
 - **Best iPhone Deal**: [iPhone 15 Pro Max (Renewed, 512GB)](https://www.amazon.com/dp/B0CRJK7V6D?tag=trendytecht0a-20) - Premium flagship at a fraction of the cost.
-- **Best New iPhone**: [iPhone 16 (256GB)](https://www.amazon.com/dp/B0DPDJ2DK8?tag=trendytecht0a-20) - Latest model with Camera Control button.
+- **Best iPhone on Sale**: [iPhone 16 (256GB)](https://www.amazon.com/dp/B0DPDJ2DK8?tag=trendytecht0a-20) - Last year's model with great features at a discount.
 - **Best Laptop Value**: [MacBook Air 13" M4 (256GB)](https://www.amazon.com/dp/B0DZD9S5GC?tag=trendytecht0a-20) - 25% off the latest M4 chip.
 - **Best Big Screen Laptop**: [MacBook Air 15" M4 (512GB)](https://www.amazon.com/dp/B0DZDB168B?tag=trendytecht0a-20) - Maximum screen and storage.
 - **Best Wearable**: [Apple Watch Ultra 2](https://www.amazon.com/dp/B0CSVGDV7Q?tag=trendytecht0a-20) - The ultimate adventure watch at 23% off.
@@ -55,10 +55,11 @@ IMAGE SOURCING DECISION GUIDE:
 
 Apple products rarely go on sale, so Black Friday is your best shot at scoring a deal. Here's what to keep in mind:
 
-1. **Renewed vs. New**: Amazon Renewed Premium offers like-new iPhones at significant discounts with full warranty. Great for flagship models.
-2. **M4 Chip is the Real Deal**: The 2025 MacBook Air with M4 is a massive upgrade over M3. Built for Apple Intelligence, it's faster, more efficient, and future-proof.
-3. **Check the Storage**: 256GB fills up fast. If you're a creative or store lots of files, spring for the 512GB model.
-4. **Color Choices**: All MacBooks come in multiple colors (Midnight, Starlight, Sky Blue, Silver). Choose based on your preference - they're all the same price.
+1. **iPhone 17 Not on Sale**: The current iPhone 17 (2025) isn't discounted for Black Friday. The iPhone 16 from 2024 is what's on sale.
+2. **Renewed vs. New**: Amazon Renewed Premium offers like-new iPhones at significant discounts with full warranty. Great for flagship models.
+3. **M4 Chip is the Real Deal**: The 2025 MacBook Air with M4 is a massive upgrade over M3. Built for Apple Intelligence, it's faster, more efficient, and future-proof.
+4. **Check the Storage**: 256GB fills up fast. If you're a creative or store lots of files, spring for the 512GB model.
+5. **Color Choices**: All MacBooks come in multiple colors (Midnight, Starlight, Sky Blue, Silver). Choose based on your preference - they're all the same price.
 
 ## Our Top Picks
 
@@ -85,7 +86,7 @@ Apple products rarely go on sale, so Black Friday is your best shot at scoring a
 - Amazon Renewed Premium warranty
 
 **Cons:**
-- Not the latest model (iPhone 16 is newer)
+- Not the current model (iPhone 17 is the 2025 flagship)
 - Renewed (not brand new)
 
 **Who It's For:** Anyone who wants flagship iPhone performance without paying full price.
@@ -96,7 +97,7 @@ Apple products rarely go on sale, so Black Friday is your best shot at scoring a
 
 ---
 
-### 2. iPhone 16 (256GB) - Best New iPhone
+### 2. iPhone 16 (256GB) - Best Last-Gen iPhone
 
 **Rating: 9.5/10**
 
@@ -104,11 +105,11 @@ Apple products rarely go on sale, so Black Friday is your best shot at scoring a
 
 **Key Features:**
 - 6.1-inch Super Retina XDR Display
-- A18 chip (latest generation)
-- Camera Control button (new feature)
+- A18 chip (2024 generation)
+- Camera Control button
 - Dual camera system (48MP Fusion, 12MP Ultra Wide)
 - 256GB storage
-- Brand new, latest model
+- Last year's model (2024), not current iPhone 17
 
 **Available Colors:** Black, White, Pink, Teal, Ultramarine
 
@@ -119,12 +120,12 @@ Apple products rarely go on sale, so Black Friday is your best shot at scoring a
 - Great camera system
 
 **Cons:**
-- More expensive than renewed options
+- Not the current iPhone 17 model
 - Not Pro model (no telephoto lens)
 
-**Who It's For:** Anyone who wants the latest iPhone with the newest features.
+**Who It's For:** Anyone who wants a recent iPhone with modern features at a Black Friday discount.
 
-**Why We Picked It:** The iPhone 16 is Apple's latest standard model with the new Camera Control button and A18 chip. It's the best choice if you want a brand-new iPhone without going Pro.
+**Why We Picked It:** The iPhone 16 (2024) is still an excellent phone with the Camera Control button and A18 chip. Since iPhone 17 isn't on sale, this is your best bet for a recent-model iPhone at a discount.
 
 **More Buying Choices:** Used and refurbished options available
 
@@ -385,7 +386,7 @@ Black Friday is the best time to buy Apple products, and these deals are legit. 
 
 **iPhones:**
 - **Want flagship on a budget?** → [iPhone 15 Pro Max (Renewed, 512GB)](https://www.amazon.com/dp/B0CRJK7V6D?tag=trendytecht0a-20)
-- **Want the latest model?** → [iPhone 16 (256GB)](https://www.amazon.com/dp/B0DPDJ2DK8?tag=trendytecht0a-20)
+- **Want last year's flagship?** → [iPhone 16 (256GB)](https://www.amazon.com/dp/B0DPDJ2DK8?tag=trendytecht0a-20)
 - **Best value Pro?** → [iPhone 15 Pro Max (Renewed, 256GB)](https://www.amazon.com/dp/B0CRJRNTNS?tag=trendytecht0a-20)
 
 **Laptops:**
