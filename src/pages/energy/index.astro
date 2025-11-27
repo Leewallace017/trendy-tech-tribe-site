@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
+import { calculateReadTime } from '../../utils/calculateReadTime';
 
 const posts = (await getCollection('energy')).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
@@ -43,7 +44,7 @@ const posts = (await getCollection('energy')).sort(
               </h2>
               <p class="post-summary">{post.data.summary}</p>
               <div class="post-meta">
-                <span class="post-type">{post.data.type.replace('-', ' ')}</span>
+                <span class="post-type">{post.data.type.replace('-', ' ')} • {calculateReadTime(post.body)} min read</span>
                 {post.data.tags.length > 0 && (
                   <div class="post-tags">
                     {post.data.tags.slice(0, 3).map(tag => (

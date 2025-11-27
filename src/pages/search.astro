@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { getCollection } from 'astro:content';
+import { calculateReadTime } from '../utils/calculateReadTime';
 
 // Get all posts for the search index
 const allPosts = [
@@ -23,7 +24,9 @@ const searchIndex = allPosts.map(post => ({
   slug: post.id,
   date: post.data.date,
   image: post.data.image,
-  url: `/${post.collection}/${post.id}` // Approximate URL construction
+  image: post.data.image,
+  url: `/${post.collection}/${post.id}`, // Approximate URL construction
+  readTime: calculateReadTime(post.body)
 }));
 
 const categoryMap: Record<string, string> = {
@@ -97,7 +100,7 @@ const categoryMap: Record<string, string> = {
             <img src="${post.image}" alt="${post.title}" loading="lazy" />
           </div>
           <div class="post-content">
-            <span class="post-category">${post.category}</span>
+            <span class="post-category">${post.category} • ${post.readTime} min read</span>
             <h3 class="post-title">${post.title}</h3>
             <p class="post-summary">${post.summary}</p>
           </div>

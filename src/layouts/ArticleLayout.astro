@@ -16,6 +16,7 @@ interface Props {
   summary: string;
   image: string;
   imageAlt?: string;
+  readTime?: number;
 }
 
 const {
@@ -27,7 +28,8 @@ const {
   tags,
   summary,
   image,
-  imageAlt
+  imageAlt,
+  readTime
 } = Astro.props;
 
 const formattedDate = new Date(date).toLocaleDateString('en-US', {
@@ -73,6 +75,7 @@ const schema = {
         <div class="article-container">
           <div class="article-meta">
             <span class="category-badge">{category}</span>
+            {readTime && <span class="read-time">{readTime} min read</span>}
             <time datetime={date}>{formattedDate}</time>
           </div>
 
@@ -194,6 +197,20 @@ const schema = {
   }
 
   time {
+    color: var(--color-text-light);
+  }
+
+  .read-time {
+    color: var(--color-text-light);
+    font-size: 0.875rem;
+    position: relative;
+    padding-left: var(--space-sm);
+  }
+
+  .read-time::before {
+    content: "•";
+    position: absolute;
+    left: -4px;
     color: var(--color-text-light);
   }
 

@@ -7,6 +7,7 @@ import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import { optimizeUnsplashUrl } from '../utils/imageOptimization';
+import { calculateReadTime } from '../utils/calculateReadTime';
 
 // Get latest posts from each category
 const techPosts = (await getCollection('tech')).sort(
@@ -62,6 +63,7 @@ if (featuredCandidates.length >= 3) {
 featuredPosts = Array.from(new Map(featuredPosts.map(p => [p.id, p])).values()).slice(0, 3);
 
 const [mainFeature, ...sideFeatures] = featuredPosts;
+const mainReadTime = mainFeature ? calculateReadTime(mainFeature.body) : 0;
 
 // Prepare hero image for main feature
 const isUnsplash = mainFeature?.data.image.includes('unsplash.com');
@@ -92,7 +94,7 @@ const categoryMap: Record<string, string> = {
       <section class="hero-section container scroll-trigger">
         <div class="hero-card hover-lift">
           <div class="hero-content">
-            <span class="feature-category">{mainFeature.data.category}</span>
+            <span class="feature-category">{mainFeature.data.category} • {mainReadTime} min read</span>
             <h1 class="hero-title">
               <a href={`/${categoryMap[mainFeature.data.category]}/${mainFeature.id}`}>
                 {mainFeature.data.title}
@@ -146,6 +148,8 @@ const categoryMap: Record<string, string> = {
               ? optimizeUnsplashUrl(post.data.image, 600) 
               : post.data.image;
             
+            const readTime = calculateReadTime(post.body);
+            
             return (
               <a href={`/${categoryMap[post.data.category]}/${post.id}`} class={`trending-card hover-lift delay-${(index + 1) * 100}`}>
                 <div class="trending-image">
@@ -172,7 +176,7 @@ const categoryMap: Record<string, string> = {
                   )}
                 </div>
                 <div class="trending-content">
-                  <span class="trending-category">{post.data.category}</span>
+                  <span class="trending-category">{post.data.category} • {readTime} min read</span>
                   <h3 class="trending-title">{post.data.title}</h3>
                 </div>
               </a>
