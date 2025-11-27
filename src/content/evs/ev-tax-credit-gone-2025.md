@@ -8,8 +8,8 @@ type: "deep-dive"
 summary: "The federal $7,500 EV tax credit has been eliminated, fundamentally changing the economics of buying an electric vehicle. Here's everything you need to know."
 seoTitle: "EV Tax Credit Eliminated: Complete 2025 Buyer's Guide"
 seoDescription: "Federal EV tax credit is gone. How this affects EV pricing, which vehicles are still worth buying, and what state incentives remain available."
-image: "/images/articles/ev-tax-credit-gone-2025.png"
-imageAlt: "Electric vehicle charging cable unplugged representing the end of tax credits"
+image: "/images/articles/modern-electric-vehicle-plugged-into-ev-charging-s-1764222372003.png"
+imageAlt: "Modern electric vehicle plugged into EV charging station with charging cable and port visible"
 imageCredit: "AI Generated Image"
 featured: false
 affiliateProducts: []
