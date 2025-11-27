@@ -41,7 +41,7 @@ Trendy Tech Tribe is a modern tech publication website covering technology news,
 
 ### Image Generation
 **Command**: `npm run generate-image "description"`
-**Providers**: OpenAI (Quality) or Replicate (Cost).
+**Providers**: OpenAI gpt-image-1 (Quality).
 **Setup**: keys in `.env`.
 
 ### Link Verification

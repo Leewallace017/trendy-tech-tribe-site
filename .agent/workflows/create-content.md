@@ -35,7 +35,9 @@ Use this workflow for creating all new articles.
 ### 3. Draft Content
 - Create file in the correct directory.
 - **Frontmatter**: Ensure `category`, `title`, `date`, and `image` are correct.
-- **Images**: Use `generate_image` for hero images. Do not use placeholders.
+- **Images**:    -   Use `generate_image` tool.
+    -   **FALLBACK**: If `generate_image` fails (e.g., 429 Rate Limit), use the local script: `npm run generate-image "prompt" -- --model dall-e-3 --output filename`.
+    -   Save to `public/images/articles/`. Do not use placeholders.
 - **Links**: Insert the verified links from Phase 1.
 
 ### 4. Visual Verification (Self-Correction)
