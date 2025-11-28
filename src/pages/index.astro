@@ -101,6 +101,13 @@ const categoryMap: Record<string, string> = {
               </a>
             </h1>
             <p class="hero-summary">{mainFeature.data.summary}</p>
+            
+            <div class="hero-tags">
+              {mainFeature.data.tags.slice(0, 3).map(tag => (
+                <a href={`/tags/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="hero-tag">#{tag}</a>
+              ))}
+            </div>
+
             <a href={`/${categoryMap[mainFeature.data.category]}/${mainFeature.id}`} class="feature-cta">
               Read Now →
             </a>
@@ -358,6 +365,28 @@ const categoryMap: Record<string, string> = {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+  }
+
+  .hero-tag {
+    font-size: var(--text-body-sm);
+    color: var(--text-gray-300);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+  }
+
+  .hero-tag:hover {
+    background: var(--neon-cyan);
+    color: var(--bg-primary);
   }
 
   @media (max-width: 1024px) {
