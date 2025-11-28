@@ -8,8 +8,8 @@ type: "opinion"
 summary: "The world doesn't need another $100k electric tank. We need an electric Ford Maverick. Here's why automakers are ignoring the most obvious gap in the market."
 seoTitle: "Opinion: The Case for a Small Affordable EV Pickup"
 seoDescription: "Legacy automakers are obsessed with massive, expensive EV trucks. We argue why a small, affordable electric pickup is what the market actually wants."
-image: "/images/articles/small-ev-pickup-2025.png"
-imageAlt: "Photorealistic compact electric pickup truck in urban setting"
+image: "/images/articles/small-affordable-ev-pickup-market-gap-v2.jpg.png"
+imageAlt: "A compact electric pickup truck parked easily on a city street, while a massive, expensive electric truck struggles to park in the background."
 imageCredit: "AI Generated Image"
 featured: false
 affiliateProducts: []

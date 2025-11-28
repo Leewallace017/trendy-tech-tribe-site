@@ -8,8 +8,8 @@ type: "deep-dive"
 summary: "An in-depth analysis of Google's Private AI Compute and Titanium Intelligence Enclaves, exploring how hardware-backed isolation is redefining cloud privacy."
 seoTitle: "Google Private AI Compute Explained: Titanium Enclaves & Privacy in 2025"
 seoDescription: "Comprehensive analysis of Google's Private AI Compute covering Titanium Intelligence Enclaves, custom TPUs, and remote attestation. Understand the implications for enterprise data privacy."
-image: "/images/articles/google-private-ai-compute-tie.jpg.png"
-imageAlt: "Abstract visualization of secure cloud computing with a titanium shield protecting glowing AI data"
+image: "/images/articles/google-private-ai-compute-tie-v2.jpg.png"
+imageAlt: "A futuristic, impenetrable digital vault floating in a server room, glowing with secure blue light. Inside the vault, a Google Tensor chip is processing data."
 imageCredit: "AI Generated Image"
 featured: true
 affiliateProducts: []

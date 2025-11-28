@@ -8,8 +8,8 @@ type: "deep-dive"
 summary: "The definitive guide to EV charging in 2025. Learn the difference between LFP and NMC batteries, why the 80% rule still matters (mostly), and how to navigate the new public charging landscape."
 seoTitle: "EV Charging Guide 2025: Battery Health & Best Practices"
 seoDescription: "Master EV charging with our 2025 guide. Discover best practices for LFP vs NMC batteries, public charging tips, and how to extend your battery's life."
-image: "/images/articles/ev-charging-best-practices-hero.png"
-imageAlt: "A modern EV charging station at sunset with a vehicle plugged in, displaying 80% charge."
+image: "/images/articles/ev-charging-best-practices-2025-v2.jpg.png"
+imageAlt: "Split screen visualization of EV battery technologies: LFP (100% Charge) vs NMC (80% Limit)"
 imageCredit: "Trendy Tech Tribe AI"
 featured: false
 affiliateProducts: []
