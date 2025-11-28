@@ -8,7 +8,7 @@ type: "best-list"
 summary: "We sifted through the garbage so you don't have to. Here are the actually good tech deals on Amazon this Black Friday."
 seoTitle: "Best Amazon Black Friday Tech Deals 2025 - Expert Picks"
 seoDescription: "Don't waste money on e-waste. We found the best Amazon Black Friday tech deals for 2025, from Apple Watches to Sony headphones."
-image: "/images/articles/amazon-black-friday-premium-2025.png"
+image: "../../assets/images/articles/amazon-black-friday-premium-2025.png"
 imageAlt: "Curated collection of high-end tech gadgets on a sleek dark surface with gold accents"
 imageCredit: "AI Generated Image"
 featured: true

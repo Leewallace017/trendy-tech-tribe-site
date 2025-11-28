@@ -8,7 +8,7 @@ type: "deep-dive"
 summary: "The IEA says it's happened. In 2025, the world's thirst for oil, gas, and coal stopped growing. Here is what the 'Peak' looks like."
 seoTitle: "Peak Fossil Fuel Demand 2025: IEA Report Analysis"
 seoDescription: "The IEA's 2025 World Energy Outlook confirms we have hit peak fossil fuel demand. We analyze the data, the drivers (China/EVs), and the economic fallout."
-image: "/images/articles/peak-fossil-fuel-demand-2025.png"
+image: "../../assets/images/articles/peak-fossil-fuel-demand-2025.png"
 imageAlt: "A graph showing the peak and decline of oil barrels against a rising sun of renewables."
 imageCredit: "Trendy Tech Tribe AI"
 featured: false

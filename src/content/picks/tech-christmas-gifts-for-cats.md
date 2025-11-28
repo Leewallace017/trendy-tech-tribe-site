@@ -8,7 +8,7 @@ type: "best-list"
 summary: "Treat your feline friend to the best tech this holiday season. From automatic laser toys to interactive robotic mice, here are our top picks for bored indoor cats."
 seoTitle: "Best Tech Christmas Gifts for Cats 2025 | Interactive Toys & Gadgets"
 seoDescription: "Looking for the perfect Christmas gift for your cat? Check out our guide to the best high-tech interactive toys, including automatic lasers, robotic mice, and more."
-image: "/images/articles/tech-cat-gifts-2025.png"
+image: "../../assets/images/articles/tech-cat-gifts-2025.png"
 imageAlt: "High-tech cat toys and feeder in a cozy modern home setting"
 imageCredit: "AI Generated Image"
 featured: false

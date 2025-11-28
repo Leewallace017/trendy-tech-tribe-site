@@ -38,8 +38,9 @@ Use this workflow for creating all new articles.
 - **Images**:
     -   Use `generate_image` tool with **16:9 aspect ratio** (1792x1008 or 1600x900).
     -   **FALLBACK**: If `generate_image` fails (e.g., 429 Rate Limit), use the local script: `npm run generate-image "prompt" -- --model dall-e-3 --size 1792x1024 --output filename`.
-    -   Save to `public/images/articles/`. Do not use placeholders.
+    -   Save to `src/assets/images/articles/`. Do not use placeholders.
     -   **Standard**: All hero images should be 16:9 aspect ratio for consistent display.
+    -   **Path in Markdown**: Use relative path: `../../assets/images/articles/filename.png`.
 - **Links**: Insert the verified links from Phase 1.
 
 ### 4. Visual Verification (Self-Correction)

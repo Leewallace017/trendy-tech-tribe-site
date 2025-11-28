@@ -8,7 +8,7 @@ type: "quick-take"
 summary: "Google just launched Gemini 3 with record-breaking benchmark scores and a new coding platform called Antigravity. Here's what it means for AI competition."
 seoTitle: "Google Gemini 3 Launch - First AI to Hit 1501 Elo Score"
 seoDescription: "Google's Gemini 3 achieves historic 1501 Elo score on LMArena, surpassing GPT-5.1 and Claude 4.5 Sonnet. New Antigravity coding platform included."
-image: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3_model-blog_meta-dark.width-1300.jpg"
+image: "../../assets/images/articles/gemini-3-launch-2025.png"
 imageAlt: "Google Gemini 3 announcement visual showing the new AI model branding"
 imageCredit: "Image courtesy of Google"
 featured: true

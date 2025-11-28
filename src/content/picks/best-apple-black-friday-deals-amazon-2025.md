@@ -8,7 +8,7 @@ type: "best-list"
 summary: "Score massive discounts on Apple's latest iPhones, M4 MacBook Air, and Apple Watches. We found the best Apple deals on Amazon this Black Friday."
 seoTitle: "Best Apple Black Friday Deals on Amazon 2025 - iPhones, MacBooks & More"
 seoDescription: "Get up to 25% off Apple's 2025 MacBook Air with M4 chip, iPhone 15 Pro Max, iPhone 16, and Apple Watches on Amazon. All verified deals with our affiliate links."
-image: "/images/articles/apple-products-black-friday-unsplash.jpg"
+image: "../../assets/images/articles/apple-products-black-friday-unsplash.jpg"
 imageAlt: "Apple MacBook and accessories on wooden desk"
 imageCredit: "Photo by Unsplash"
 featured: true

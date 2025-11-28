@@ -8,7 +8,7 @@ type: "quick-take"
 summary: "Solar and wind renewable energy overtook coal as the world's top source of electricity generation in the first half of 2025, marking a historic turning point in the energy transition."
 seoTitle: "Solar Overtakes Coal as #1 Global Electricity Source in 2025"
 seoDescription: "Renewables surpass coal for global electricity generation for the first time in H1 2025. Solar grew 31%, adding 306 TWh. What this energy milestone means."
-image: "/images/articles/solar-overtakes-coal-2025.png"
+image: "../../assets/images/articles/solar-overtakes-coal-2025.png"
 imageAlt: "Vast solar farm landscape under a bright sun representing renewable energy growth"
 imageCredit: "AI Generated Image"
 featured: true

@@ -8,7 +8,7 @@ type: "deep-dive"
 summary: "AI is solving problems, but it's creating a massive one: Power. Data centers now consume more energy than entire nations. Is nuclear the only answer?"
 seoTitle: "AI Energy Consumption 2025: Data Centers vs The Grid"
 seoDescription: "AI's energy demand has exploded in 2025. We explore how data centers are straining the grid and why tech giants are buying nuclear power plants."
-image: "/images/articles/ai-energy-crisis-data-centers.png"
+image: "../../assets/images/articles/ai-energy-crisis-data-centers.png"
 imageAlt: "A glowing server rack connected to a nuclear cooling tower."
 imageCredit: "Trendy Tech Tribe AI"
 featured: false

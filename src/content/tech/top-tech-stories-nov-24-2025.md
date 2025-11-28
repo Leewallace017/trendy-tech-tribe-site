@@ -8,7 +8,7 @@ type: "news-roundup"
 summary: "A deep dive into today's top stories: Microsoft and Google escalate the AI agent war, Trump launches a federal AI mission, and infrastructure spending hits overdrive."
 seoTitle: "Tech News Nov 24 2025: AI Agents, Google $40B Investment, Genesis Mission"
 seoDescription: "Today's top tech news: Microsoft GPT-5 in Copilot, Google's $40B Texas investment, Trump's 'Genesis Mission' for AI, and Alibaba's Qwen app success."
-image: "/images/articles/tech-roundup-nov-2025.png"
+image: "../../assets/images/articles/tech-roundup-nov-2025.png"
 imageAlt: "Modern data center server room with clean minimal aesthetic"
 imageCredit: "AI Generated Image"
 featured: false

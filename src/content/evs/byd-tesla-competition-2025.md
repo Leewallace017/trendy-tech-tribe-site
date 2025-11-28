@@ -8,7 +8,7 @@ type: "quick-take"
 summary: "BYD secured 15.4% of the global battery-electric vehicle market in Q3 2025, narrowly edging out Tesla's 13.4% as total NEV sales surged 31% year-over-year to 5.39 million units."
 seoTitle: "BYD Beats Tesla in Global EV Market Share - Q3 2025 Results"
 seoDescription: "BYD leads with 15.4% global BEV market share vs Tesla's 13.4%. NEV sales hit 5.39M units in Q3, up 31% YoY. UK announces £1.5B EV subsidy boost."
-image: "/images/articles/ev-charging-competition-2025.png"
+image: "../../assets/images/articles/ev-charging-competition-2025.png"
 imageAlt: "Modern electric vehicle charging station at sunset with clean sustainable energy vibe"
 imageCredit: "AI Generated Image"
 featured: false

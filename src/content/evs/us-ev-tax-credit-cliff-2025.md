@@ -8,7 +8,7 @@ type: "deep-dive"
 summary: "The $7,500 federal tax credit is on the chopping block. We analyze what happens to the EV market if the subsidies disappear overnight."
 seoTitle: "End of EV Tax Credits 2025: Market Impact Analysis"
 seoDescription: "With the US EV tax credit facing potential repeal in late 2025, we analyze the impact on car prices, sales, and the future of the American auto industry."
-image: "/images/articles/us-ev-tax-credit-cliff-2025.png"
+image: "../../assets/images/articles/us-ev-tax-credit-cliff-2025.png"
 imageAlt: "A conceptual illustration of an electric vehicle driving off a cliff graph representing subsidies."
 imageCredit: "Trendy Tech Tribe AI"
 featured: false

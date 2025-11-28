@@ -8,7 +8,7 @@ type: "quick-take"
 summary: "Federal antitrust regulators failed to break up Meta, marking a significant setback for government efforts to rein in Big Tech dominance through structural remedies."
 seoTitle: "Meta Avoids Breakup: Antitrust Case Fails"
 seoDescription: "Meta successfully defended against government breakup efforts in landmark antitrust case. What this means for Big Tech regulation and future enforcement."
-image: "/images/articles/meta-antitrust-2025.png"
+image: "../../assets/images/articles/meta-antitrust-2025.png"
 imageAlt: "Conceptual image of big tech regulation with abstract digital maze aesthetic"
 imageCredit: "AI Generated Image"
 featured: false

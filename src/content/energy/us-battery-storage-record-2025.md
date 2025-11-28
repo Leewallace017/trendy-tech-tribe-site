@@ -8,7 +8,7 @@ type: "quick-take"
 summary: "The US is expected to add 18.2 gigawatts of battery storage to the grid in 2025, setting a new record as energy demand surges and renewable adoption accelerates."
 seoTitle: "US Battery Storage to Hit Record 18.2 GW in 2025"
 seoDescription: "The US will add 18.2 GW of battery storage in 2025, a record driven by renewable energy growth and surging electricity demand. What it means for the grid."
-image: "/images/articles/us-battery-storage-2025.png"
+image: "../../assets/images/articles/us-battery-storage-2025.png"
 imageAlt: "US power grid infrastructure with modern battery storage units in American landscape"
 imageCredit: "AI Generated Image"
 featured: false

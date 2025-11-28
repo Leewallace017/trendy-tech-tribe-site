@@ -2,7 +2,7 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 // Shared schema for all article collections
-const articleSchema = z.object({
+const articleSchema = ({ image }: { image: any }) => z.object({
     title: z.string(),
     date: z.string(),
     author: z.string().default('Trendy Tech Tribe Staff'),
@@ -19,7 +19,7 @@ const articleSchema = z.object({
     summary: z.string(),
     seoTitle: z.string(),
     seoDescription: z.string(),
-    image: z.string(),
+    image: image(),
     imageAlt: z.string().optional(),
     imageCredit: z.string().optional(),
     featured: z.boolean().default(false),

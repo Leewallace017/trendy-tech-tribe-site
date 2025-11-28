@@ -8,7 +8,7 @@ type: "deep-dive"
 summary: "We have officially moved beyond 'Quantum Supremacy' to 'Quantum Utility.' Here is why 2025 is the year quantum computing finally starts doing real work."
 seoTitle: "Quantum Computing 2025: Error Correction Breakthroughs Explained"
 seoDescription: "Quantum computing has hit a turning point in 2025. We explore the new error-correction breakthroughs from Google and IBM that are making quantum utility a reality."
-image: "/images/articles/quantum-computing-breakthrough-2025.png"
+image: "../../assets/images/articles/quantum-computing-breakthrough-2025.png"
 imageAlt: "A close-up artistic visualization of a quantum processor chip with glowing qubits."
 imageCredit: "Trendy Tech Tribe AI"
 featured: false

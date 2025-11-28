@@ -17,7 +17,7 @@ const readTime = calculateReadTime(post.body);
 
 <article class={`post-card ${isHighlight ? 'post-card--highlight' : ''} ${isHorizontal ? 'post-card--horizontal' : ''}`}>
   <a href={`/${categorySlug}/${post.id}`} class="post-image">
-    {post.data.image.startsWith('http') ? (
+    {typeof post.data.image === 'string' ? (
       <Image
         src={post.data.image}
         alt={post.data.imageAlt || post.data.title}

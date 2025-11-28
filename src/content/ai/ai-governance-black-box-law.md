@@ -8,7 +8,7 @@ type: "deep-dive"
 summary: "New laws in the EU and US now require companies to explain 'how' their AI thinks. Can Big Tech actually comply, or is this the end of the black box?"
 seoTitle: "AI Governance 2025: The End of the Black Box?"
 seoDescription: "New AI governance laws in late 2025 are forcing tech giants to open up their 'black box' models. We analyze the impact on innovation and privacy."
-image: "/images/articles/ai-governance-black-box-law.png"
+image: "../../assets/images/articles/ai-governance-black-box-law.png"
 imageAlt: "A conceptual illustration of a black cube representing AI being cracked open to reveal code."
 imageCredit: "Trendy Tech Tribe AI"
 featured: false

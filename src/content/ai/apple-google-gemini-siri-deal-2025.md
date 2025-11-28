@@ -8,7 +8,7 @@ type: "quick-take"
 summary: "Apple plans to pay Google approximately $1 billion per year to integrate Google's 1.2 trillion parameter Gemini model into a redesigned Siri."
 seoTitle: "Apple-Google $1B Deal: Gemini AI to Power New Siri"
 seoDescription: "Apple will pay Google $1 billion annually to use the 1.2 trillion parameter Gemini model for a complete Siri overhaul, marking a major AI partnership."
-image: "/images/articles/apple-google-gemini-siri-deal-2025.png"
+image: "../../assets/images/articles/apple-google-gemini-siri-deal-2025.png"
 imageAlt: "Abstract representation of Apple and Google partnership with intertwining digital streams"
 imageCredit: "AI Generated Image"
 featured: false

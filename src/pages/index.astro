@@ -66,7 +66,7 @@ const [mainFeature, ...sideFeatures] = featuredPosts;
 const mainReadTime = mainFeature ? calculateReadTime(mainFeature.body) : 0;
 
 // Prepare hero image for main feature
-const isUnsplash = mainFeature?.data.image.includes('unsplash.com');
+const isUnsplash = typeof mainFeature?.data.image === 'string' && mainFeature.data.image.includes('unsplash.com');
 const mainHeroImage = isUnsplash 
   ? optimizeUnsplashUrl(mainFeature.data.image, 1600) 
   : mainFeature?.data.image;
@@ -127,6 +127,7 @@ const categoryMap: Record<string, string> = {
                 fetchpriority="high"
                 format="webp"
                 quality={80}
+                inferSize={typeof mainHeroImage === 'string'}
               />
             )}
           </div>
@@ -143,7 +144,7 @@ const categoryMap: Record<string, string> = {
         </div>
         <div class="trending-grid">
           {sideFeatures.map((post, index) => {
-            const isUnsplashSide = post.data.image.includes('unsplash.com');
+            const isUnsplashSide = typeof post.data.image === 'string' && post.data.image.includes('unsplash.com');
             const sideImage = isUnsplashSide 
               ? optimizeUnsplashUrl(post.data.image, 600) 
               : post.data.image;
@@ -172,6 +173,7 @@ const categoryMap: Record<string, string> = {
                       decoding="async"
                       format="webp"
                       quality={80}
+                      inferSize={typeof sideImage === 'string'}
                     />
                   )}
                 </div>

@@ -8,7 +8,7 @@ type: "deep-dive"
 summary: "5G is old news. The race for 6G has officially begun, with China and South Korea launching the first pilots. Here is what terabit speeds mean for you."
 seoTitle: "6G Technology 2025: Speed, Latency, and the Race for Dominance"
 seoDescription: "The race for 6G is on. We explore the first pilot networks launching in 2025, the promise of terabit speeds, and the geopolitical battle for connectivity."
-image: "/images/articles/6g-network-future-city.png"
+image: "../../assets../../assets/images/articles/6g-network-future-city.png"
 imageAlt: "A futuristic city skyline with visible data streams representing 6G connectivity."
 imageCredit: "Trendy Tech Tribe AI"
 featured: false

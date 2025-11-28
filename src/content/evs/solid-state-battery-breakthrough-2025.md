@@ -8,7 +8,7 @@ type: "deep-dive"
 summary: "The 'Holy Grail' of batteries is finally leaving the lab. Toyota and Samsung have begun limited production. Here is what it means for your next car."
 seoTitle: "Solid-State Batteries 2025: Production Starts, Range Doubles"
 seoDescription: "Solid-state batteries have finally hit production in late 2025. We look at the first cars to get them and why they change everything for EVs."
-image: "/images/articles/solid-state-battery-breakthrough-2025.png"
+image: "../../assets/images/articles/solid-state-battery-breakthrough-2025.png"
 imageAlt: "A high-tech visualization of a solid-state battery cell with glowing energy flow."
 imageCredit: "Trendy Tech Tribe AI"
 featured: false

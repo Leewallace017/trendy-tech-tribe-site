@@ -8,7 +8,7 @@ type: "quick-take"
 summary: "Tech stocks tumbled this week even as Nvidia crushed earnings expectations with $57B revenue, signaling investors are questioning whether AI valuations have run too far."
 seoTitle: "Tech Stocks Fall Despite Nvidia Beat - AI Bubble Concerns Mount"
 seoDescription: "Tech stocks including Nvidia, AMD, Oracle declined despite strong earnings. Why investors are rotating out of AI stocks and what it signals for markets."
-image: "/images/articles/tech-stocks-plunge-2025.png"
+image: "../../assets/images/articles/tech-stocks-plunge-2025.png"
 imageAlt: "Stock market concept with downward trending red lines in abstract modern style"
 imageCredit: "AI Generated Image"
 featured: false

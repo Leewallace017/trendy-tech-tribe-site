@@ -8,7 +8,7 @@ type: "deep-dive"
 summary: "November 2025 saw a massive sell-off in tech stocks. Investors are finally asking the $1 Trillion question: Where is the ROI?"
 seoTitle: "Tech Stock Correction Late 2025: AI Bubble Analysis"
 seoDescription: "The late 2025 market correction has hit Big Tech hard. We analyze why investors are fleeing Nvidia and Apple and if the AI bubble is finally popping."
-image: "/images/articles/tech-titan-correction-late-2025.png"
+image: "../../assets/images/articles/tech-titan-correction-late-2025.png"
 imageAlt: "A stock market graph crashing down with binary code raining in the background."
 imageCredit: "Trendy Tech Tribe AI"
 featured: false

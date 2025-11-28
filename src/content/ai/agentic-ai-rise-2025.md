@@ -8,7 +8,7 @@ type: "quick-take"
 summary: "Agentic AI systems that can make decisions and act autonomously are rapidly emerging, with 23% of organizations already scaling these systems and Microsoft and NVIDIA launching a dedicated startup accelerator."
 seoTitle: "Agentic AI Rise: 23% of Orgs Scaling Autonomous AI Systems"
 seoDescription: "Agentic AI shifts from assistive to autonomous. 23% of orgs scale AI agents, Microsoft/NVIDIA launch Agentic Launchpad for startups."
-image: "/images/articles/agentic-ai-rise-2025.png"
+image: "../../assets/images/articles/agentic-ai-rise-2025.png"
 imageAlt: "The Rise of Agentic AI: From Assistants to Autonomous Agents - editorial illustration"
 imageCredit: "Photo by Google DeepMind on Unsplash"
 featured: false

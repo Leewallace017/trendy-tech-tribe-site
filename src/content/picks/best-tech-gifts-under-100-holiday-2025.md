@@ -8,7 +8,7 @@ type: "best-list"
 summary: "From smart home devices to wireless earbuds, we've curated the best tech gifts under $100 that actually deliver value this holiday season."
 seoTitle: "Best Tech Gifts Under $100 - Holiday 2025 Gift Guide"
 seoDescription: "Top tech gifts under $100 for 2025. Smart home devices, wireless earbuds, streaming devices, and more—gifts people will actually use."
-image: "/images/articles/tech-gifts-under-100-2025.png"
+image: "../../assets/images/articles/tech-gifts-under-100-2025.png"
 imageAlt: "Collection of affordable tech gadgets arranged neatly with clean minimalist aesthetic"
 imageCredit: "AI Generated Image"
 featured: false

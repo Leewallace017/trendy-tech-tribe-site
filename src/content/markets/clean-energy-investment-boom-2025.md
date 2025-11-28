@@ -8,7 +8,7 @@ type: "deep-dive"
 summary: "While tech stocks wobble, smart money is flooding into the grid. Here is why 'boring' infrastructure is the hottest trade of the decade."
 seoTitle: "Clean Energy Investment Trends 2025: Grid & Storage Boom"
 seoDescription: "Investment in clean energy infrastructure has hit record highs in 2025. We analyze why capital is fleeing tech for the safety of the grid."
-image: "/images/articles/clean-energy-investment-boom-2025.png"
+image: "../../assets/images/articles/clean-energy-investment-boom-2025.png"
 imageAlt: "A visualization of gold coins transforming into wind turbines and solar panels."
 imageCredit: "Trendy Tech Tribe AI"
 featured: false

@@ -8,7 +8,7 @@ type: "quick-take"
 summary: "Google has officially launched Antigravity, an AI-native IDE that promises to revolutionize software development with agentic workflows and 'antigravity' coding."
 seoTitle: "Google Antigravity IDE Launch - A New Era of AI Coding"
 seoDescription: "Google launches Antigravity IDE, an agent-first development environment powered by Gemini 3. Here's why it's a game changer for developers."
-image: "/images/articles/google-antigravity-ide-2025.png"
+image: "../../assets/images/articles/google-antigravity-ide-2025.png"
 imageAlt: "Clean modern IDE interface with dark theme and subtle AI glow effects"
 imageCredit: "AI Generated Image"
 featured: true

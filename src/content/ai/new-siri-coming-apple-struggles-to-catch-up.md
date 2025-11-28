@@ -8,7 +8,7 @@ type: "quick-take"
 summary: "Apple is racing to overhaul Siri with 'Apple Intelligence' in 2025. Can the tech giant catch up to ChatGPT and Gemini, or is it too little, too late?"
 seoTitle: "New Siri 2025: Apple Intelligence Features & Release Date"
 seoDescription: "Apple is preparing a massive Siri update for Spring 2025 with iOS 18.4. We explore the new features and Apple's struggle to compete with OpenAI."
-image: "/images/articles/new-siri-apple-intelligence-hero.png"
+image: "../../assets/images/articles/new-siri-apple-intelligence-hero.png"
 imageAlt: "A glowing, futuristic Siri orb transforming into a neural network, symbolizing the new Apple Intelligence update."
 imageCredit: "Trendy Tech Tribe AI"
 featured: false

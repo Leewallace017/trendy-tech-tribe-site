@@ -8,7 +8,7 @@ type: "deep-dive"
 summary: "Chatbots are so 2024. The new era of 'Agentic AI' means software that doesn't just talk—it acts. Here is how it's changing the workplace."
 seoTitle: "Agentic AI Explained: The 2025 Workplace Revolution"
 seoDescription: "Agentic AI is taking over the workplace in late 2025. We explore how autonomous agents from Microsoft and Google are moving beyond chatbots to doing actual work."
-image: "/images/articles/agentic-ai-workplace-revolution.png"
+image: "../../assets/images/articles/agentic-ai-workplace-revolution.png"
 imageAlt: "A conceptual illustration of an AI agent collaborating with a human worker."
 imageCredit: "Trendy Tech Tribe AI"
 featured: false

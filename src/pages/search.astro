@@ -24,7 +24,7 @@ const searchIndex = allPosts.map(post => ({
   slug: post.id,
   date: post.data.date,
   image: post.data.image,
-  image: post.data.image,
+  image: typeof post.data.image === 'string' ? post.data.image : post.data.image.src,
   url: `/${post.collection}/${post.id}`, // Approximate URL construction
   readTime: calculateReadTime(post.body)
 }));

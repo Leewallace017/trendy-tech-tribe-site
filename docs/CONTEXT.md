@@ -75,9 +75,11 @@ Trendy Tech Tribe is a modern tech publication website covering technology news,
 │   ├── components/        # Astro Components
 │   ├── layouts/           # Page Layouts
 │   ├── pages/             # Routes
-│   └── styles/            # global.css
+│   ├── styles/            # global.css
+│   └── assets/            # Optimized assets
+│       └── images/        # Article hero images
 ├── public/
-│   └── images/            # Static assets & generated images
+│   └── images/            # Static assets (logos, etc.)
 ├── .agent/
 │   └── workflows/         # Active workflows (create-content.md)
 ├── docs/
@@ -103,7 +105,7 @@ type: [quick-take, deep-dive, product-review, best-list, opinion]
 summary: string
 seoTitle: string
 seoDescription: string
-image: /images/articles/filename.png
+image: ../../assets/images/articles/filename.png
 imageAlt: string
 featured: boolean
 affiliateProducts:
