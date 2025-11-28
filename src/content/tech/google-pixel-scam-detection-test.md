@@ -8,7 +8,7 @@ type: "deep-dive"
 summary: "We dive deep into Google's new AI-powered Scam Detection for Pixel devices. How does it work, is it effective, and can it really protect you without invading your privacy?"
 seoTitle: "Google Pixel Scam Detection Review: AI vs. Spam Calls 2025"
 seoDescription: "In-depth testing of Google's on-device Scam Detection feature. Powered by Gemini Nano, it analyzes call patterns in real-time to block scammers. Here's how it works."
-image: "/images/articles/google-pixel-scam-detection-test.jpg.png"
+image: "/images/articles/google-pixel-scam-detection-test.png"
 imageAlt: "Split screen visualization: Left side shows a dark, glitchy silhouette of a hacker/scammer on a phone. Right side shows a clean, bright Google Pixel interface with a 'Scam Detected' shield icon."
 imageCredit: "AI Generated Image"
 featured: true

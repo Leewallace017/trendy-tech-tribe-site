@@ -8,7 +8,7 @@ type: "deep-dive"
 summary: "An in-depth analysis of Samsung's Exynos 2500 and its strategic partnership with Nota AI, exploring how hardware-software integration is unlocking true on-device generative AI."
 seoTitle: "Samsung Exynos 2500 & Nota AI: The Future of On-Device AI Explained"
 seoDescription: "Deep dive into the Samsung Exynos 2500 chipset, its 59 TOPS NPU, and the Nota AI partnership that optimizes model compression for faster, private on-device AI."
-image: "/images/articles/samsung-exynos-2500-nota-ai.jpg.png"
+image: "/images/articles/samsung-exynos-2500-nota-ai.png"
 imageAlt: "Close up of a futuristic computer chip with glowing neural network pathways, Samsung Exynos branding style"
 imageCredit: "AI Generated Image"
 featured: true
