@@ -8,8 +8,8 @@ type: "best-list"
 summary: "From Tesla's mass-production marvel to China's agile acrobats, here are the 10 most advanced humanoid robots defining 2025."
 seoTitle: "Top 10 Humanoid Robots 2025: Tesla, Figure, Atlas & More"
 seoDescription: "The definitive ranking of the top 10 humanoid robots in 2025. We compare Tesla Optimus, Figure 02, Boston Dynamics Atlas, Unitree, and more."
-image: "/images/articles/top-10-humanoid-robots-hero.png"
-imageAlt: "A futuristic lineup of the top 10 humanoid robots including Tesla Optimus and Boston Dynamics Atlas."
+image: "/images/articles/top-10-humanoid-robots-2025.png"
+imageAlt: "A futuristic lineup of advanced humanoid robots standing in a high-tech laboratory."
 imageCredit: "Trendy Tech Tribe AI"
 featured: true
 affiliateProducts: []
