@@ -55,7 +55,7 @@ export default defineConfig({
       entrypoint: 'astro/assets/services/sharp',
     },
     format: ['webp'],
-    quality: 80,
+    quality: 100,
   },
 
   build: {
