@@ -1,0 +1,68 @@
+---
+---
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500 Index"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "US 100 Cash CFD"
+    },
+    {
+      "description": "Nvidia",
+      "proName": "NASDAQ:NVDA"
+    },
+    {
+      "description": "Apple",
+      "proName": "NASDAQ:AAPL"
+    },
+    {
+      "description": "Microsoft",
+      "proName": "NASDAQ:MSFT"
+    },
+    {
+      "description": "Tesla",
+      "proName": "NASDAQ:TSLA"
+    },
+    {
+      "description": "AMD",
+      "proName": "NASDAQ:AMD"
+    },
+    {
+      "description": "Bitcoin",
+      "proName": "BITSTAMP:BTCUSD"
+    },
+    {
+      "description": "Ethereum",
+      "proName": "BITSTAMP:ETHUSD"
+    }
+  ],
+  "showSymbolLogo": true,
+  "isTransparent": true,
+  "displayMode": "adaptive",
+  "colorTheme": "dark",
+  "locale": "en"
+}
+  </script>
+</div>
+
+<style>
+  .tradingview-widget-container {
+    width: 100%;
+    height: 46px; /* Standard height for ticker tape */
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border-subtle);
+    z-index: 20;
+    pointer-events: none; /* Disable clicks/redirects */
+  }
+
+  .tradingview-widget-container__widget {
+    width: 100%;
+    height: 100%;
+  }
+</style>

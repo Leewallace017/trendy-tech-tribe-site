@@ -4,6 +4,7 @@ import GoogleConsentMode from '../components/GoogleConsentMode.astro';
 import AdSenseHead from '../components/AdSenseHead.astro';
 import ConsentBanner from '../components/ConsentBanner.astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
+import StockTicker from '../components/StockTicker.astro';
 
 interface Props {
   title: string;
@@ -81,8 +82,24 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta name="twitter:image" content={new URL(image, Astro.site)}>
 </head>
 <body>
+  <div class="sticky-ticker">
+    <StockTicker />
+  </div>
   <slot />
   <ConsentBanner />
   <SpeedInsights />
 </body>
 </html>
+
+<style>
+  .sticky-ticker {
+  .sticky-ticker {
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Add padding to body to prevent content from being hidden behind ticker */
+  body {
+    /* padding-top: 46px; Removed as ticker is no longer fixed */
+  }
+</style>

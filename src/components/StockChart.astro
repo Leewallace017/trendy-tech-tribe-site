@@ -1,0 +1,39 @@
+---
+interface Props {
+  symbol: string;
+  height?: string;
+}
+
+const { symbol, height = "400" } = Astro.props;
+const containerId = `tradingview_${Math.random().toString(36).substring(7)}`;
+---
+
+<div class="tradingview-widget-container" style={`height: ${height}px`}>
+  <div id={containerId} style={`height: ${height}px`}></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js" is:inline></script>
+  <script type="text/javascript" define:vars={{ containerId, symbol }}>
+    new TradingView.widget({
+      "autosize": true,
+      "symbol": symbol,
+      "interval": "D",
+      "timezone": "Etc/UTC",
+      "theme": "dark",
+      "style": "1",
+      "locale": "en",
+      "toolbar_bg": "#f1f3f6",
+      "enable_publishing": false,
+      "allow_symbol_change": true,
+      "container_id": containerId
+    });
+  </script>
+</div>
+
+<style>
+  .tradingview-widget-container {
+    margin: var(--space-8) 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-md);
+  }
+</style>

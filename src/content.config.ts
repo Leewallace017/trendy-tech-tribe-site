@@ -38,27 +38,27 @@ const articleSchema = ({ image }: { image: any }) => z.object({
 // Define collections using the new Content Layer API with glob loaders
 export const collections = {
     tech: defineCollection({
-        loader: glob({ pattern: '**/*.md', base: './src/content/tech' }),
+        loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/tech' }),
         schema: articleSchema,
     }),
     ai: defineCollection({
-        loader: glob({ pattern: '**/*.md', base: './src/content/ai' }),
+        loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/ai' }),
         schema: articleSchema,
     }),
     evs: defineCollection({
-        loader: glob({ pattern: '**/*.md', base: './src/content/evs' }),
+        loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/evs' }),
         schema: articleSchema,
     }),
     energy: defineCollection({
-        loader: glob({ pattern: '**/*.md', base: './src/content/energy' }),
+        loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/energy' }),
         schema: articleSchema,
     }),
     markets: defineCollection({
-        loader: glob({ pattern: '**/*.md', base: './src/content/markets' }),
+        loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/markets' }),
         schema: articleSchema,
     }),
     picks: defineCollection({
-        loader: glob({ pattern: '**/*.md', base: './src/content/picks' }),
+        loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/picks' }),
         schema: articleSchema,
     }),
 };

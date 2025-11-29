@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import { calculateReadTime } from '../../utils/calculateReadTime';
+import CleanEnergyChart from '../../components/CleanEnergyChart.astro';
 
 const posts = (await getCollection('energy')).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
@@ -25,6 +26,10 @@ const posts = (await getCollection('energy')).sort(
           Clean energy, grid technology, storage solutions, and tech-related policy, regulation, and opinion.
         </p>
       </header>
+
+      <div class="widgets-section">
+        <CleanEnergyChart />
+      </div>
 
       <div class="posts-grid">
         {posts.map(post => (
@@ -109,6 +114,13 @@ const posts = (await getCollection('energy')).sort(
     color: var(--text-secondary);
     max-width: 800px;
     line-height: var(--line-relaxed);
+  }
+
+  .widgets-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    margin-bottom: var(--space-32);
   }
 
   .posts-grid {
